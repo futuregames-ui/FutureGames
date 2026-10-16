@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Games</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="background-glow glow-one"></div>
+<div class="background-glow glow-two"></div>
+
+<header class="hero">
+  <div class="hero-content">
+    <p class="small-title">NEXT LEVEL GAMING</p>
+    <h1>FUTURE <span>GAMES</span></h1>
+    <p class="hero-description">Explore our collection of games and discover your next adventure.</p>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search for a game...">
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="section-header">
+    <div>
+      <p class="small-title">OUR COLLECTION</p>
+      <h2>Featured Games</h2>
+    </div>
+    <div id="gameCount" class="game-count">0 Games</div>
+  </div>
+  <section id="gamesContainer" class="games-grid"></section>
+  <div id="noResults" class="no-results">No games found.</div>
+</main>
+
+<div id="detailsModal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <button id="closeModal" class="close-button">×</button>
+    <div id="detailsContainer"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
