@@ -577,7 +577,6 @@ g(60,"Sonic Frontiers",["غير متاح",550,"غير متاح","غير متاح
     })
 ];
 
-/* CUSTOM GAME CARD ORDER */
 const GAME_DISPLAY_ORDER = [
     38, // FC 27 Standard
     39, // GTA VI Standard
@@ -594,30 +593,30 @@ const GAME_DISPLAY_ORDER = [
     4,  // Split Fiction
     10, // It Takes Two
     5,  // God of War Ragnarök
-    37, // Forza Horizon 5
+    40, // Forza Horizon 5
     8,  // TEKKEN 8
-    36, // WWE 2K26
-    33, // PES 2020
-    35, // Need for Speed Unbound
-    26, // Need for Speed Heat
-    27, // Need for Speed Payback
+    41, // WWE 2K26
+    46, // PES 2020
+    42, // Need for Speed Unbound
+    47, // Need for Speed Heat
+    48, // Need for Speed Payback
     11, // Call of Duty: Vanguard
-    12, // Call of Duty: Black Ops III
-    30, // Red Dead Redemption 2
-    31, // Injustice 2
-    25, // Sonic
-    21, // Batman
-    20, // Marvel's Avengers
-    13, // LEGO
-    15, // Battlefield V
-    16, // Battlefield 4
-    32, // Crash Team Racing Nitro-Fueled
-    17, // Far Cry 5
-    18, // Uncharted Bundle
-    19, // Resident Evil Village
-    22, // Carnival Games
-    23, // Minecraft
-    24  // Unravel Two
+    43, // Call of Duty: Black Ops III
+    49, // Red Dead Redemption 2
+    50, // Injustice 2
+    60, // Sonic Frontiers
+    56, // Batman: Arkham Knight
+    55, // Marvel's Avengers
+    61, // LEGO Marvel Super Heroes 2
+    44, // Battlefield V
+    45, // Battlefield 4
+    51, // Crash Team Racing Nitro-Fueled
+    52, // Far Cry 5
+    53, // Uncharted Bundle
+    54, // Resident Evil Village
+    57, // Carnival Games
+    58, // Minecraft
+    59  // Unravel Two
 ];
 
 games.sort((a, b) =>
