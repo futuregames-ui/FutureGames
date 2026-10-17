@@ -9,8 +9,7 @@
 const PS4_UNSUPPORTED_IDS = new Set([2, 3, 4, 5, 6, 8, 35, 36, 37, 39, 41, 42]);
 
 const games = [
-    g(1,"FC 26",[750,750,null,900],"1–4 Players","Up to 22 Players","Sports / Football","Sports","POPULAR","images/fc-26.jpg","تجربة كرة قدم حديثة تقدم مباريات تنافسية وأوضاع لعب متعددة، مع تطوير أسلوب اللعب وإدارة الفريق والمنافسة محليًا وعبر الإنترنت.",{
-        screenshots:[
+g(1,"FC 26",[750,750,null,900],"1–4 Players","Up to 22 Players","Sports / Football","Sports","POPULAR","images/fc-26.jpg","استمتع بتجربة كرة قدم حديثة تجمع بين المنافسة والإثارة وتقدم مجموعة متنوعة من أوضاع اللعب. طوّر أسلوب لعب فريقك واستفد من مهارات اللاعبين والتكتيكات المختلفة لتحقيق التفوق داخل الملعب. خُض مباريات محلية مع أصدقائك أو نافس لاعبين آخرين عبر الإنترنت في مواجهات مليئة بالحماس. ومع تنوع الفرق والبطولات وطرق اللعب، تمنحك FC 26 تجربة كرة قدم متجددة تناسب اللعب الفردي والجماعي.",{        screenshots:[
             "images/fc-26-1.jpg","images/fc-26-2.jpg","images/fc-26-3.jpg",
             "images/fc-26-4.jpg","images/fc-26-5.jpg","images/fc-26-6.jpg",
             "images/fc-26-7.jpg","images/fc-26-8.jpg","images/fc-26-9.jpg",
@@ -20,8 +19,7 @@ const games = [
         videoTitle:"EA SPORTS FC 26 Trailer"
     }),
 
-    g(2,"Ghost of Yōtei",[null,1900,null,"غير متاح"],"1 Player","Up to 4 Players","Action / Samurai / Open World","Action","NEW","images/ghost-of-yotei.jpg","مغامرة ساموراي تدور في شمال اليابان خلال القرن السابع عشر، حيث تخوض Atsu رحلة انتقام عبر مناظر طبيعية واسعة ومعارك بالسيف. وتتوفر أيضًا Ghost of Yōtei Legends كتجربة تعاونية عبر الإنترنت.",{
-        screenshots:[
+g(2,"Ghost of Yōtei",[null,1900,null,"غير متاح"],"1 Player","Up to 4 Players","Action / Samurai / Open World","Action","NEW","images/ghost-of-yotei.jpg","انطلق في مغامرة ساموراي ملحمية تدور أحداثها في شمال اليابان خلال القرن السابع عشر، حيث تبدأ Atsu رحلة مليئة بالانتقام والغموض. استكشف مناطق طبيعية واسعة ومتنوعة، وخض معارك بالسيف تعتمد على السرعة والدقة واختيار أسلوب القتال المناسب. واجه أعداء خطرين واكتشف الأسرار والقصص المنتشرة في عالم مفتوح مليء بالتفاصيل والمغامرات. ويمكنك أيضًا الاستمتاع بتجربة Ghost of Yōtei Legends التعاونية وخوض تحديات ومواجهات مع لاعبين آخرين عبر الإنترنت.",{        screenshots:[
             "images/ghost-of-yotei-1.jpg","images/ghost-of-yotei-2.jpg",
             "images/ghost-of-yotei-3.jpg","images/ghost-of-yotei-4.jpg",
             "images/ghost-of-yotei-5.jpg","images/ghost-of-yotei-6.jpg",
@@ -32,8 +30,7 @@ const games = [
         videoTitle:"Ghost of Yōtei Trailer"
     }),
 
-    g(3,"Assassin's Creed Shadows",[null,1600,null,1900],"1 Player","غير متاح","Action / Stealth / Open World","Action","NEW","images/assassin-s-creed-shadows.jpg","تدور أحداث اللعبة في اليابان الإقطاعية، وتتيح لك التبديل بين Naoe وYasuke، مع التخفي والاستكشاف والقتال وبناء أسلوبك الخاص في مواجهة أعداء متنوعين.",{
-        screenshots:[
+g(3,"Assassin's Creed Shadows",[null,1600,null,1900],"1 Player","غير متاح","Action / Stealth / Open World","Action","NEW","images/assassin-s-creed-shadows.jpg","استكشف اليابان الإقطاعية في مغامرة تجمع بين التخفي والقتال والاستكشاف داخل عالم مفتوح مليء بالتفاصيل. تحكم في شخصيتين مختلفتين، Naoe وYasuke، ولكل منهما أسلوبه الخاص في التعامل مع الأعداء والمواقف. استخدم التخفي والاغتيالات أو واجه خصومك في معارك مباشرة، واختر الطريقة التي تناسب أسلوب لعبك. اكتشف المناطق والقرى والقلاع، ونفّذ المهام وواجه أعداء متنوعين بينما تصنع طريقك الخاص وسط صراعات اليابان.",{        screenshots:[
             "images/assassin-s-creed-shadows-1.jpg","images/assassin-s-creed-shadows-2.jpg",
             "images/assassin-s-creed-shadows-3.jpg","images/assassin-s-creed-shadows-4.jpg",
             "images/assassin-s-creed-shadows-5.jpg","images/assassin-s-creed-shadows-6.jpg",
@@ -44,8 +41,7 @@ const games = [
         videoTitle:"Assassin's Creed Shadows Trailer"
     }),
 
-    g(4,"Split Fiction",[null,1600,null,1900],"1–2 Players","2 Players","Action / Adventure / Co-op","Adventure","FEATURED","images/split-fiction.jpg","مغامرة تعاونية مصممة لشخصين، تنتقل فيها Mio وZoe بين عوالم الخيال العلمي والفانتازيا، وتعتمد مراحلها على التعاون والتنسيق بين اللاعبين.",{
-        screenshots:[
+g(4,"Split Fiction",[null,1600,null,1900],"1–2 Players","2 Players","Action / Adventure / Co-op","Adventure","FEATURED","images/split-fiction.jpg","انطلق في مغامرة تعاونية مصممة خصيصًا للاعبين، حيث تتحكم في Mio وZoe وتخوضان رحلة مليئة بالمفاجآت والتحديات. انتقل بين عوالم مختلفة تجمع بين الخيال العلمي والفانتازيا، مع مراحل متنوعة وأفكار لعب جديدة في كل تجربة. تعتمد المغامرة على التعاون والتنسيق المستمر بين اللاعبين، حيث يحتاج كل لاعب إلى استخدام قدراته لمساعدة الآخر والتقدم في المراحل. واجه الألغاز والعقبات والمواقف المليئة بالحماس، واستمتع بتجربة تعاونية ممتعة من البداية حتى النهاية.",{        screenshots:[
             "images/split-fiction-1.jpg","images/split-fiction-2.jpg",
             "images/split-fiction-3.jpg","images/split-fiction-4.jpg",
             "images/split-fiction-5.jpg","images/split-fiction-6.jpg",
@@ -56,8 +52,7 @@ const games = [
         videoTitle:"Split Fiction Trailer"
     }),
 
-           g(5,"God of War Ragnarök",[null,"غير متاح",null,"غير متاح"],"1 Player","1 Player","Action / Adventure","Action","POPULAR","images/god-of-war-ragnarok.jpg","انطلق مع Kratos وAtreus في مغامرة ملحمية عبر العوالم الإسكندنافية، وواجه أعداءً أقوياء في رحلة مليئة بالقتال والاستكشاف.",{
-        screenshots:[
+g(5,"God of War Ragnarök",[null,"غير متاح",null,"غير متاح"],"1 Player","1 Player","Action / Adventure","Action","POPULAR","images/god-of-war-ragnarok.jpg","واصل رحلة Kratos وAtreus في مغامرة ملحمية داخل العوالم الإسكندنافية، مع اقتراب أحداث Ragnarök التي تهدد بتدمير العوالم. استكشف مناطق متنوعة مليئة بالأسرار والأعداء والتحديات، وخض معارك قوية باستخدام الفؤوس والأسلحة والقدرات القتالية المختلفة. واجه آلهة ومحاربين خطرين، وطوّر مهاراتك ومعداتك لتتمكن من التغلب على خصوم أكثر قوة. عِش قصة مؤثرة عن العائلة والتضحية والمصير، واكتشف كيف ستؤثر اختيارات الشخصيات في مستقبل العوالم التسعة.",{        screenshots:[
             "images/god-of-war-ragnarok-1.jpg",
             "images/god-of-war-ragnarok-2.jpg",
             "images/god-of-war-ragnarok-3.jpg",
@@ -187,8 +182,7 @@ const games = [
     videoTitle:"Assassin's Creed Odyssey Official Trailer"
 }),
 
-   g(44,"Battlefield V",,"1 Player","Up to 64 Players","Action / First-Person Shooter","Shooter","POPULAR","images/battlefield-v.jpg","عِش أجواء الحرب العالمية الثانية في تجربة تصويب سينمائية مليئة بالمعارك الضخمة، والمهام الحربية، والاشتباكات الجماعية عبر خرائط متنوعة.",{
-    screenshots:[
+g(44,"Battlefield V",[null,550,null,700],"1 Player","Up to 64 Players","Action / First-Person Shooter","Shooter","POPULAR","images/battlefield-v.jpg","عِش أجواء الحرب العالمية الثانية في تجربة تصويب سينمائية تجمع بين القتال السريع والمعارك الضخمة. خُض مجموعة متنوعة من المهام والعمليات الحربية عبر ساحات معركة مستوحاة من أحداث تاريخية حقيقية. استخدم الأسلحة والمركبات المختلفة، وتعاون مع فريقك لتغيير مجرى المعركة والسيطرة على الأهداف. واستمتع بمعارك جماعية مليئة بالحماس والفوضى والاشتباكات واسعة النطاق التي تشتهر بها سلسلة Battlefield.",{    screenshots:[
         "images/battlefield-v-1.jpg",
         "images/battlefield-v-2.jpg",
         "images/battlefield-v-3.jpg",
