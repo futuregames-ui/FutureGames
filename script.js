@@ -291,7 +291,22 @@ const games = [
     videoTitle:"Batman: Arkham Knight Official Trailer"
 }),
 
-    g(22,"Carnival",[400,400,400,500],"1–4 Players","غير متاح","Party / Arcade","Adventure","FEATURED","images/carnival.jpg","مجموعة ألعاب حفلات صغيرة مناسبة للعب الجماعي، تضم تحديات وألعابًا مصغرة سريعة يمكن للأصدقاء والعائلة التنافس فيها."),
+    g(57,"Carnival Games",[0,0,0,0],"1–4 Players","Local Multiplayer Only","Party / Arcade / Mini-Games","Family","POPULAR","images/carnival-games.jpg","استمتع بأجواء الملاهي مع Carnival Games، التي تضم 20 لعبة مصغرة ممتعة تناسب العائلة والأصدقاء. جرّب رمي الحلقات، وكرة السلة، وسباقات الطائرات الصغيرة، والبولينج الفضائي، وغيرها من التحديات. العب بمفردك أو تنافس مع الأصدقاء على نفس الجهاز، واربح التذاكر لفتح ألعاب وأزياء ومكافآت جديدة.",{
+    screenshots:[
+        "images/carnival-games-1.jpg",
+        "images/carnival-games-2.jpg",
+        "images/carnival-games-3.jpg",
+        "images/carnival-games-4.jpg",
+        "images/carnival-games-5.jpg",
+        "images/carnival-games-6.jpg",
+        "images/carnival-games-7.jpg",
+        "images/carnival-games-8.jpg",
+        "images/carnival-games-9.jpg",
+        "images/carnival-games-10.jpg"
+    ],
+    video:"videos/carnival-games.mp4",
+    videoTitle:"Carnival Games Official Trailer"
+}),
 
     g(23,"Minecraft",[null,null,null,null],"1–4 Players","Up to 8 Players","Sandbox / Survival / Adventure","Adventure","POPULAR","images/minecraft.jpg","عالم مفتوح يعتمد على البناء والاستكشاف وجمع الموارد، ويمكنك إنشاء مبانٍ وأدوات وعوالم كاملة أو مواجهة مخاطر Survival."),
 
