@@ -314,7 +314,22 @@ const games = [
     videoTitle:"Injustice 2 Official Trailer"
 }),
 
-    g(32,"Crash Team Racing Nitro-Fueled",[550,550,500,650],"1–4 Players","Up to 8 Players","Racing / Kart","Racing","FEATURED","images/crash-team-racing-nitro-fueled.jpg","نسخة محسنة من تجربة Crash Team Racing الكلاسيكية، مع سباقات كارت سريعة ومضامير مليئة بالعوائق والأسلحة والمنافسة."),
+   g(51,"Crash Team Racing Nitro-Fueled",[0,0,0,0],"1–4 Players","Up to 8 Players","Racing / Kart Racing","Racing","POPULAR","images/crash-team-racing-nitro-fueled.jpg","استعد لسباقات كارت مليئة بالإثارة مع Crash وأصدقائه، واستخدم الأسلحة والتعزيزات لتجاوز المنافسين، وافتح شخصيات وسيارات ومسارات متنوعة في سباقات ممتعة.",{
+    screenshots:[
+        "images/crash-team-racing-nitro-fueled-1.jpg",
+        "images/crash-team-racing-nitro-fueled-2.jpg",
+        "images/crash-team-racing-nitro-fueled-3.jpg",
+        "images/crash-team-racing-nitro-fueled-4.jpg",
+        "images/crash-team-racing-nitro-fueled-5.jpg",
+        "images/crash-team-racing-nitro-fueled-6.jpg",
+        "images/crash-team-racing-nitro-fueled-7.jpg",
+        "images/crash-team-racing-nitro-fueled-8.jpg",
+        "images/crash-team-racing-nitro-fueled-9.jpg",
+        "images/crash-team-racing-nitro-fueled-10.jpg"
+    ],
+    video:"videos/crash-team-racing-nitro-fueled.mp4",
+    videoTitle:"Crash Team Racing Nitro-Fueled Official Trailer"
+}),
 
    g(46,"PES 2020",[0,0,0,0],"1–4 Players","Up to 22 Players","Sports / Football","Sports","POPULAR","images/pes-2020.jpg","استمتع بكرة القدم مع eFootball PES 2020، وتحكم واقعي في الكرة واللاعبين، وحركات ومهارات مميزة، ومباريات تنافسية تتيح لك بناء فريقك المفضل ومواجهة أصدقائك.",{
     screenshots:[
