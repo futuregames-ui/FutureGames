@@ -223,7 +223,22 @@ const games = [
     videoTitle:"Far Cry 5 Official Trailer"
 }),
 
-    g(18,"Uncharted Bundle",[null,null,null,null],"1 Player","غير متاح","Action / Adventure","Adventure","FEATURED","images/uncharted-bundle.jpg","مجموعة Uncharted تقدم مغامرات سينمائية مليئة بالاستكشاف والألغاز والمطاردات والقتال. إصدار Legacy of Thieves يضم قصتي Uncharted 4 وThe Lost Legacy الفرديتين."),
+    g(53,"Uncharted Bundle",[0,0,0,0],"1 Player","Up to 10 Players","Action / Adventure / Third-Person Shooter","Action","POPULAR","images/uncharted-bundle.jpg","استمتع بمغامرات Nathan Drake في مجموعة Uncharted Bundle، التي تجمع تجارب من أشهر ألعاب السلسلة، مع استكشاف المواقع الأثرية وحل الألغاز وخوض المعارك ومطاردات مليئة بالإثارة. تختلف الأطوار والمحتويات المتاحة حسب الإصدار الموجود في المجموعة.",{
+    screenshots:[
+        "images/uncharted-bundle-1.jpg",
+        "images/uncharted-bundle-2.jpg",
+        "images/uncharted-bundle-3.jpg",
+        "images/uncharted-bundle-4.jpg",
+        "images/uncharted-bundle-5.jpg",
+        "images/uncharted-bundle-6.jpg",
+        "images/uncharted-bundle-7.jpg",
+        "images/uncharted-bundle-8.jpg",
+        "images/uncharted-bundle-9.jpg",
+        "images/uncharted-bundle-10.jpg"
+    ],
+    video:"videos/uncharted-bundle.mp4",
+    videoTitle:"Uncharted Bundle Official Trailer"
+}),
 
     g(19,"Resident Evil Village",[null,null,550,null],"1 Player","غير متاح","Survival Horror / Action","Action","FEATURED","images/resident-evil-village.jpg","يعود Ethan Winters في رحلة مرعبة إلى قرية غامضة بحثًا عن ابنته، وسط أعداء مرعبين وألغاز واستكشاف وأجواء رعب وبقاء مكثفة."),
 
