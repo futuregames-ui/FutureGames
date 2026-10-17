@@ -206,7 +206,22 @@ const games = [
     videoTitle:"Battlefield 4 Official Trailer"
 }),
 
-    g(17,"Far Cry 5",[500,500,500,650],"1–2 Players","Up to 12 Players","Action / Shooter / Open World","Action","POPULAR","images/far-cry-5.jpg","تواجه جماعة متطرفة تسيطر على Hope County في مونتانا، وتستكشف عالمًا مفتوحًا وتجمع حلفاء وتخوض القتال منفردًا أو في تعاون مع لاعب آخر."),
+   g(52,"Far Cry 5",[0,0,0,0],"1–2 Players","Up to 2 Players","Action / First-Person Shooter / Open World","Action","POPULAR","images/far-cry-5.jpg","انطلق في مغامرة داخل مقاطعة Hope County الأمريكية، حيث تواجه جماعة متطرفة يقودها Joseph Seed. استكشف عالمًا مفتوحًا واسعًا، وحرر المناطق من سيطرة الجماعة، واستخدم مجموعة متنوعة من الأسلحة والمركبات، مع إمكانية خوض القصة مع صديق في طور اللعب التعاوني.",{
+    screenshots:[
+        "images/far-cry-5-1.jpg",
+        "images/far-cry-5-2.jpg",
+        "images/far-cry-5-3.jpg",
+        "images/far-cry-5-4.jpg",
+        "images/far-cry-5-5.jpg",
+        "images/far-cry-5-6.jpg",
+        "images/far-cry-5-7.jpg",
+        "images/far-cry-5-8.jpg",
+        "images/far-cry-5-9.jpg",
+        "images/far-cry-5-10.jpg"
+    ],
+    video:"videos/far-cry-5.mp4",
+    videoTitle:"Far Cry 5 Official Trailer"
+}),
 
     g(18,"Uncharted Bundle",[null,null,null,null],"1 Player","غير متاح","Action / Adventure","Adventure","FEATURED","images/uncharted-bundle.jpg","مجموعة Uncharted تقدم مغامرات سينمائية مليئة بالاستكشاف والألغاز والمطاردات والقتال. إصدار Legacy of Thieves يضم قصتي Uncharted 4 وThe Lost Legacy الفرديتين."),
 
