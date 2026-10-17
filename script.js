@@ -342,7 +342,22 @@ const games = [
     videoTitle:"Unravel Two Official Trailer"
 }),
 
-    g(25,"Sonic",[null,null,550,null],"غير محدد","غير محدد","Platform / Action","Adventure","POPULAR","images/sonic.jpg","ألعاب Sonic تعتمد على السرعة والجري عبر مراحل مليئة بالعقبات والحلقات والأعداء. اسم اللعبة في قائمة الأسعار مكتوب Sonic فقط، لذلك أحتاج اسم الإصدار لتأكيد عدد اللاعبين."),
+g(60,"Sonic Frontiers",[0,0,0,0],"1 Player","Single Player Only","Action / Adventure / Open-Zone Platformer","Adventure","POPULAR","images/sonic-frontiers.jpg","انطلق مع Sonic في مغامرة سريعة عبر جزر Starfall الغامضة، وابحث عن Chaos Emeralds واكتشف أسرار حضارة قديمة. استكشف عالمًا مفتوحًا واسعًا، وتجاوز التحديات والألغاز، وواجه أعداء آليين وزعماء عملاقين باستخدام قدرات قتالية ومهارات جديدة. عِش تجربة تجمع بين السرعة والاستكشاف والمعارك الملحمية.",{
+    screenshots:[
+        "images/sonic-frontiers-1.jpg",
+        "images/sonic-frontiers-2.jpg",
+        "images/sonic-frontiers-3.jpg",
+        "images/sonic-frontiers-4.jpg",
+        "images/sonic-frontiers-5.jpg",
+        "images/sonic-frontiers-6.jpg",
+        "images/sonic-frontiers-7.jpg",
+        "images/sonic-frontiers-8.jpg",
+        "images/sonic-frontiers-9.jpg",
+        "images/sonic-frontiers-10.jpg"
+    ],
+    video:"videos/sonic-frontiers.mp4",
+    videoTitle:"Sonic Frontiers Official Trailer"
+}),
 
    g(47,"Need for Speed Heat",[0,0,0,0],"1 Player","Up to 16 Players","Racing / Open World","Racing","POPULAR","images/need-for-speed-heat.jpg","انطلق في شوارع Palm City في سباقات ليلية مليئة بالأدرينالين، ونافس خصومك نهارًا في فعاليات رسمية، واهرب من الشرطة ليلًا مع إمكانية تعديل سياراتك وتطوير أدائها.",{
     screenshots:[
