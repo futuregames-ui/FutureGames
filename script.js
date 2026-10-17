@@ -274,7 +274,22 @@ const games = [
     videoTitle:"Marvel's Avengers Official Trailer"
 }), 
 
-    g(21,"Batman",[450,450,null,600],"غير محدد","غير محدد","Action / Superhero","Action","POPULAR","images/batman.jpg","مغامرة أكشن في عالم Batman تجمع بين القتال والتخفي والتحقيق والتنقل في مدينة Gotham. اسم اللعبة في قائمة الأسعار مكتوب Batman فقط، لذلك أحتاج اسم الإصدار لتأكيد اللاعبين بدقة."),
+    g(56,"Batman: Arkham Knight",[0,0,0,0],"1 Player","1 Player","Action / Adventure / Open World","Action","POPULAR","images/batman-arkham-knight.jpg","عُد إلى شوارع Gotham City في مغامرة مظلمة بدور Batman، وواجه Scarecrow وأعداءه في معركة مصيرية لإنقاذ المدينة. استخدم مهارات القتال والتخفي والتحقيق، واستكشف عالمًا مفتوحًا واسعًا، وقُد Batmobile في مطاردات ومعارك مليئة بالإثارة.",{
+    screenshots:[
+        "images/batman-arkham-knight-1.jpg",
+        "images/batman-arkham-knight-2.jpg",
+        "images/batman-arkham-knight-3.jpg",
+        "images/batman-arkham-knight-4.jpg",
+        "images/batman-arkham-knight-5.jpg",
+        "images/batman-arkham-knight-6.jpg",
+        "images/batman-arkham-knight-7.jpg",
+        "images/batman-arkham-knight-8.jpg",
+        "images/batman-arkham-knight-9.jpg",
+        "images/batman-arkham-knight-10.jpg"
+    ],
+    video:"videos/batman-arkham-knight.mp4",
+    videoTitle:"Batman: Arkham Knight Official Trailer"
+}),
 
     g(22,"Carnival",[400,400,400,500],"1–4 Players","غير متاح","Party / Arcade","Adventure","FEATURED","images/carnival.jpg","مجموعة ألعاب حفلات صغيرة مناسبة للعب الجماعي، تضم تحديات وألعابًا مصغرة سريعة يمكن للأصدقاء والعائلة التنافس فيها."),
 
