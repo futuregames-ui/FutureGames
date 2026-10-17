@@ -325,7 +325,22 @@ const games = [
     videoTitle:"Minecraft Official Trailer"
 }),
 
-    g(24,"Unravel Two",[400,400,400,550],"1–2 Players","غير متاح","Platform / Puzzle / Co-op","Adventure","FEATURED","images/unravel-two.jpg","مغامرة هادئة تعتمد على شخصيتي Yarny، ويمكن لعبها منفردًا أو بالتعاون المحلي لحل الألغاز وتجاوز العقبات باستخدام الحبل والخيوط."),
+    g(59,"Unravel Two",[0,0,0,0],"1–2 Players","Local Co-op Only","Adventure / Puzzle / Platformer","Adventure","POPULAR","images/unravel-two.jpg","انطلق في مغامرة ساحرة مع شخصيتي Yarny المصنوعتين من الخيوط، واستكشف عوالم طبيعية خلابة مليئة بالألغاز والتحديات. استخدم الخيوط للتأرجح والقفز وتسلق العقبات، وتعاون مع صديقك لحل الألغاز والتقدم في القصة. يمكنك اللعب بمفردك أو مع لاعب آخر على نفس الجهاز في تجربة تجمع بين المغامرة والإبداع والصداقة.",{
+    screenshots:[
+        "images/unravel-two-1.jpg",
+        "images/unravel-two-2.jpg",
+        "images/unravel-two-3.jpg",
+        "images/unravel-two-4.jpg",
+        "images/unravel-two-5.jpg",
+        "images/unravel-two-6.jpg",
+        "images/unravel-two-7.jpg",
+        "images/unravel-two-8.jpg",
+        "images/unravel-two-9.jpg",
+        "images/unravel-two-10.jpg"
+    ],
+    video:"videos/unravel-two.mp4",
+    videoTitle:"Unravel Two Official Trailer"
+}),
 
     g(25,"Sonic",[null,null,550,null],"غير محدد","غير محدد","Platform / Action","Adventure","POPULAR","images/sonic.jpg","ألعاب Sonic تعتمد على السرعة والجري عبر مراحل مليئة بالعقبات والحلقات والأعداء. اسم اللعبة في قائمة الأسعار مكتوب Sonic فقط، لذلك أحتاج اسم الإصدار لتأكيد عدد اللاعبين."),
 
