@@ -130,7 +130,7 @@ const games = [
         videoTitle:"It Takes Two Trailer"
     }),
 
-    g(11,"Call of Duty: Vanguard",[null,null,600,null],"1–2 Players","Up to 48 Players","Action / Shooter / WWII","Action","POPULAR","images/call-of-duty-vanguard.jpg","تقدم حملة تدور خلال الحرب العالمية الثانية إلى جانب أوضاع Multiplayer وZombies، مع معارك سريعة وأسلحة ومواجهات متعددة اللاعبين.",{
+    g(11,"Call of Duty: Vanguard",["غير متاح","غير متاح",600,"غير متاح"],"1–2 Players","Up to 48 Players","Action / Shooter / WWII","Action","POPULAR","images/call-of-duty-vanguard.jpg","تقدم حملة تدور خلال الحرب العالمية الثانية إلى جانب أوضاع Multiplayer وZombies، مع معارك سريعة وأسلحة ومواجهات متعددة اللاعبين.",{
         screenshots:[
             "images/call-of-duty-vanguard-1.jpg","images/call-of-duty-vanguard-2.jpg",
             "images/call-of-duty-vanguard-3.jpg","images/call-of-duty-vanguard-4.jpg",
@@ -142,7 +142,7 @@ const games = [
         videoTitle:"Call of Duty: Vanguard Trailer"
     }),
 
-   g(43,"Call of Duty: Black Ops III",[0,0,0,0],"1–4 Players","Up to 18 Players","Action / First-Person Shooter","Shooter","POPULAR","images/call-of-duty-black-ops-3.jpg","انطلق في تجربة تصويب مستقبلية مليئة بالإثارة، مع حملة تعاونية وأسلحة متطورة ومعارك جماعية، بالإضافة إلى طور الزومبي الشهير الذي يقدم تحديات مليئة بالأكشن.",{
+   g(43,"Call of Duty: Black Ops III",[550,550,550,"غير متاح"],"1–4 Players","Up to 18 Players","Action / First-Person Shooter","Shooter","POPULAR","images/call-of-duty-black-ops-3.jpg","انطلق في تجربة تصويب مستقبلية مليئة بالإثارة، مع حملة تعاونية وأسلحة متطورة ومعارك جماعية، بالإضافة إلى طور الزومبي الشهير الذي يقدم تحديات مليئة بالأكشن.",{
     screenshots:[
         "images/call-of-duty-black-ops-3-1.jpg",
         "images/call-of-duty-black-ops-3-2.jpg",
@@ -159,7 +159,7 @@ const games = [
     videoTitle:"Call of Duty: Black Ops III Official Trailer"
 }),
 
-    g(61,"LEGO Marvel Super Heroes 2",[0,0,0,0],"1–4 Players","لا تدعم","Action / Adventure / Superhero","Action","POPULAR","images/lego-marvel-super-heroes-2.jpg","انطلق في مغامرة كونية مع أبطال وأشرار Marvel، وواجه Kang the Conqueror في عالم Chronopolis الذي يجمع أماكن من عصور مختلفة. العب بشخصيات شهيرة مثل Spider-Man وIron Man وThor وHulk وBlack Panther، واستكشف عوالم متنوعة، واستخدم القدرات الخاصة لكل شخصية لحل الألغاز وخوض المعارك. استمتع بقصة مليئة بالفكاهة والمغامرات، مع إمكانية اللعب التعاوني مع الأصدقاء على نفس الجهاز.",{
+    g(61,"LEGO Marvel Super Heroes 2",["غير متاح","غير متاح","غير متاح","غير متاح"],"1–4 Players","لا تدعم","Action / Adventure / Superhero","Action","POPULAR","images/lego-marvel-super-heroes-2.jpg","انطلق في مغامرة كونية مع أبطال وأشرار Marvel، وواجه Kang the Conqueror في عالم Chronopolis الذي يجمع أماكن من عصور مختلفة. العب بشخصيات شهيرة مثل Spider-Man وIron Man وThor وHulk وBlack Panther، واستكشف عوالم متنوعة، واستخدم القدرات الخاصة لكل شخصية لحل الألغاز وخوض المعارك. استمتع بقصة مليئة بالفكاهة والمغامرات، مع إمكانية اللعب التعاوني مع الأصدقاء على نفس الجهاز.",{
     screenshots:[
         "images/lego-marvel-super-heroes-2-1.jpg",
         "images/lego-marvel-super-heroes-2-2.jpg",
@@ -176,7 +176,7 @@ const games = [
     videoTitle:"LEGO Marvel Super Heroes 2 Official Trailer"
 }),
 
-    g(14,"Assassin's Creed Odyssey",[250,250,200,300],"1 Player","1 Player","Action / RPG / Adventure","Action","POPULAR","images/assassins-creed-odyssey.jpg","انطلق في رحلة ملحمية إلى اليونان القديمة، واختر بطلك بين أليكسيوس وكاساندرا، وخض معارك ضد الأعداء والوحوش، واستكشف عالمًا مفتوحًا مليئًا بالأسرار والمهام والقرارات التي تؤثر في مجرى القصة.",{
+    g(14,"Assassin's Creed Odyssey",["غير متاح",550,"غير متاح",700],"1 Player","1 Player","Action / RPG / Adventure","Action","POPULAR","images/assassins-creed-odyssey.jpg","انطلق في رحلة ملحمية إلى اليونان القديمة، واختر بطلك بين أليكسيوس وكاساندرا، وخض معارك ضد الأعداء والوحوش، واستكشف عالمًا مفتوحًا مليئًا بالأسرار والمهام والقرارات التي تؤثر في مجرى القصة.",{
     screenshots:[
         "images/assassins-creed-odyssey-1.jpg","images/assassins-creed-odyssey-2.jpg","images/assassins-creed-odyssey-3.jpg",
         "images/assassins-creed-odyssey-4.jpg","images/assassins-creed-odyssey-5.jpg","images/assassins-creed-odyssey-6.jpg",
@@ -187,7 +187,7 @@ const games = [
     videoTitle:"Assassin's Creed Odyssey Official Trailer"
 }),
 
-   g(44,"Battlefield V",[0,0,0,0],"1 Player","Up to 64 Players","Action / First-Person Shooter","Shooter","POPULAR","images/battlefield-v.jpg","عِش أجواء الحرب العالمية الثانية في تجربة تصويب سينمائية مليئة بالمعارك الضخمة، والمهام الحربية، والاشتباكات الجماعية عبر خرائط متنوعة.",{
+   g(44,"Battlefield V",,"1 Player","Up to 64 Players","Action / First-Person Shooter","Shooter","POPULAR","images/battlefield-v.jpg","عِش أجواء الحرب العالمية الثانية في تجربة تصويب سينمائية مليئة بالمعارك الضخمة، والمهام الحربية، والاشتباكات الجماعية عبر خرائط متنوعة.",{
     screenshots:[
         "images/battlefield-v-1.jpg",
         "images/battlefield-v-2.jpg",
@@ -204,7 +204,7 @@ const games = [
     videoTitle:"Battlefield V Official Trailer"
 }),
 
-    g(45,"Battlefield 4",[0,0,0,0],"1 Player","Up to 64 Players","Action / First-Person Shooter","Shooter","POPULAR","images/battlefield-4.jpg","خُض معارك عسكرية مكثفة في Battlefield 4، واستمتع بقتال تكتيكي وخرائط واسعة ومركبات متنوعة، مع إمكانية تدمير أجزاء من البيئة وتغيير مجريات المعركة.",{
+    g(45,"Battlefield 4",[400,400,400,550],"1 Player","Up to 64 Players","Action / First-Person Shooter","Shooter","POPULAR","images/battlefield-4.jpg","خُض معارك عسكرية مكثفة في Battlefield 4، واستمتع بقتال تكتيكي وخرائط واسعة ومركبات متنوعة، مع إمكانية تدمير أجزاء من البيئة وتغيير مجريات المعركة.",{
     screenshots:[
         "images/battlefield-4-1.jpg",
         "images/battlefield-4-2.jpg",
@@ -221,7 +221,7 @@ const games = [
     videoTitle:"Battlefield 4 Official Trailer"
 }),
 
-   g(52,"Far Cry 5",[0,0,0,0],"1–2 Players","Up to 2 Players","Action / First-Person Shooter / Open World","Action","POPULAR","images/far-cry-5.jpg","انطلق في مغامرة داخل مقاطعة Hope County الأمريكية، حيث تواجه جماعة متطرفة يقودها Joseph Seed. استكشف عالمًا مفتوحًا واسعًا، وحرر المناطق من سيطرة الجماعة، واستخدم مجموعة متنوعة من الأسلحة والمركبات، مع إمكانية خوض القصة مع صديق في طور اللعب التعاوني.",{
+   g(52,"Far Cry 5",[500,500,500,650],"1–2 Players","Up to 2 Players","Action / First-Person Shooter / Open World","Action","POPULAR","images/far-cry-5.jpg","انطلق في مغامرة داخل مقاطعة Hope County الأمريكية، حيث تواجه جماعة متطرفة يقودها Joseph Seed. استكشف عالمًا مفتوحًا واسعًا، وحرر المناطق من سيطرة الجماعة، واستخدم مجموعة متنوعة من الأسلحة والمركبات، مع إمكانية خوض القصة مع صديق في طور اللعب التعاوني.",{
     screenshots:[
         "images/far-cry-5-1.jpg",
         "images/far-cry-5-2.jpg",
@@ -238,7 +238,7 @@ const games = [
     videoTitle:"Far Cry 5 Official Trailer"
 }),
 
-    g(53,"Uncharted Bundle",[0,0,0,0],"1 Player","Up to 10 Players","Action / Adventure / Third-Person Shooter","Action","POPULAR","images/uncharted-bundle.jpg","استمتع بمغامرات Nathan Drake في مجموعة Uncharted Bundle، التي تجمع تجارب من أشهر ألعاب السلسلة، مع استكشاف المواقع الأثرية وحل الألغاز وخوض المعارك ومطاردات مليئة بالإثارة. تختلف الأطوار والمحتويات المتاحة حسب الإصدار الموجود في المجموعة.",{
+    g(53,"Uncharted Bundle",["غير متاح","غير متاح","غير متاح","غير متاح"],"1 Player","Up to 10 Players","Action / Adventure / Third-Person Shooter","Action","POPULAR","images/uncharted-bundle.jpg","استمتع بمغامرات Nathan Drake في مجموعة Uncharted Bundle، التي تجمع تجارب من أشهر ألعاب السلسلة، مع استكشاف المواقع الأثرية وحل الألغاز وخوض المعارك ومطاردات مليئة بالإثارة. تختلف الأطوار والمحتويات المتاحة حسب الإصدار الموجود في المجموعة.",{
     screenshots:[
         "images/uncharted-bundle-1.jpg",
         "images/uncharted-bundle-2.jpg",
@@ -255,7 +255,7 @@ const games = [
     videoTitle:"Uncharted Bundle Official Trailer"
 }),
 
-   g(54,"Resident Evil Village",[0,0,0,0],"1 Player","1 Player","Survival Horror / Action / First-Person","Horror","POPULAR","images/resident-evil-village.jpg","عِش تجربة رعب وبقاء مشوقة مع Ethan Winters في قرية غامضة مليئة بالأعداء والمخاطر. واجه مخلوقات مرعبة، واستكشف أماكن مظلمة، واجمع الموارد والأسلحة، وحاول كشف أسرار القرية والنجاة من التهديدات التي تواجهك.",{
+   g(54,"Resident Evil Village",["غير متاح",550,"غير متاح","غير متاح"],"1 Player","1 Player","Survival Horror / Action / First-Person","Horror","POPULAR","images/resident-evil-village.jpg","عِش تجربة رعب وبقاء مشوقة مع Ethan Winters في قرية غامضة مليئة بالأعداء والمخاطر. واجه مخلوقات مرعبة، واستكشف أماكن مظلمة، واجمع الموارد والأسلحة، وحاول كشف أسرار القرية والنجاة من التهديدات التي تواجهك.",{
     screenshots:[
         "images/resident-evil-village-1.jpg",
         "images/resident-evil-village-2.jpg",
@@ -272,7 +272,7 @@ const games = [
     videoTitle:"Resident Evil Village Official Trailer"
 }),
 
-   g(55,"Marvel's Avengers",[0,0,0,0],"1 Player","Up to 4 Players","Action / Adventure / Superhero","Action","POPULAR","images/marvels-avengers.jpg","انضم إلى أقوى أبطال مارفل في مغامرة مليئة بالإثارة، واستمتع باللعب بشخصيات مثل Iron Man وCaptain America وThor وHulk وBlack Widow وMs. Marvel. استخدم قدرات كل بطل الفريدة، وطوّر مهاراتك ومعداتك، وواجه أعداء خطرين في معارك سينمائية لإنقاذ العالم.",{
+   g(55,"Marvel's Avengers",["غير متاح",500,"غير متاح","غير متاح"],"1 Player","Up to 4 Players","Action / Adventure / Superhero","Action","POPULAR","images/marvels-avengers.jpg","انضم إلى أقوى أبطال مارفل في مغامرة مليئة بالإثارة، واستمتع باللعب بشخصيات مثل Iron Man وCaptain America وThor وHulk وBlack Widow وMs. Marvel. استخدم قدرات كل بطل الفريدة، وطوّر مهاراتك ومعداتك، وواجه أعداء خطرين في معارك سينمائية لإنقاذ العالم.",{
     screenshots:[
         "images/marvels-avengers-1.jpg",
         "images/marvels-avengers-2.jpg",
@@ -289,7 +289,7 @@ const games = [
     videoTitle:"Marvel's Avengers Official Trailer"
 }), 
 
-    g(56,"Batman: Arkham Knight",[0,0,0,0],"1 Player","1 Player","Action / Adventure / Open World","Action","POPULAR","images/batman-arkham-knight.jpg","عُد إلى شوارع Gotham City في مغامرة مظلمة بدور Batman، وواجه Scarecrow وأعداءه في معركة مصيرية لإنقاذ المدينة. استخدم مهارات القتال والتخفي والتحقيق، واستكشف عالمًا مفتوحًا واسعًا، وقُد Batmobile في مطاردات ومعارك مليئة بالإثارة.",{
+    g(56,"Batman: Arkham Knight",[450,"غير متاح",450,600],"1 Player","1 Player","Action / Adventure / Open World","Action","POPULAR","images/batman-arkham-knight.jpg","عُد إلى شوارع Gotham City في مغامرة مظلمة بدور Batman، وواجه Scarecrow وأعداءه في معركة مصيرية لإنقاذ المدينة. استخدم مهارات القتال والتخفي والتحقيق، واستكشف عالمًا مفتوحًا واسعًا، وقُد Batmobile في مطاردات ومعارك مليئة بالإثارة.",{
     screenshots:[
         "images/batman-arkham-knight-1.jpg",
         "images/batman-arkham-knight-2.jpg",
@@ -306,7 +306,7 @@ const games = [
     videoTitle:"Batman: Arkham Knight Official Trailer"
 }),
 
-    g(57,"Carnival Games",[0,0,0,0],"1–4 Players","Local Multiplayer Only","Party / Arcade / Mini-Games","Family","POPULAR","images/carnival-games.jpg","استمتع بأجواء الملاهي مع Carnival Games، التي تضم 20 لعبة مصغرة ممتعة تناسب العائلة والأصدقاء. جرّب رمي الحلقات، وكرة السلة، وسباقات الطائرات الصغيرة، والبولينج الفضائي، وغيرها من التحديات. العب بمفردك أو تنافس مع الأصدقاء على نفس الجهاز، واربح التذاكر لفتح ألعاب وأزياء ومكافآت جديدة.",{
+    g(57,"Carnival Games",[400,400,400,500],"1–4 Players","Local Multiplayer Only","Party / Arcade / Mini-Games","Family","POPULAR","images/carnival-games.jpg","استمتع بأجواء الملاهي مع Carnival Games، التي تضم 20 لعبة مصغرة ممتعة تناسب العائلة والأصدقاء. جرّب رمي الحلقات، وكرة السلة، وسباقات الطائرات الصغيرة، والبولينج الفضائي، وغيرها من التحديات. العب بمفردك أو تنافس مع الأصدقاء على نفس الجهاز، واربح التذاكر لفتح ألعاب وأزياء ومكافآت جديدة.",{
     screenshots:[
         "images/carnival-games-1.jpg",
         "images/carnival-games-2.jpg",
@@ -323,7 +323,7 @@ const games = [
     videoTitle:"Carnival Games Official Trailer"
 }),
 
-    g(58,"Minecraft",[0,0,0,0],"1–4 Players","Up to 8 Players","Sandbox / Survival / Adventure","Adventure","POPULAR","images/minecraft.jpg","عِش مغامرتك في عالم Minecraft المفتوح، وابنِ كل ما تتخيله باستخدام مجموعة ضخمة من البلوكات والموارد. استكشف الكهوف، واجمع الخامات، وصنّع الأدوات والأسلحة، وواجه الوحوش في وضع Survival أو أطلق العنان لإبداعك في وضع Creative. العب بمفردك أو شارك أصدقاءك في البناء والاستكشاف والمغامرات.",{
+    g(58,"Minecraft",["غير متاح","غير متاح","غير متاح","غير متاح"],"1–4 Players","Up to 8 Players","Sandbox / Survival / Adventure","Adventure","POPULAR","images/minecraft.jpg","عِش مغامرتك في عالم Minecraft المفتوح، وابنِ كل ما تتخيله باستخدام مجموعة ضخمة من البلوكات والموارد. استكشف الكهوف، واجمع الخامات، وصنّع الأدوات والأسلحة، وواجه الوحوش في وضع Survival أو أطلق العنان لإبداعك في وضع Creative. العب بمفردك أو شارك أصدقاءك في البناء والاستكشاف والمغامرات.",{
     screenshots:[
         "images/minecraft-1.jpg",
         "images/minecraft-2.jpg",
@@ -340,7 +340,7 @@ const games = [
     videoTitle:"Minecraft Official Trailer"
 }),
 
-    g(59,"Unravel Two",[0,0,0,0],"1–2 Players","Local Co-op Only","Adventure / Puzzle / Platformer","Adventure","POPULAR","images/unravel-two.jpg","انطلق في مغامرة ساحرة مع شخصيتي Yarny المصنوعتين من الخيوط، واستكشف عوالم طبيعية خلابة مليئة بالألغاز والتحديات. استخدم الخيوط للتأرجح والقفز وتسلق العقبات، وتعاون مع صديقك لحل الألغاز والتقدم في القصة. يمكنك اللعب بمفردك أو مع لاعب آخر على نفس الجهاز في تجربة تجمع بين المغامرة والإبداع والصداقة.",{
+    g(59,"Unravel Two",[400,400,400,550],"1–2 Players","Local Co-op Only","Adventure / Puzzle / Platformer","Adventure","POPULAR","images/unravel-two.jpg","انطلق في مغامرة ساحرة مع شخصيتي Yarny المصنوعتين من الخيوط، واستكشف عوالم طبيعية خلابة مليئة بالألغاز والتحديات. استخدم الخيوط للتأرجح والقفز وتسلق العقبات، وتعاون مع صديقك لحل الألغاز والتقدم في القصة. يمكنك اللعب بمفردك أو مع لاعب آخر على نفس الجهاز في تجربة تجمع بين المغامرة والإبداع والصداقة.",{
     screenshots:[
         "images/unravel-two-1.jpg",
         "images/unravel-two-2.jpg",
@@ -357,7 +357,7 @@ const games = [
     videoTitle:"Unravel Two Official Trailer"
 }),
 
-g(60,"Sonic Frontiers",[0,0,0,0],"1 Player","Single Player Only","Action / Adventure / Open-Zone Platformer","Adventure","POPULAR","images/sonic-frontiers.jpg","انطلق مع Sonic في مغامرة سريعة عبر جزر Starfall الغامضة، وابحث عن Chaos Emeralds واكتشف أسرار حضارة قديمة. استكشف عالمًا مفتوحًا واسعًا، وتجاوز التحديات والألغاز، وواجه أعداء آليين وزعماء عملاقين باستخدام قدرات قتالية ومهارات جديدة. عِش تجربة تجمع بين السرعة والاستكشاف والمعارك الملحمية.",{
+g(60,"Sonic Frontiers",["غير متاح",550,"غير متاح","غير متاح"],"1 Player","Single Player Only","Action / Adventure / Open-Zone Platformer","Adventure","POPULAR","images/sonic-frontiers.jpg","انطلق مع Sonic في مغامرة سريعة عبر جزر Starfall الغامضة، وابحث عن Chaos Emeralds واكتشف أسرار حضارة قديمة. استكشف عالمًا مفتوحًا واسعًا، وتجاوز التحديات والألغاز، وواجه أعداء آليين وزعماء عملاقين باستخدام قدرات قتالية ومهارات جديدة. عِش تجربة تجمع بين السرعة والاستكشاف والمعارك الملحمية.",{
     screenshots:[
         "images/sonic-frontiers-1.jpg",
         "images/sonic-frontiers-2.jpg",
@@ -374,7 +374,7 @@ g(60,"Sonic Frontiers",[0,0,0,0],"1 Player","Single Player Only","Action / Adven
     videoTitle:"Sonic Frontiers Official Trailer"
 }),
 
-   g(47,"Need for Speed Heat",[0,0,0,0],"1 Player","Up to 16 Players","Racing / Open World","Racing","POPULAR","images/need-for-speed-heat.jpg","انطلق في شوارع Palm City في سباقات ليلية مليئة بالأدرينالين، ونافس خصومك نهارًا في فعاليات رسمية، واهرب من الشرطة ليلًا مع إمكانية تعديل سياراتك وتطوير أدائها.",{
+   g(47,"Need for Speed Heat",[400,"غير متاح",400,"غير متاح"],"1 Player","Up to 16 Players","Racing / Open World","Racing","POPULAR","images/need-for-speed-heat.jpg","انطلق في شوارع Palm City في سباقات ليلية مليئة بالأدرينالين، ونافس خصومك نهارًا في فعاليات رسمية، واهرب من الشرطة ليلًا مع إمكانية تعديل سياراتك وتطوير أدائها.",{
     screenshots:[
         "images/need-for-speed-heat-1.jpg",
         "images/need-for-speed-heat-2.jpg",
@@ -391,7 +391,7 @@ g(60,"Sonic Frontiers",[0,0,0,0],"1 Player","Single Player Only","Action / Adven
     videoTitle:"Need for Speed Heat Official Trailer"
 }),
 
-   g(48,"Need for Speed Payback",[0,0,0,0],"1 Player","Up to 8 Players","Racing / Open World","Racing","POPULAR","images/need-for-speed-payback.jpg","انطلق في مغامرة مليئة بالسباقات والمطاردات في Fortune Valley، واجمع السيارات وطوّرها، وشارك في تحديات السرعة والقيادة الوعرة والهروب من الشرطة.",{
+   g(48,"Need for Speed Payback",[550,500,550,"غير متاح"],"1 Player","Up to 8 Players","Racing / Open World","Racing","POPULAR","images/need-for-speed-payback.jpg","انطلق في مغامرة مليئة بالسباقات والمطاردات في Fortune Valley، واجمع السيارات وطوّرها، وشارك في تحديات السرعة والقيادة الوعرة والهروب من الشرطة.",{
     screenshots:[
         "images/need-for-speed-payback-1.jpg",
         "images/need-for-speed-payback-2.jpg",
@@ -408,7 +408,7 @@ g(60,"Sonic Frontiers",[0,0,0,0],"1 Player","Single Player Only","Action / Adven
     videoTitle:"Need for Speed Payback Official Trailer"
 }),
 
-   g(28,"Mortal Kombat 1",[350,350,300,400],"1–2 Players","Up to 2 Players","Fighting","Fighting","POPULAR","images/mortal-kombat-1.jpg","عُد إلى عالم Mortal Kombat في تجربة قتال جديدة تضم شخصيات مألوفة بقدرات مختلفة، ونظام Kameo Fighters المميز، ومعارك عنيفة وحركات إنهاء سينمائية.",{
+   g(28,"Mortal Kombat 1",[null,null,700,900],"1–2 Players","Up to 2 Players","Fighting","Fighting","POPULAR","images/mortal-kombat-1.jpg","عُد إلى عالم Mortal Kombat في تجربة قتال جديدة تضم شخصيات مألوفة بقدرات مختلفة، ونظام Kameo Fighters المميز، ومعارك عنيفة وحركات إنهاء سينمائية.",{
     screenshots:[
         "images/mortal-kombat-1-1.jpg","images/mortal-kombat-1-2.jpg","images/mortal-kombat-1-3.jpg",
         "images/mortal-kombat-1-4.jpg","images/mortal-kombat-1-5.jpg","images/mortal-kombat-1-6.jpg",
@@ -419,7 +419,7 @@ g(60,"Sonic Frontiers",[0,0,0,0],"1 Player","Single Player Only","Action / Adven
     videoTitle:"Mortal Kombat 1 Official Trailer"
 }),
 
-   g(29,"Mortal Kombat 11",[300,300,250,350],"1–2 Players","Up to 2 Players","Fighting","Fighting","POPULAR","images/mortal-kombat-11.jpg","تجربة قتال قوية تضم مجموعة كبيرة من الشخصيات الشهيرة، مع نظام قتال متطور وحركات Fatalities وBrutalities ومجموعة متنوعة من أوضاع اللعب.",{
+   g(29,"Mortal Kombat 11",[500,500,500,650],"1–2 Players","Up to 2 Players","Fighting","Fighting","POPULAR","images/mortal-kombat-11.jpg","تجربة قتال قوية تضم مجموعة كبيرة من الشخصيات الشهيرة، مع نظام قتال متطور وحركات Fatalities وBrutalities ومجموعة متنوعة من أوضاع اللعب.",{
     screenshots:[
         "images/mortal-kombat-11-1.jpg","images/mortal-kombat-11-2.jpg","images/mortal-kombat-11-3.jpg",
         "images/mortal-kombat-11-4.jpg","images/mortal-kombat-11-5.jpg","images/mortal-kombat-11-6.jpg",
@@ -430,7 +430,7 @@ g(60,"Sonic Frontiers",[0,0,0,0],"1 Player","Single Player Only","Action / Adven
     videoTitle:"Mortal Kombat 11 Official Trailer"
 }),
 
-   g(49,"Red Dead Redemption 2",[0,0,0,0],"1 Player","Up to 32 Players","Action / Adventure / Open World","Action","POPULAR","images/red-dead-redemption-2.jpg","عِش مغامرة آرثر مورجان وعصابة فان دير ليند في الغرب الأمريكي عام 1899، واستكشف عالمًا مفتوحًا ضخمًا مليئًا بالمهمات والأنشطة والصيد والاشتباكات في قصة سينمائية مميزة.",{
+   g(49,"Red Dead Redemption 2",[600,550,600,850],"1 Player","Up to 32 Players","Action / Adventure / Open World","Action","POPULAR","images/red-dead-redemption-2.jpg","عِش مغامرة آرثر مورجان وعصابة فان دير ليند في الغرب الأمريكي عام 1899، واستكشف عالمًا مفتوحًا ضخمًا مليئًا بالمهمات والأنشطة والصيد والاشتباكات في قصة سينمائية مميزة.",{
     screenshots:[
         "images/red-dead-redemption-2-1.jpg",
         "images/red-dead-redemption-2-2.jpg",
@@ -447,7 +447,7 @@ g(60,"Sonic Frontiers",[0,0,0,0],"1 Player","Single Player Only","Action / Adven
     videoTitle:"Red Dead Redemption 2 Official Trailer"
 }),
 
-   g(50,"Injustice 2",[0,0,0,0],"1–2 Players","Up to 8 Players","Fighting / Action","Fighting","POPULAR","images/injustice-2.jpg","ادخل عالم DC المليء بالمواجهات الملحمية، وتحكم في أبطال وأشرار مثل Batman وSuperman وWonder Woman، واستخدم قدراتهم الخاصة في معارك قتالية حماسية.",{
+   g(50,"Injustice 2",[400,400,400,600],"1–2 Players","Up to 8 Players","Fighting / Action","Fighting","POPULAR","images/injustice-2.jpg","ادخل عالم DC المليء بالمواجهات الملحمية، وتحكم في أبطال وأشرار مثل Batman وSuperman وWonder Woman، واستخدم قدراتهم الخاصة في معارك قتالية حماسية.",{
     screenshots:[
         "images/injustice-2-1.jpg",
         "images/injustice-2-2.jpg",
@@ -464,7 +464,7 @@ g(60,"Sonic Frontiers",[0,0,0,0],"1 Player","Single Player Only","Action / Adven
     videoTitle:"Injustice 2 Official Trailer"
 }),
 
-   g(51,"Crash Team Racing Nitro-Fueled",[0,0,0,0],"1–4 Players","Up to 8 Players","Racing / Kart Racing","Racing","POPULAR","images/crash-team-racing-nitro-fueled.jpg","استعد لسباقات كارت مليئة بالإثارة مع Crash وأصدقائه، واستخدم الأسلحة والتعزيزات لتجاوز المنافسين، وافتح شخصيات وسيارات ومسارات متنوعة في سباقات ممتعة.",{
+   g(51,"Crash Team Racing Nitro-Fueled",[550,500,550,650],"1–4 Players","Up to 8 Players","Racing / Kart Racing","Racing","POPULAR","images/crash-team-racing-nitro-fueled.jpg","استعد لسباقات كارت مليئة بالإثارة مع Crash وأصدقائه، واستخدم الأسلحة والتعزيزات لتجاوز المنافسين، وافتح شخصيات وسيارات ومسارات متنوعة في سباقات ممتعة.",{
     screenshots:[
         "images/crash-team-racing-nitro-fueled-1.jpg",
         "images/crash-team-racing-nitro-fueled-2.jpg",
@@ -481,7 +481,7 @@ g(60,"Sonic Frontiers",[0,0,0,0],"1 Player","Single Player Only","Action / Adven
     videoTitle:"Crash Team Racing Nitro-Fueled Official Trailer"
 }),
 
-   g(46,"PES 2020",[0,0,0,0],"1–4 Players","Up to 22 Players","Sports / Football","Sports","POPULAR","images/pes-2020.jpg","استمتع بكرة القدم مع eFootball PES 2020، وتحكم واقعي في الكرة واللاعبين، وحركات ومهارات مميزة، ومباريات تنافسية تتيح لك بناء فريقك المفضل ومواجهة أصدقائك.",{
+   g(46,"PES 2020",[800,750,800,950],"1–4 Players","Up to 22 Players","Sports / Football","Sports","POPULAR","images/pes-2020.jpg","استمتع بكرة القدم مع eFootball PES 2020، وتحكم واقعي في الكرة واللاعبين، وحركات ومهارات مميزة، ومباريات تنافسية تتيح لك بناء فريقك المفضل ومواجهة أصدقائك.",{
     screenshots:[
         "images/pes-2020-1.jpg",
         "images/pes-2020-2.jpg",
@@ -498,7 +498,7 @@ g(60,"Sonic Frontiers",[0,0,0,0],"1 Player","Single Player Only","Action / Adven
     videoTitle:"eFootball PES 2020 Official Trailer"
 }),
 
-    g(34,"Ghost of Tsushima",[250,250,200,300],"1 Player","Up to 4 Players","Action / Adventure","Action","POPULAR","images/ghost-of-tsushima.jpg","قاتل ساموراي يقاتل لتحرير جزيرة تسوشيما من الغزو المغولي، في عالم مفتوح مليء بالمعارك والاستكشاف والتخفي.",{
+    g(34,"Ghost of Tsushima",[650,500,650,850],"1 Player","Up to 4 Players","Action / Adventure","Action","POPULAR","images/ghost-of-tsushima.jpg","قاتل ساموراي يقاتل لتحرير جزيرة تسوشيما من الغزو المغولي، في عالم مفتوح مليء بالمعارك والاستكشاف والتخفي.",{
     screenshots:[
         "images/ghost-of-tsushima-gameplay-1.jpg","images/ghost-of-tsushima-gameplay-2.jpg","images/ghost-of-tsushima-gameplay-3.jpg",
         "images/ghost-of-tsushima-gameplay-4.jpg","images/ghost-of-tsushima-gameplay-5.jpg","images/ghost-of-tsushima-gameplay-6.jpg",
@@ -509,7 +509,7 @@ g(60,"Sonic Frontiers",[0,0,0,0],"1 Player","Single Player Only","Action / Adven
     videoTitle:"Ghost of Tsushima Official Trailer"
 }), 
 
-   g(42,"Need for Speed Unbound",[0,0,0,0],"1 Player","Up to 16 Players","Racing / Open World","Racing","POPULAR","images/need-for-speed-unbound.jpg","انطلق في شوارع Lakeshore في سباقات مليئة بالإثارة، وعدّل سيارتك بأسلوبك الخاص، وتحدى المنافسين في عالم مفتوح يجمع بين السرعة والمطاردات والمهارة.",{
+   g(42,"Need for Speed Unbound",[null,null,650,850],"1 Player","Up to 16 Players","Racing / Open World","Racing","POPULAR","images/need-for-speed-unbound.jpg","انطلق في شوارع Lakeshore في سباقات مليئة بالإثارة، وعدّل سيارتك بأسلوبك الخاص، وتحدى المنافسين في عالم مفتوح يجمع بين السرعة والمطاردات والمهارة.",{
     screenshots:[
         "images/need-for-speed-unbound-1.jpg",
         "images/need-for-speed-unbound-2.jpg",
@@ -526,7 +526,7 @@ g(60,"Sonic Frontiers",[0,0,0,0],"1 Player","Single Player Only","Action / Adven
     videoTitle:"Need for Speed Unbound Official Trailer"
 }),
 
-   g(41,"WWE 2K26",[0,0,0,0],"1–4 Players","Up to 8 Players","Sports / Wrestling","Sports","POPULAR","images/wwe-2k26.jpg","عِش أجواء المصارعة مع WWE 2K26، وشارك في مواجهات حماسية مع أشهر نجوم WWE، واستمتع بأنواع مباريات متعددة وأوضاع لعب مختلفة.",{
+   g(41,"WWE 2K26",[null,null,1600,1900],"1–4 Players","Up to 8 Players","Sports / Wrestling","Sports","POPULAR","images/wwe-2k26.jpg","عِش أجواء المصارعة مع WWE 2K26، وشارك في مواجهات حماسية مع أشهر نجوم WWE، واستمتع بأنواع مباريات متعددة وأوضاع لعب مختلفة.",{
     screenshots:[
         "images/wwe-2k26-1.jpg",
         "images/wwe-2k26-2.jpg",
@@ -543,7 +543,7 @@ g(60,"Sonic Frontiers",[0,0,0,0],"1 Player","Single Player Only","Action / Adven
     videoTitle:"WWE 2K26 Official Trailer"
 }),
 
-   g(40,"Forza Horizon 5",[0,0,0,0],"1 Player","Up to 12 Players","Racing / Open World","Racing","POPULAR","images/forza-horizon-5.jpg","عِش تجربة سباقات مفتوحة في المكسيك مع Forza Horizon 5، واستكشف عالمًا واسعًا مليئًا بالطرق والمناظر الطبيعية والسيارات المتنوعة والفعاليات الممتعة.",{
+   g(40,"Forza Horizon 5",[null,null,1400,1700],"1 Player","Up to 12 Players","Racing / Open World","Racing","POPULAR","images/forza-horizon-5.jpg","عِش تجربة سباقات مفتوحة في المكسيك مع Forza Horizon 5، واستكشف عالمًا واسعًا مليئًا بالطرق والمناظر الطبيعية والسيارات المتنوعة والفعاليات الممتعة.",{
     screenshots:[
         "images/forza-horizon-5-1.jpg",
         "images/forza-horizon-5-2.jpg",
@@ -560,7 +560,7 @@ g(60,"Sonic Frontiers",[0,0,0,0],"1 Player","Single Player Only","Action / Adven
     videoTitle:"Forza Horizon 5 Official Trailer"
 }),
 
-    g(38,"FC 27 Standard",[1450,1450,700,2400],"1–4 Players","Up to 99 Players","Sports / Football","Sports","NEW","images/fc-27-standard.jpg","أحدث إصدار من سلسلة EA SPORTS FC، يقدم مباريات كرة قدم وأوضاعًا متعددة مع خيارات لعب محلية وعبر الإنترنت وتجربة تنافسية واسعة.",{
+    g(38,"FC 27 Standard",[1450,700,1450,2400],"1–4 Players","Up to 99 Players","Sports / Football","Sports","NEW","images/fc-27-standard.jpg","أحدث إصدار من سلسلة EA SPORTS FC، يقدم مباريات كرة قدم وأوضاعًا متعددة مع خيارات لعب محلية وعبر الإنترنت وتجربة تنافسية واسعة.",{
         screenshots:[
             "images/fc-27-1.jpg","images/fc-27-2.jpg","images/fc-27-3.jpg",
             "images/fc-27-4.jpg","images/fc-27-5.jpg","images/fc-27-6.jpg",
@@ -571,7 +571,7 @@ g(60,"Sonic Frontiers",[0,0,0,0],"1 Player","Single Player Only","Action / Adven
         videoTitle:"FC 27 Trailer"
     }),
 
-    g(39,"GTA VI Standard",["لا تدعم",null,null,2500],"1 Player","غير متاح حاليًا","Action / Open World","Action","NEW","images/gta-vi.jpg","تعود Grand Theft Auto إلى ولاية Leonida وVice City في قصة جديدة تتابع Jason وLucia. النسخة الحالية معلنة كتجربة فردية، ولم يتم الإعلان رسميًا عن نمط GTA VI Online حتى الآن.",{
+    g(39,"GTA VI Standard",[null,null,2000,2500],"1 Player","غير متاح حاليًا","Action / Open World","Action","NEW","images/gta-vi.jpg","تعود Grand Theft Auto إلى ولاية Leonida وVice City في قصة جديدة تتابع Jason وLucia. النسخة الحالية معلنة كتجربة فردية، ولم يتم الإعلان رسميًا عن نمط GTA VI Online حتى الآن.",{
         screenshots:[
             "images/gta-vi-1.jpg","images/gta-vi-2.jpg","images/gta-vi-3.jpg",
             "images/gta-vi-4.jpg","images/gta-vi-5.jpg","images/gta-vi-6.jpg",
