@@ -506,11 +506,12 @@ button {
     text-align: center;
 }
 
+
 /* ==================== PRICES ==================== */
 .prices-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 13px;
+    gap: 15px;
     margin: 25px 0 45px;
 }
 
@@ -518,23 +519,48 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 12px;
-    padding: 16px;
-    border: 1px solid #ffd70030;
-    border-radius: 12px;
+    padding: 18px;
+    border: 1px solid #ffd70040;
+    border-radius: 14px;
     background: linear-gradient(135deg, #ffd70012, #8b5cf60d);
 }
 
 .price-item span {
     color: #cbd5e1;
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.8;
 }
 
 .price-item strong {
+    display: inline-block;
     color: var(--gold);
-    font-family: Orbitron, sans-serif;
-    font-size: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    word-spacing: 3px;
+    white-space: normal;
+    overflow-wrap: anywhere;
 }
+
+/* تحسين وضوح الأسعار في الوضع الفاتح */
+body.light-mode .price-item {
+    background: linear-gradient(135deg, #ffd70020, #8b5cf610);
+    border-color: #d4a90055;
+}
+
+body.light-mode .price-item span {
+    color: #475569;
+}
+
+body.light-mode .price-item strong {
+    color: #9a6700;
+}
+
+/* ==================== VIDEO & GAMEPLAY ==================== */
 
 /* ==================== VIDEO & GAMEPLAY ==================== */
 .game-video-section,
