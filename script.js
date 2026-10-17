@@ -159,7 +159,22 @@ const games = [
     videoTitle:"Call of Duty: Black Ops III Official Trailer"
 }),
 
-    g(13,"LEGO",[null,null,null,null],"غير محدد","غير محدد","Adventure / LEGO","Adventure","FEATURED","images/lego.jpg","ألعاب LEGO تجمع بين المغامرة والألغاز والكوميديا وشخصيات LEGO القابلة للعب. اسم اللعبة في قائمة الأسعار مكتوب LEGO فقط، لذلك أحتاج اسم إصدار LEGO بالضبط لتأكيد عدد اللاعبين."),
+    g(61,"LEGO Marvel Super Heroes 2",[0,0,0,0],"1–4 Players","لا تدعم","Action / Adventure / Superhero","Action","POPULAR","images/lego-marvel-super-heroes-2.jpg","انطلق في مغامرة كونية مع أبطال وأشرار Marvel، وواجه Kang the Conqueror في عالم Chronopolis الذي يجمع أماكن من عصور مختلفة. العب بشخصيات شهيرة مثل Spider-Man وIron Man وThor وHulk وBlack Panther، واستكشف عوالم متنوعة، واستخدم القدرات الخاصة لكل شخصية لحل الألغاز وخوض المعارك. استمتع بقصة مليئة بالفكاهة والمغامرات، مع إمكانية اللعب التعاوني مع الأصدقاء على نفس الجهاز.",{
+    screenshots:[
+        "images/lego-marvel-super-heroes-2-1.jpg",
+        "images/lego-marvel-super-heroes-2-2.jpg",
+        "images/lego-marvel-super-heroes-2-3.jpg",
+        "images/lego-marvel-super-heroes-2-4.jpg",
+        "images/lego-marvel-super-heroes-2-5.jpg",
+        "images/lego-marvel-super-heroes-2-6.jpg",
+        "images/lego-marvel-super-heroes-2-7.jpg",
+        "images/lego-marvel-super-heroes-2-8.jpg",
+        "images/lego-marvel-super-heroes-2-9.jpg",
+        "images/lego-marvel-super-heroes-2-10.jpg"
+    ],
+    video:"videos/lego-marvel-super-heroes-2.mp4",
+    videoTitle:"LEGO Marvel Super Heroes 2 Official Trailer"
+}),
 
     g(14,"Assassin's Creed Odyssey",[250,250,200,300],"1 Player","1 Player","Action / RPG / Adventure","Action","POPULAR","images/assassins-creed-odyssey.jpg","انطلق في رحلة ملحمية إلى اليونان القديمة، واختر بطلك بين أليكسيوس وكاساندرا، وخض معارك ضد الأعداء والوحوش، واستكشف عالمًا مفتوحًا مليئًا بالأسرار والمهام والقرارات التي تؤثر في مجرى القصة.",{
     screenshots:[
