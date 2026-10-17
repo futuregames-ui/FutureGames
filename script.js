@@ -503,7 +503,7 @@ g(60,"Sonic Frontiers",["غير متاح",550,"غير متاح","غير متاح
     videoTitle:"Ghost of Tsushima Official Trailer"
 }), 
 
-   g(42,"Need for Speed Unbound",[null,null,650,850],"1 Player","Up to 16 Players","Racing / Open World","Racing","POPULAR","images/need-for-speed-unbound.jpg","انطلق في شوارع Lakeshore في سباقات مليئة بالإثارة، وعدّل سيارتك بأسلوبك الخاص، وتحدى المنافسين في عالم مفتوح يجمع بين السرعة والمطاردات والمهارة.",{
+   g(42,"Need for Speed Unbound",[null,650,null,850],"1 Player","Up to 16 Players","Racing / Open World","Racing","POPULAR","images/need-for-speed-unbound.jpg","انطلق في شوارع Lakeshore في سباقات مليئة بالإثارة، وعدّل سيارتك بأسلوبك الخاص، وتحدى المنافسين في عالم مفتوح يجمع بين السرعة والمطاردات والمهارة.",{
     screenshots:[
         "images/need-for-speed-unbound-1.jpg",
         "images/need-for-speed-unbound-2.jpg",
@@ -520,7 +520,7 @@ g(60,"Sonic Frontiers",["غير متاح",550,"غير متاح","غير متاح
     videoTitle:"Need for Speed Unbound Official Trailer"
 }),
 
-   g(41,"WWE 2K26",[null,null,1600,1900],"1–4 Players","Up to 8 Players","Sports / Wrestling","Sports","POPULAR","images/wwe-2k26.jpg","عِش أجواء المصارعة مع WWE 2K26، وشارك في مواجهات حماسية مع أشهر نجوم WWE، واستمتع بأنواع مباريات متعددة وأوضاع لعب مختلفة.",{
+   g(41,"WWE 2K26",[null,1600,null,1900],"1–4 Players","Up to 8 Players","Sports / Wrestling","Sports","POPULAR","images/wwe-2k26.jpg","عِش أجواء المصارعة مع WWE 2K26، وشارك في مواجهات حماسية مع أشهر نجوم WWE، واستمتع بأنواع مباريات متعددة وأوضاع لعب مختلفة.",{
     screenshots:[
         "images/wwe-2k26-1.jpg",
         "images/wwe-2k26-2.jpg",
@@ -537,7 +537,7 @@ g(60,"Sonic Frontiers",["غير متاح",550,"غير متاح","غير متاح
     videoTitle:"WWE 2K26 Official Trailer"
 }),
 
-   g(40,"Forza Horizon 5",[null,null,1400,1700],"1 Player","Up to 12 Players","Racing / Open World","Racing","POPULAR","images/forza-horizon-5.jpg","عِش تجربة سباقات مفتوحة في المكسيك مع Forza Horizon 5، واستكشف عالمًا واسعًا مليئًا بالطرق والمناظر الطبيعية والسيارات المتنوعة والفعاليات الممتعة.",{
+   g(40,"Forza Horizon 5",[null,1400,null,1700],"1 Player","Up to 12 Players","Racing / Open World","Racing","POPULAR","images/forza-horizon-5.jpg","عِش تجربة سباقات مفتوحة في المكسيك مع Forza Horizon 5، واستكشف عالمًا واسعًا مليئًا بالطرق والمناظر الطبيعية والسيارات المتنوعة والفعاليات الممتعة.",{
     screenshots:[
         "images/forza-horizon-5-1.jpg",
         "images/forza-horizon-5-2.jpg",
@@ -565,7 +565,7 @@ g(60,"Sonic Frontiers",["غير متاح",550,"غير متاح","غير متاح
         videoTitle:"FC 27 Trailer"
     }),
 
-    g(39,"GTA VI Standard",[null,null,2000,2500],"1 Player","غير متاح حاليًا","Action / Open World","Action","NEW","images/gta-vi.jpg","تعود Grand Theft Auto إلى ولاية Leonida وVice City في قصة جديدة تتابع Jason وLucia. النسخة الحالية معلنة كتجربة فردية، ولم يتم الإعلان رسميًا عن نمط GTA VI Online حتى الآن.",{
+    g(39,"GTA VI Standard",[null,2000,null,2500],"1 Player","غير متاح حاليًا","Action / Open World","Action","NEW","images/gta-vi.jpg","تعود Grand Theft Auto إلى ولاية Leonida وVice City في قصة جديدة تتابع Jason وLucia. النسخة الحالية معلنة كتجربة فردية، ولم يتم الإعلان رسميًا عن نمط GTA VI Online حتى الآن.",{
         screenshots:[
             "images/gta-vi-1.jpg","images/gta-vi-2.jpg","images/gta-vi-3.jpg",
             "images/gta-vi-4.jpg","images/gta-vi-5.jpg","images/gta-vi-6.jpg",
