@@ -20,7 +20,7 @@ const games = [
         videoTitle:"EA SPORTS FC 26 Trailer"
     }),
 
-    g(2,"Ghost of Yōtei",[null,1500,null,1800],"1 Player","Up to 4 Players","Action / Samurai / Open World","Action","NEW","images/ghost-of-yotei.jpg","مغامرة ساموراي تدور في شمال اليابان خلال القرن السابع عشر، حيث تخوض Atsu رحلة انتقام عبر مناظر طبيعية واسعة ومعارك بالسيف. وتتوفر أيضًا Ghost of Yōtei Legends كتجربة تعاونية عبر الإنترنت.",{
+    g(2,"Ghost of Yōtei",[null,1900,null,"غير متاح"],"1 Player","Up to 4 Players","Action / Samurai / Open World","Action","NEW","images/ghost-of-yotei.jpg","مغامرة ساموراي تدور في شمال اليابان خلال القرن السابع عشر، حيث تخوض Atsu رحلة انتقام عبر مناظر طبيعية واسعة ومعارك بالسيف. وتتوفر أيضًا Ghost of Yōtei Legends كتجربة تعاونية عبر الإنترنت.",{
         screenshots:[
             "images/ghost-of-yotei-1.jpg","images/ghost-of-yotei-2.jpg",
             "images/ghost-of-yotei-3.jpg","images/ghost-of-yotei-4.jpg",
@@ -32,7 +32,7 @@ const games = [
         videoTitle:"Ghost of Yōtei Trailer"
     }),
 
-    g(3,"Assassin's Creed Shadows",["لا تدعم",null,null,1900],"1 Player","غير متاح","Action / Stealth / Open World","Action","NEW","images/assassin-s-creed-shadows.jpg","تدور أحداث اللعبة في اليابان الإقطاعية، وتتيح لك التبديل بين Naoe وYasuke، مع التخفي والاستكشاف والقتال وبناء أسلوبك الخاص في مواجهة أعداء متنوعين.",{
+    g(3,"Assassin's Creed Shadows",[null,1600,null,1900],"1 Player","غير متاح","Action / Stealth / Open World","Action","NEW","images/assassin-s-creed-shadows.jpg","تدور أحداث اللعبة في اليابان الإقطاعية، وتتيح لك التبديل بين Naoe وYasuke، مع التخفي والاستكشاف والقتال وبناء أسلوبك الخاص في مواجهة أعداء متنوعين.",{
         screenshots:[
             "images/assassin-s-creed-shadows-1.jpg","images/assassin-s-creed-shadows-2.jpg",
             "images/assassin-s-creed-shadows-3.jpg","images/assassin-s-creed-shadows-4.jpg",
@@ -44,7 +44,7 @@ const games = [
         videoTitle:"Assassin's Creed Shadows Trailer"
     }),
 
-    g(4,"Split Fiction",[1600,1600,null,1900],"1–2 Players","2 Players","Action / Adventure / Co-op","Adventure","FEATURED","images/split-fiction.jpg","مغامرة تعاونية مصممة لشخصين، تنتقل فيها Mio وZoe بين عوالم الخيال العلمي والفانتازيا، وتعتمد مراحلها على التعاون والتنسيق بين اللاعبين.",{
+    g(4,"Split Fiction",[null,1600,null,1900],"1–2 Players","2 Players","Action / Adventure / Co-op","Adventure","FEATURED","images/split-fiction.jpg","مغامرة تعاونية مصممة لشخصين، تنتقل فيها Mio وZoe بين عوالم الخيال العلمي والفانتازيا، وتعتمد مراحلها على التعاون والتنسيق بين اللاعبين.",{
         screenshots:[
             "images/split-fiction-1.jpg","images/split-fiction-2.jpg",
             "images/split-fiction-3.jpg","images/split-fiction-4.jpg",
@@ -56,7 +56,7 @@ const games = [
         videoTitle:"Split Fiction Trailer"
     }),
 
-           g(5,"God of War Ragnarök",[350,350,300,400],"1 Player","1 Player","Action / Adventure","Action","POPULAR","images/god-of-war-ragnarok.jpg","انطلق مع Kratos وAtreus في مغامرة ملحمية عبر العوالم الإسكندنافية، وواجه أعداءً أقوياء في رحلة مليئة بالقتال والاستكشاف.",{
+           g(5,"God of War Ragnarök",[null,"غير متاح",null,"غير متاح"],"1 Player","1 Player","Action / Adventure","Action","POPULAR","images/god-of-war-ragnarok.jpg","انطلق مع Kratos وAtreus في مغامرة ملحمية عبر العوالم الإسكندنافية، وواجه أعداءً أقوياء في رحلة مليئة بالقتال والاستكشاف.",{
         screenshots:[
             "images/god-of-war-ragnarok-1.jpg",
             "images/god-of-war-ragnarok-2.jpg",
@@ -73,7 +73,7 @@ const games = [
         videoTitle:"God of War Ragnarök Official Trailer"
     }),
 
-    g(6,"Spider-Man 2 (Arabic)",["لا تدعم",null,null,1600],"1 Player","غير متاح","Action / Superhero / Open World","Action","POPULAR","images/spider-man-2-arabic.jpg","تجمع اللعبة بين Peter Parker وMiles Morales في مغامرة واحدة داخل نيويورك، مع تنقل سريع بالويب، وقدرات جديدة، ومعارك ضد أعداء مثل Venom وKraven.",{
+    g(6,"Spider-Man 2 (Arabic)",[null,1250,null,1600],"1 Player","غير متاح","Action / Superhero / Open World","Action","POPULAR","images/spider-man-2-arabic.jpg","تجمع اللعبة بين Peter Parker وMiles Morales في مغامرة واحدة داخل نيويورك، مع تنقل سريع بالويب، وقدرات جديدة، ومعارك ضد أعداء مثل Venom وKraven.",{
         screenshots:[
             "images/spider-man-2-arabic-1.jpg","images/spider-man-2-arabic-2.jpg",
             "images/spider-man-2-arabic-3.jpg","images/spider-man-2-arabic-4.jpg",
@@ -85,7 +85,7 @@ const games = [
         videoTitle:"Marvel's Spider-Man 2 Trailer"
     }),
 
-   g(7,"Spider-Man: Miles Morales",[300,300,250,350],"1 Player","1 Player","Action / Adventure","Action","POPULAR","images/spider-man-miles-morales.jpg","انطلق في مغامرة مع مايلز موراليس وهو يتعلم إتقان قواه الجديدة ويواجه تحديات خطيرة لحماية مدينة نيويورك، مع قتال سريع وحركة مذهلة باستخدام خيوط العنكبوت.",{
+   g(7,"Spider-Man: Miles Morales",[650,600,650,800],"1 Player","1 Player","Action / Adventure","Action","POPULAR","images/spider-man-miles-morales.jpg","انطلق في مغامرة مع مايلز موراليس وهو يتعلم إتقان قواه الجديدة ويواجه تحديات خطيرة لحماية مدينة نيويورك، مع قتال سريع وحركة مذهلة باستخدام خيوط العنكبوت.",{
     screenshots:[
         "images/spider-man-miles-morales-1.jpg","images/spider-man-miles-morales-2.jpg","images/spider-man-miles-morales-3.jpg",
         "images/spider-man-miles-morales-4.jpg","images/spider-man-miles-morales-5.jpg","images/spider-man-miles-morales-6.jpg",
@@ -96,7 +96,7 @@ const games = [
     videoTitle:"Marvel's Spider-Man: Miles Morales Official Trailer"
 }),
 
-    g(8,"TEKKEN 8",["لا تدعم",null,null,null],"1–2 Players","Up to 16 Players","Fighting","Fighting","POPULAR","images/tekken-8.jpg","لعبة قتال تنافسية تركز على مواجهة شخصيات السلسلة الشهيرة، مع نظام قتال سريع ورسوم سينمائية ومجموعة كبيرة من الحركات والقدرات.",{
+    g(8,"TEKKEN 8",[null,1100,null,"غير متاح"],"1–2 Players","Up to 16 Players","Fighting","Fighting","POPULAR","images/tekken-8.jpg","لعبة قتال تنافسية تركز على مواجهة شخصيات السلسلة الشهيرة، مع نظام قتال سريع ورسوم سينمائية ومجموعة كبيرة من الحركات والقدرات.",{
         screenshots:[
             "images/tekken-8-1.jpg","images/tekken-8-2.jpg","images/tekken-8-3.jpg",
             "images/tekken-8-4.jpg","images/tekken-8-5.jpg","images/tekken-8-6.jpg",
@@ -107,7 +107,7 @@ const games = [
         videoTitle:"TEKKEN 8 Trailer"
     }),
 
-    g(9,"GTA V",[650,650,500,800],"1 Player","Up to 30 Players","Action / Open World","Action","POPULAR","images/gta-v.jpg","تدور أحداث Grand Theft Auto V في Los Santos، حيث تتقاطع قصص ثلاثة أبطال في عالم مفتوح مليء بالسرقات والمطاردات والمهمات. ويمكن الانتقال إلى GTA Online للعب مع لاعبين آخرين.",{
+    g(9,"GTA V",[650,500,650,800],"1 Player","Up to 30 Players","Action / Open World","Action","POPULAR","images/gta-v.jpg","تدور أحداث Grand Theft Auto V في Los Santos، حيث تتقاطع قصص ثلاثة أبطال في عالم مفتوح مليء بالسرقات والمطاردات والمهمات. ويمكن الانتقال إلى GTA Online للعب مع لاعبين آخرين.",{
         screenshots:[
             "images/gta-v-1.jpg","images/gta-v-2.jpg","images/gta-v-3.jpg",
             "images/gta-v-4.jpg","images/gta-v-5.jpg","images/gta-v-6.jpg",
@@ -118,7 +118,7 @@ const games = [
         videoTitle:"Grand Theft Auto V Trailer"
     }),
 
-    g(10,"It Takes Two",[600,600,500,800],"1–2 Players","2 Players","Adventure / Co-op / Platform","Adventure","FEATURED","images/it-takes-two.jpg","مغامرة تعاونية مصممة بالكامل تقريبًا للعب مع شخص آخر، حيث يتحول Cody وMay إلى دمى ويخوضان رحلة مليئة بالألغاز والتحديات التي تتطلب التعاون.",{
+    g(10,"It Takes Two",[600,500,600,800],"1–2 Players","2 Players","Adventure / Co-op / Platform","Adventure","FEATURED","images/it-takes-two.jpg","مغامرة تعاونية مصممة بالكامل تقريبًا للعب مع شخص آخر، حيث يتحول Cody وMay إلى دمى ويخوضان رحلة مليئة بالألغاز والتحديات التي تتطلب التعاون.",{
         screenshots:[
             "images/it-takes-two-1.jpg","images/it-takes-two-2.jpg",
             "images/it-takes-two-3.jpg","images/it-takes-two-4.jpg",
