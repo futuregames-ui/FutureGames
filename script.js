@@ -297,7 +297,22 @@ const games = [
     videoTitle:"Red Dead Redemption 2 Official Trailer"
 }),
 
-    g(31,"Injustice 2",[400,400,400,600],"1–2 Players","Up to 8 Players","Fighting / Superhero","Fighting","POPULAR","images/injustice-2.jpg","تجمع شخصيات DC في معارك قتالية قوية، مع نظام Gear يسمح بتطوير وتخصيص المقاتلين وقصة تدور حول Batman وSuperman وتهديد جديد."),
+   g(50,"Injustice 2",[0,0,0,0],"1–2 Players","Up to 8 Players","Fighting / Action","Fighting","POPULAR","images/injustice-2.jpg","ادخل عالم DC المليء بالمواجهات الملحمية، وتحكم في أبطال وأشرار مثل Batman وSuperman وWonder Woman، واستخدم قدراتهم الخاصة في معارك قتالية حماسية.",{
+    screenshots:[
+        "images/injustice-2-1.jpg",
+        "images/injustice-2-2.jpg",
+        "images/injustice-2-3.jpg",
+        "images/injustice-2-4.jpg",
+        "images/injustice-2-5.jpg",
+        "images/injustice-2-6.jpg",
+        "images/injustice-2-7.jpg",
+        "images/injustice-2-8.jpg",
+        "images/injustice-2-9.jpg",
+        "images/injustice-2-10.jpg"
+    ],
+    video:"videos/injustice-2.mp4",
+    videoTitle:"Injustice 2 Official Trailer"
+}),
 
     g(32,"Crash Team Racing Nitro-Fueled",[550,550,500,650],"1–4 Players","Up to 8 Players","Racing / Kart","Racing","FEATURED","images/crash-team-racing-nitro-fueled.jpg","نسخة محسنة من تجربة Crash Team Racing الكلاسيكية، مع سباقات كارت سريعة ومضامير مليئة بالعوائق والأسلحة والمنافسة."),
 
