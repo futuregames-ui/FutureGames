@@ -240,7 +240,22 @@ const games = [
     videoTitle:"Uncharted Bundle Official Trailer"
 }),
 
-    g(19,"Resident Evil Village",[null,null,550,null],"1 Player","غير متاح","Survival Horror / Action","Action","FEATURED","images/resident-evil-village.jpg","يعود Ethan Winters في رحلة مرعبة إلى قرية غامضة بحثًا عن ابنته، وسط أعداء مرعبين وألغاز واستكشاف وأجواء رعب وبقاء مكثفة."),
+   g(54,"Resident Evil Village",[0,0,0,0],"1 Player","1 Player","Survival Horror / Action / First-Person","Horror","POPULAR","images/resident-evil-village.jpg","عِش تجربة رعب وبقاء مشوقة مع Ethan Winters في قرية غامضة مليئة بالأعداء والمخاطر. واجه مخلوقات مرعبة، واستكشف أماكن مظلمة، واجمع الموارد والأسلحة، وحاول كشف أسرار القرية والنجاة من التهديدات التي تواجهك.",{
+    screenshots:[
+        "images/resident-evil-village-1.jpg",
+        "images/resident-evil-village-2.jpg",
+        "images/resident-evil-village-3.jpg",
+        "images/resident-evil-village-4.jpg",
+        "images/resident-evil-village-5.jpg",
+        "images/resident-evil-village-6.jpg",
+        "images/resident-evil-village-7.jpg",
+        "images/resident-evil-village-8.jpg",
+        "images/resident-evil-village-9.jpg",
+        "images/resident-evil-village-10.jpg"
+    ],
+    video:"videos/resident-evil-village.mp4",
+    videoTitle:"Resident Evil Village Official Trailer"
+}),
 
     g(20,"Marvel's Avengers",[null,null,500,null],"1 Player","Up to 4 Players","Action / Superhero / Co-op","Action","FEATURED","images/marvel-s-avengers.jpg","مغامرة أكشن تجمع أبطال Marvel في قصة أصلية، ثم تتيح مهامًا تعاونية يمكن فيها اختيار أبطال مختلفين وتطوير قدراتهم ومعداتهم."),
 
