@@ -280,7 +280,22 @@ const games = [
     videoTitle:"Mortal Kombat 11 Official Trailer"
 }),
 
-    g(30,"Red Dead Redemption 2",[600,600,550,850],"1 Player","Up to 32 Players","Action / Open World / Western","Action","POPULAR","images/red-dead-redemption-2.jpg","رحلة Arthur Morgan وعصابة Van der Linde في الغرب الأمريكي، مع عالم مفتوح ضخم وقصة مليئة بالشخصيات والمهام والاستكشاف، إضافة إلى Red Dead Online."),
+   g(49,"Red Dead Redemption 2",[0,0,0,0],"1 Player","Up to 32 Players","Action / Adventure / Open World","Action","POPULAR","images/red-dead-redemption-2.jpg","عِش مغامرة آرثر مورجان وعصابة فان دير ليند في الغرب الأمريكي عام 1899، واستكشف عالمًا مفتوحًا ضخمًا مليئًا بالمهمات والأنشطة والصيد والاشتباكات في قصة سينمائية مميزة.",{
+    screenshots:[
+        "images/red-dead-redemption-2-1.jpg",
+        "images/red-dead-redemption-2-2.jpg",
+        "images/red-dead-redemption-2-3.jpg",
+        "images/red-dead-redemption-2-4.jpg",
+        "images/red-dead-redemption-2-5.jpg",
+        "images/red-dead-redemption-2-6.jpg",
+        "images/red-dead-redemption-2-7.jpg",
+        "images/red-dead-redemption-2-8.jpg",
+        "images/red-dead-redemption-2-9.jpg",
+        "images/red-dead-redemption-2-10.jpg"
+    ],
+    video:"videos/red-dead-redemption-2.mp4",
+    videoTitle:"Red Dead Redemption 2 Official Trailer"
+}),
 
     g(31,"Injustice 2",[400,400,400,600],"1–2 Players","Up to 8 Players","Fighting / Superhero","Fighting","POPULAR","images/injustice-2.jpg","تجمع شخصيات DC في معارك قتالية قوية، مع نظام Gear يسمح بتطوير وتخصيص المقاتلين وقصة تدور حول Batman وSuperman وتهديد جديد."),
 
