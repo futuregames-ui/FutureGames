@@ -189,7 +189,22 @@ const games = [
     videoTitle:"Battlefield V Official Trailer"
 }),
 
-    g(16,"Battlefield 4",[400,400,400,550],"1–2 Players","Up to 24 Players","Shooter / Military","Action","POPULAR","images/battlefield-4.jpg","لعبة تصويب عسكرية تجمع بين حملة فردية ومعارك Multiplayer واسعة، وتشتهر بالخرائط الديناميكية والمركبات والبيئات القابلة للتدمير."),
+    g(45,"Battlefield 4",[0,0,0,0],"1 Player","Up to 64 Players","Action / First-Person Shooter","Shooter","POPULAR","images/battlefield-4.jpg","خُض معارك عسكرية مكثفة في Battlefield 4، واستمتع بقتال تكتيكي وخرائط واسعة ومركبات متنوعة، مع إمكانية تدمير أجزاء من البيئة وتغيير مجريات المعركة.",{
+    screenshots:[
+        "images/battlefield-4-1.jpg",
+        "images/battlefield-4-2.jpg",
+        "images/battlefield-4-3.jpg",
+        "images/battlefield-4-4.jpg",
+        "images/battlefield-4-5.jpg",
+        "images/battlefield-4-6.jpg",
+        "images/battlefield-4-7.jpg",
+        "images/battlefield-4-8.jpg",
+        "images/battlefield-4-9.jpg",
+        "images/battlefield-4-10.jpg"
+    ],
+    video:"videos/battlefield-4.mp4",
+    videoTitle:"Battlefield 4 Official Trailer"
+}),
 
     g(17,"Far Cry 5",[500,500,500,650],"1–2 Players","Up to 12 Players","Action / Shooter / Open World","Action","POPULAR","images/far-cry-5.jpg","تواجه جماعة متطرفة تسيطر على Hope County في مونتانا، وتستكشف عالمًا مفتوحًا وتجمع حلفاء وتخوض القتال منفردًا أو في تعاون مع لاعب آخر."),
 
