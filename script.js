@@ -1025,9 +1025,14 @@ function priceText(value){
         return "لا تدعم";
     }
 
-    return value == null
-        ? "غير متاح"
-        : `(${value} LE)`;
+    if(
+        value == null ||
+        (typeof value === "string" && value.trim() === "غير متاح")
+    ){
+        return "غير متاح";
+    }
+
+    return `(${value} LE)`;
 }
 
 function openDetails(id){
