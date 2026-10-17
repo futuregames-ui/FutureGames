@@ -6,7 +6,7 @@
   - PS4 games can also be played on PS5 through backward compatibility.
   - Platform support is separate from price availability.
 */
-const PS4_UNSUPPORTED_IDS = new Set([2, 3, 4, 5, 6, 8, 35, 36, 37, 39]);
+const PS4_UNSUPPORTED_IDS = new Set([2, 3, 4, 5, 6, 8, 35, 36, 37, 39, 41, 42]);
 
 const games = [
     g(1,"FC 26",[750,750,700,900],"1–4 Players","Up to 22 Players","Sports / Football","Sports","POPULAR","images/fc-26.jpg","تجربة كرة قدم حديثة تقدم مباريات تنافسية وأوضاع لعب متعددة، مع تطوير أسلوب اللعب وإدارة الفريق والمنافسة محليًا وعبر الإنترنت.",{
@@ -224,11 +224,56 @@ const games = [
     videoTitle:"Ghost of Tsushima Official Trailer"
 }), 
 
-    g(35,"Need for Speed Unbound",[650,650,null,850],"1 Player","Up to 16 Players","Racing / Open World","Racing","POPULAR","images/need-for-speed-unbound.jpg","سباقات شوارع في Lakeshore مع أسلوب بصري يجمع بين السيارات الواقعية وتأثيرات الرسوم، وتطوير السيارات والمطاردات للوصول إلى القمة."),
+   g(42,"Need for Speed Unbound",[0,0,0,0],"1 Player","Up to 16 Players","Racing / Open World","Racing","POPULAR","images/need-for-speed-unbound.jpg","انطلق في شوارع Lakeshore في سباقات مليئة بالإثارة، وعدّل سيارتك بأسلوبك الخاص، وتحدى المنافسين في عالم مفتوح يجمع بين السرعة والمطاردات والمهارة.",{
+    screenshots:[
+        "images/need-for-speed-unbound-1.jpg",
+        "images/need-for-speed-unbound-2.jpg",
+        "images/need-for-speed-unbound-3.jpg",
+        "images/need-for-speed-unbound-4.jpg",
+        "images/need-for-speed-unbound-5.jpg",
+        "images/need-for-speed-unbound-6.jpg",
+        "images/need-for-speed-unbound-7.jpg",
+        "images/need-for-speed-unbound-8.jpg",
+        "images/need-for-speed-unbound-9.jpg",
+        "images/need-for-speed-unbound-10.jpg"
+    ],
+    video:"videos/need-for-speed-unbound.mp4",
+    videoTitle:"Need for Speed Unbound Official Trailer"
+}),
 
-    g(36,"WWE 2K26",[1600,1600,null,1900],"1–4 Players","Up to 8 Players","Sports / Wrestling","Sports","NEW","images/wwe-2k26.jpg","تجربة مصارعة WWE تضم نجومًا ومباريات وأوضاع لعب متعددة، مع إمكانية إنشاء وتخصيص المصارعين وخوض مواجهات محلية وعبر الإنترنت."),
+   g(41,"WWE 2K26",[0,0,0,0],"1–4 Players","Up to 8 Players","Sports / Wrestling","Sports","POPULAR","images/wwe-2k26.jpg","عِش أجواء المصارعة مع WWE 2K26، وشارك في مواجهات حماسية مع أشهر نجوم WWE، واستمتع بأنواع مباريات متعددة وأوضاع لعب مختلفة.",{
+    screenshots:[
+        "images/wwe-2k26-1.jpg",
+        "images/wwe-2k26-2.jpg",
+        "images/wwe-2k26-3.jpg",
+        "images/wwe-2k26-4.jpg",
+        "images/wwe-2k26-5.jpg",
+        "images/wwe-2k26-6.jpg",
+        "images/wwe-2k26-7.jpg",
+        "images/wwe-2k26-8.jpg",
+        "images/wwe-2k26-9.jpg",
+        "images/wwe-2k26-10.jpg"
+    ],
+    video:"videos/wwe-2k26.mp4",
+    videoTitle:"WWE 2K26 Official Trailer"
+}),
 
-    g(37,"Forza Horizon 5",[1400,1400,null,1700],"1 Player","Up to 12 Players","Racing / Open World","Racing","POPULAR","images/forza-horizon-5.jpg","مغامرة سباقات عالم مفتوح في المكسيك، تستكشف فيها مناطق متنوعة وتجمع وتعدل السيارات وتشارك في سباقات وفعاليات عبر الإنترنت."),
+   g(40,"Forza Horizon 5",[0,0,0,0],"1 Player","Up to 12 Players","Racing / Open World","Racing","POPULAR","images/forza-horizon-5.jpg","عِش تجربة سباقات مفتوحة في المكسيك مع Forza Horizon 5، واستكشف عالمًا واسعًا مليئًا بالطرق والمناظر الطبيعية والسيارات المتنوعة والفعاليات الممتعة.",{
+    screenshots:[
+        "images/forza-horizon-5-1.jpg",
+        "images/forza-horizon-5-2.jpg",
+        "images/forza-horizon-5-3.jpg",
+        "images/forza-horizon-5-4.jpg",
+        "images/forza-horizon-5-5.jpg",
+        "images/forza-horizon-5-6.jpg",
+        "images/forza-horizon-5-7.jpg",
+        "images/forza-horizon-5-8.jpg",
+        "images/forza-horizon-5-9.jpg",
+        "images/forza-horizon-5-10.jpg"
+    ],
+    video:"videos/forza-horizon-5.mp4",
+    videoTitle:"Forza Horizon 5 Official Trailer"
+}),
 
     g(38,"FC 27 Standard",[1450,1450,700,2400],"1–4 Players","Up to 99 Players","Sports / Football","Sports","NEW","images/fc-27-standard.jpg","أحدث إصدار من سلسلة EA SPORTS FC، يقدم مباريات كرة قدم وأوضاعًا متعددة مع خيارات لعب محلية وعبر الإنترنت وتجربة تنافسية واسعة.",{
         screenshots:[
