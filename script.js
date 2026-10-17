@@ -20,7 +20,7 @@ const games = [
         videoTitle:"EA SPORTS FC 26 Trailer"
     }),
 
-    g(2,"Ghost of Yōtei",[null,1500,null,null],"1 Player","Up to 4 Players","Action / Samurai / Open World","Action","NEW","images/ghost-of-yotei.jpg","مغامرة ساموراي تدور في شمال اليابان خلال القرن السابع عشر، حيث تخوض Atsu رحلة انتقام عبر مناظر طبيعية واسعة ومعارك بالسيف. وتتوفر أيضًا Ghost of Yōtei Legends كتجربة تعاونية عبر الإنترنت.",{
+    g(2,"Ghost of Yōtei",[null,1500,null,1800],"1 Player","Up to 4 Players","Action / Samurai / Open World","Action","NEW","images/ghost-of-yotei.jpg","مغامرة ساموراي تدور في شمال اليابان خلال القرن السابع عشر، حيث تخوض Atsu رحلة انتقام عبر مناظر طبيعية واسعة ومعارك بالسيف. وتتوفر أيضًا Ghost of Yōtei Legends كتجربة تعاونية عبر الإنترنت.",{
         screenshots:[
             "images/ghost-of-yotei-1.jpg","images/ghost-of-yotei-2.jpg",
             "images/ghost-of-yotei-3.jpg","images/ghost-of-yotei-4.jpg",
