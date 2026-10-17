@@ -224,7 +224,22 @@ const games = [
 
     g(25,"Sonic",[null,null,550,null],"غير محدد","غير محدد","Platform / Action","Adventure","POPULAR","images/sonic.jpg","ألعاب Sonic تعتمد على السرعة والجري عبر مراحل مليئة بالعقبات والحلقات والأعداء. اسم اللعبة في قائمة الأسعار مكتوب Sonic فقط، لذلك أحتاج اسم الإصدار لتأكيد عدد اللاعبين."),
 
-    g(26,"Need for Speed Heat",[400,400,null,null],"1 Player","Up to 16 Players","Racing / Open World","Racing","POPULAR","images/need-for-speed-heat.jpg","سباقات شوارع سريعة في Palm City، حيث تتنافس نهارًا في فعاليات رسمية وتخاطر ليلًا في سباقات غير قانونية مع مطاردات الشرطة."),
+   g(47,"Need for Speed Heat",[0,0,0,0],"1 Player","Up to 16 Players","Racing / Open World","Racing","POPULAR","images/need-for-speed-heat.jpg","انطلق في شوارع Palm City في سباقات ليلية مليئة بالأدرينالين، ونافس خصومك نهارًا في فعاليات رسمية، واهرب من الشرطة ليلًا مع إمكانية تعديل سياراتك وتطوير أدائها.",{
+    screenshots:[
+        "images/need-for-speed-heat-1.jpg",
+        "images/need-for-speed-heat-2.jpg",
+        "images/need-for-speed-heat-3.jpg",
+        "images/need-for-speed-heat-4.jpg",
+        "images/need-for-speed-heat-5.jpg",
+        "images/need-for-speed-heat-6.jpg",
+        "images/need-for-speed-heat-7.jpg",
+        "images/need-for-speed-heat-8.jpg",
+        "images/need-for-speed-heat-9.jpg",
+        "images/need-for-speed-heat-10.jpg"
+    ],
+    video:"videos/need-for-speed-heat.mp4",
+    videoTitle:"Need for Speed Heat Official Trailer"
+}),
 
     g(27,"Need for Speed Payback",[550,550,500,null],"1 Player","Up to 8 Players","Racing / Action","Racing","FEATURED","images/need-for-speed-payback.jpg","سباقات ومطاردات تدور في Fortune Valley، مع سيارات قابلة للتعديل وقصة انتقام وفعاليات متعددة السرعات."),
 
@@ -256,7 +271,22 @@ const games = [
 
     g(32,"Crash Team Racing Nitro-Fueled",[550,550,500,650],"1–4 Players","Up to 8 Players","Racing / Kart","Racing","FEATURED","images/crash-team-racing-nitro-fueled.jpg","نسخة محسنة من تجربة Crash Team Racing الكلاسيكية، مع سباقات كارت سريعة ومضامير مليئة بالعوائق والأسلحة والمنافسة."),
 
-    g(33,"PES 2020",[800,800,750,950],"1–4 Players","2–22 Players","Sports / Football","Sports","POPULAR","images/pes-2020.jpg","محاكاة كرة قدم تركز على المباريات الواقعية والتمرير والتحكم في اللاعبين، مع أوضاع محلية وعبر الإنترنت ومجموعة كبيرة من الفرق."),
+   g(46,"PES 2020",[0,0,0,0],"1–4 Players","Up to 22 Players","Sports / Football","Sports","POPULAR","images/pes-2020.jpg","استمتع بكرة القدم مع eFootball PES 2020، وتحكم واقعي في الكرة واللاعبين، وحركات ومهارات مميزة، ومباريات تنافسية تتيح لك بناء فريقك المفضل ومواجهة أصدقائك.",{
+    screenshots:[
+        "images/pes-2020-1.jpg",
+        "images/pes-2020-2.jpg",
+        "images/pes-2020-3.jpg",
+        "images/pes-2020-4.jpg",
+        "images/pes-2020-5.jpg",
+        "images/pes-2020-6.jpg",
+        "images/pes-2020-7.jpg",
+        "images/pes-2020-8.jpg",
+        "images/pes-2020-9.jpg",
+        "images/pes-2020-10.jpg"
+    ],
+    video:"videos/pes-2020.mp4",
+    videoTitle:"eFootball PES 2020 Official Trailer"
+}),
 
     g(34,"Ghost of Tsushima",[250,250,200,300],"1 Player","Up to 4 Players","Action / Adventure","Action","POPULAR","images/ghost-of-tsushima.jpg","قاتل ساموراي يقاتل لتحرير جزيرة تسوشيما من الغزو المغولي، في عالم مفتوح مليء بالمعارك والاستكشاف والتخفي.",{
     screenshots:[
