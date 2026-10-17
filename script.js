@@ -241,7 +241,22 @@ const games = [
     videoTitle:"Need for Speed Heat Official Trailer"
 }),
 
-    g(27,"Need for Speed Payback",[550,550,500,null],"1 Player","Up to 8 Players","Racing / Action","Racing","FEATURED","images/need-for-speed-payback.jpg","سباقات ومطاردات تدور في Fortune Valley، مع سيارات قابلة للتعديل وقصة انتقام وفعاليات متعددة السرعات."),
+   g(48,"Need for Speed Payback",[0,0,0,0],"1 Player","Up to 8 Players","Racing / Open World","Racing","POPULAR","images/need-for-speed-payback.jpg","انطلق في مغامرة مليئة بالسباقات والمطاردات في Fortune Valley، واجمع السيارات وطوّرها، وشارك في تحديات السرعة والقيادة الوعرة والهروب من الشرطة.",{
+    screenshots:[
+        "images/need-for-speed-payback-1.jpg",
+        "images/need-for-speed-payback-2.jpg",
+        "images/need-for-speed-payback-3.jpg",
+        "images/need-for-speed-payback-4.jpg",
+        "images/need-for-speed-payback-5.jpg",
+        "images/need-for-speed-payback-6.jpg",
+        "images/need-for-speed-payback-7.jpg",
+        "images/need-for-speed-payback-8.jpg",
+        "images/need-for-speed-payback-9.jpg",
+        "images/need-for-speed-payback-10.jpg"
+    ],
+    video:"videos/need-for-speed-payback.mp4",
+    videoTitle:"Need for Speed Payback Official Trailer"
+}),
 
    g(28,"Mortal Kombat 1",[350,350,300,400],"1–2 Players","Up to 2 Players","Fighting","Fighting","POPULAR","images/mortal-kombat-1.jpg","عُد إلى عالم Mortal Kombat في تجربة قتال جديدة تضم شخصيات مألوفة بقدرات مختلفة، ونظام Kameo Fighters المميز، ومعارك عنيفة وحركات إنهاء سينمائية.",{
     screenshots:[
