@@ -308,7 +308,22 @@ const games = [
     videoTitle:"Carnival Games Official Trailer"
 }),
 
-    g(23,"Minecraft",[null,null,null,null],"1–4 Players","Up to 8 Players","Sandbox / Survival / Adventure","Adventure","POPULAR","images/minecraft.jpg","عالم مفتوح يعتمد على البناء والاستكشاف وجمع الموارد، ويمكنك إنشاء مبانٍ وأدوات وعوالم كاملة أو مواجهة مخاطر Survival."),
+    g(58,"Minecraft",[0,0,0,0],"1–4 Players","Up to 8 Players","Sandbox / Survival / Adventure","Adventure","POPULAR","images/minecraft.jpg","عِش مغامرتك في عالم Minecraft المفتوح، وابنِ كل ما تتخيله باستخدام مجموعة ضخمة من البلوكات والموارد. استكشف الكهوف، واجمع الخامات، وصنّع الأدوات والأسلحة، وواجه الوحوش في وضع Survival أو أطلق العنان لإبداعك في وضع Creative. العب بمفردك أو شارك أصدقاءك في البناء والاستكشاف والمغامرات.",{
+    screenshots:[
+        "images/minecraft-1.jpg",
+        "images/minecraft-2.jpg",
+        "images/minecraft-3.jpg",
+        "images/minecraft-4.jpg",
+        "images/minecraft-5.jpg",
+        "images/minecraft-6.jpg",
+        "images/minecraft-7.jpg",
+        "images/minecraft-8.jpg",
+        "images/minecraft-9.jpg",
+        "images/minecraft-10.jpg"
+    ],
+    video:"videos/minecraft.mp4",
+    videoTitle:"Minecraft Official Trailer"
+}),
 
     g(24,"Unravel Two",[400,400,400,550],"1–2 Players","غير متاح","Platform / Puzzle / Co-op","Adventure","FEATURED","images/unravel-two.jpg","مغامرة هادئة تعتمد على شخصيتي Yarny، ويمكن لعبها منفردًا أو بالتعاون المحلي لحل الألغاز وتجاوز العقبات باستخدام الحبل والخيوط."),
 
