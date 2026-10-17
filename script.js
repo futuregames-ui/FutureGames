@@ -257,7 +257,22 @@ const games = [
     videoTitle:"Resident Evil Village Official Trailer"
 }),
 
-    g(20,"Marvel's Avengers",[null,null,500,null],"1 Player","Up to 4 Players","Action / Superhero / Co-op","Action","FEATURED","images/marvel-s-avengers.jpg","مغامرة أكشن تجمع أبطال Marvel في قصة أصلية، ثم تتيح مهامًا تعاونية يمكن فيها اختيار أبطال مختلفين وتطوير قدراتهم ومعداتهم."),
+   g(55,"Marvel's Avengers",[0,0,0,0],"1 Player","Up to 4 Players","Action / Adventure / Superhero","Action","POPULAR","images/marvels-avengers.jpg","انضم إلى أقوى أبطال مارفل في مغامرة مليئة بالإثارة، واستمتع باللعب بشخصيات مثل Iron Man وCaptain America وThor وHulk وBlack Widow وMs. Marvel. استخدم قدرات كل بطل الفريدة، وطوّر مهاراتك ومعداتك، وواجه أعداء خطرين في معارك سينمائية لإنقاذ العالم.",{
+    screenshots:[
+        "images/marvels-avengers-1.jpg",
+        "images/marvels-avengers-2.jpg",
+        "images/marvels-avengers-3.jpg",
+        "images/marvels-avengers-4.jpg",
+        "images/marvels-avengers-5.jpg",
+        "images/marvels-avengers-6.jpg",
+        "images/marvels-avengers-7.jpg",
+        "images/marvels-avengers-8.jpg",
+        "images/marvels-avengers-9.jpg",
+        "images/marvels-avengers-10.jpg"
+    ],
+    video:"videos/marvels-avengers.mp4",
+    videoTitle:"Marvel's Avengers Official Trailer"
+}), 
 
     g(21,"Batman",[450,450,null,600],"غير محدد","غير محدد","Action / Superhero","Action","POPULAR","images/batman.jpg","مغامرة أكشن في عالم Batman تجمع بين القتال والتخفي والتحقيق والتنقل في مدينة Gotham. اسم اللعبة في قائمة الأسعار مكتوب Batman فقط، لذلك أحتاج اسم الإصدار لتأكيد اللاعبين بدقة."),
 
