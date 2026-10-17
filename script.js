@@ -56,7 +56,21 @@ const games = [
         videoTitle:"Split Fiction Trailer"
     }),
 
-    g(5,"God of War Ragnarök",[null,null,null,null],"1 Player","غير متاح","Action / Adventure","Action","POPULAR","images/god-of-war-ragnarok.jpg","تستكمل Kratos وAtreus رحلتهما في العوالم الإسكندنافية بينما يقترب Ragnarök، وسط معارك قوية واستكشاف وقصة تركز على علاقة الأب والابن."),
+        g(40,"God of War Ragnarök",[350,350,300,400],"1 Player","1 Player","Action / Adventure","Action","POPULAR","images/god-of-war-ragnarok.jpg",
+        [
+        "images/god-of-war-ragnarok-1.jpg",
+        "images/god-of-war-ragnarok-2.jpg",
+        "images/god-of-war-ragnarok-3.jpg",
+        "images/god-of-war-ragnarok-4.jpg",
+        "images/god-of-war-ragnarok-5.jpg",
+        "images/god-of-war-ragnarok-6.jpg",
+        "images/god-of-war-ragnarok-7.jpg",
+        "images/god-of-war-ragnarok-8.jpg",
+        "images/god-of-war-ragnarok-9.jpg",
+        "images/god-of-war-ragnarok-10.jpg"
+        ],
+        video:"videos/god-of-war-ragnarok.mp4",
+        videoTitle:"God of War Ragnarök Official Trailer")
 
     g(6,"Spider-Man 2 (Arabic)",["لا تدعم",null,null,1600],"1 Player","غير متاح","Action / Superhero / Open World","Action","POPULAR","images/spider-man-2-arabic.jpg","تجمع اللعبة بين Peter Parker وMiles Morales في مغامرة واحدة داخل نيويورك، مع تنقل سريع بالويب، وقدرات جديدة، ومعارك ضد أعداء مثل Venom وKraven.",{
         screenshots:[
