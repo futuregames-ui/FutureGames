@@ -142,7 +142,22 @@ const games = [
         videoTitle:"Call of Duty: Vanguard Trailer"
     }),
 
-    g(12,"Call of Duty: Black Ops III",[550,550,550,null],"1–4 Players","Up to 18 Players","Action / Shooter / Zombies","Action","POPULAR","images/call-of-duty-black-ops-iii.jpg","تقدم Black Ops III حملة مستقبلية وأوضاع Multiplayer وZombies، مع قدرات متطورة ومعارك سريعة ومحتوى تعاوني وتنافسي."),
+   g(43,"Call of Duty: Black Ops III",[0,0,0,0],"1–4 Players","Up to 18 Players","Action / First-Person Shooter","Shooter","POPULAR","images/call-of-duty-black-ops-3.jpg","انطلق في تجربة تصويب مستقبلية مليئة بالإثارة، مع حملة تعاونية وأسلحة متطورة ومعارك جماعية، بالإضافة إلى طور الزومبي الشهير الذي يقدم تحديات مليئة بالأكشن.",{
+    screenshots:[
+        "images/call-of-duty-black-ops-3-1.jpg",
+        "images/call-of-duty-black-ops-3-2.jpg",
+        "images/call-of-duty-black-ops-3-3.jpg",
+        "images/call-of-duty-black-ops-3-4.jpg",
+        "images/call-of-duty-black-ops-3-5.jpg",
+        "images/call-of-duty-black-ops-3-6.jpg",
+        "images/call-of-duty-black-ops-3-7.jpg",
+        "images/call-of-duty-black-ops-3-8.jpg",
+        "images/call-of-duty-black-ops-3-9.jpg",
+        "images/call-of-duty-black-ops-3-10.jpg"
+    ],
+    video:"videos/call-of-duty-black-ops-3.mp4",
+    videoTitle:"Call of Duty: Black Ops III Official Trailer"
+}),
 
     g(13,"LEGO",[null,null,null,null],"غير محدد","غير محدد","Adventure / LEGO","Adventure","FEATURED","images/lego.jpg","ألعاب LEGO تجمع بين المغامرة والألغاز والكوميديا وشخصيات LEGO القابلة للعب. اسم اللعبة في قائمة الأسعار مكتوب LEGO فقط، لذلك أحتاج اسم إصدار LEGO بالضبط لتأكيد عدد اللاعبين."),
 
@@ -157,7 +172,22 @@ const games = [
     videoTitle:"Assassin's Creed Odyssey Official Trailer"
 }),
 
-    g(15,"Battlefield V",[400,400,400,550],"1 Player","Up to 64 Players","Shooter / WWII","Action","POPULAR","images/battlefield-v.jpg","تعود Battlefield V إلى أجواء الحرب العالمية الثانية من خلال قصص فردية ومعارك Multiplayer واسعة، مع مركبات وأسلحة وخرائط كبيرة ومعارك جماعية."),
+   g(44,"Battlefield V",[0,0,0,0],"1 Player","Up to 64 Players","Action / First-Person Shooter","Shooter","POPULAR","images/battlefield-v.jpg","عِش أجواء الحرب العالمية الثانية في تجربة تصويب سينمائية مليئة بالمعارك الضخمة، والمهام الحربية، والاشتباكات الجماعية عبر خرائط متنوعة.",{
+    screenshots:[
+        "images/battlefield-v-1.jpg",
+        "images/battlefield-v-2.jpg",
+        "images/battlefield-v-3.jpg",
+        "images/battlefield-v-4.jpg",
+        "images/battlefield-v-5.jpg",
+        "images/battlefield-v-6.jpg",
+        "images/battlefield-v-7.jpg",
+        "images/battlefield-v-8.jpg",
+        "images/battlefield-v-9.jpg",
+        "images/battlefield-v-10.jpg"
+    ],
+    video:"videos/battlefield-v.mp4",
+    videoTitle:"Battlefield V Official Trailer"
+}),
 
     g(16,"Battlefield 4",[400,400,400,550],"1–2 Players","Up to 24 Players","Shooter / Military","Action","POPULAR","images/battlefield-4.jpg","لعبة تصويب عسكرية تجمع بين حملة فردية ومعارك Multiplayer واسعة، وتشتهر بالخرائط الديناميكية والمركبات والبيئات القابلة للتدمير."),
 
