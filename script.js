@@ -9,7 +9,7 @@
 const PS4_UNSUPPORTED_IDS = new Set([2, 3, 4, 5, 6, 8, 35, 36, 37, 39, 41, 42]);
 
 const games = [
-    g(1,"FC 26",[750,750,700,900],"1–4 Players","Up to 22 Players","Sports / Football","Sports","POPULAR","images/fc-26.jpg","تجربة كرة قدم حديثة تقدم مباريات تنافسية وأوضاع لعب متعددة، مع تطوير أسلوب اللعب وإدارة الفريق والمنافسة محليًا وعبر الإنترنت.",{
+    g(1,"FC 26",[750,750,null,900],"1–4 Players","Up to 22 Players","Sports / Football","Sports","POPULAR","images/fc-26.jpg","تجربة كرة قدم حديثة تقدم مباريات تنافسية وأوضاع لعب متعددة، مع تطوير أسلوب اللعب وإدارة الفريق والمنافسة محليًا وعبر الإنترنت.",{
         screenshots:[
             "images/fc-26-1.jpg","images/fc-26-2.jpg","images/fc-26-3.jpg",
             "images/fc-26-4.jpg","images/fc-26-5.jpg","images/fc-26-6.jpg",
@@ -20,7 +20,7 @@ const games = [
         videoTitle:"EA SPORTS FC 26 Trailer"
     }),
 
-    g(2,"Ghost of Yōtei",["لا تدعم",null,null,null],"1 Player","Up to 4 Players","Action / Samurai / Open World","Action","NEW","images/ghost-of-yotei.jpg","مغامرة ساموراي تدور في شمال اليابان خلال القرن السابع عشر، حيث تخوض Atsu رحلة انتقام عبر مناظر طبيعية واسعة ومعارك بالسيف. وتتوفر أيضًا Ghost of Yōtei Legends كتجربة تعاونية عبر الإنترنت.",{
+    g(2,"Ghost of Yōtei",[null,1500,null,null],"1 Player","Up to 4 Players","Action / Samurai / Open World","Action","NEW","images/ghost-of-yotei.jpg","مغامرة ساموراي تدور في شمال اليابان خلال القرن السابع عشر، حيث تخوض Atsu رحلة انتقام عبر مناظر طبيعية واسعة ومعارك بالسيف. وتتوفر أيضًا Ghost of Yōtei Legends كتجربة تعاونية عبر الإنترنت.",{
         screenshots:[
             "images/ghost-of-yotei-1.jpg","images/ghost-of-yotei-2.jpg",
             "images/ghost-of-yotei-3.jpg","images/ghost-of-yotei-4.jpg",
@@ -1116,28 +1116,35 @@ function openDetails(id){
 
         <p class="details-description" dir="rtl">${game.description}</p>
 
-        <div class="prices-box">
-            <div class="price-item">
-                <span>Secondary 4</span>
-                <strong>${priceText(game.prices?.secondary4)}</strong>
-            </div>
-
-            <div class="price-item">
-                <span>Secondary 5</span>
-                <strong>${priceText(game.prices?.secondary5)}</strong>
-            </div>
-
-            <div class="price-item">
-                <span>Primary 4</span>
-                <strong>${priceText(game.prices?.primary4)}</strong>
-            </div>
-
-            <div class="price-item">
-                <span>Primary 5</span>
-                <strong>${priceText(game.prices?.primary5)}</strong>
-            </div>
+       <div class="prices-box">
+    ${game.prices?.secondary4 != null && game.prices?.secondary4 !== "لا تدعم" ? `
+        <div class="price-item">
+            <span>Secondary 4</span>
+            <strong>${priceText(game.prices.secondary4)}</strong>
         </div>
+    ` : ""}
 
+    ${game.prices?.secondary5 != null && game.prices?.secondary5 !== "لا تدعم" ? `
+        <div class="price-item">
+            <span>Secondary 5</span>
+            <strong>${priceText(game.prices.secondary5)}</strong>
+        </div>
+    ` : ""}
+
+    ${game.prices?.primary4 != null && game.prices?.primary4 !== "لا تدعم" ? `
+        <div class="price-item">
+            <span>Primary 4</span>
+            <strong>${priceText(game.prices.primary4)}</strong>
+        </div>
+    ` : ""}
+
+    ${game.prices?.primary5 != null && game.prices?.primary5 !== "لا تدعم" ? `
+        <div class="price-item">
+            <span>Primary 5</span>
+            <strong>${priceText(game.prices.primary5)}</strong>
+        </div>
+    ` : ""}
+</div>
         ${videoHTML}
         ${screenshotsHTML}
     `;
