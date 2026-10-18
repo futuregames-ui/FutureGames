@@ -7,7 +7,6 @@
   - Platform support is separate from price availability.
 */
 const PS4_UNSUPPORTED_IDS = new Set([2, 3, 4, 5, 6, 8, 35, 36, 37, 39, 41, 42]);
-
 const games = [
 g(1,"FC 26",[750,750,"غير متاح",900],"1–4 Players","Up to 22 Players","Sports / Football","Sports","POPULAR","images/fc-26.jpg","استمتع بتجربة كرة قدم حديثة تجمع بين المنافسة والإثارة وتقدم مجموعة متنوعة من أوضاع اللعب. طوّر أسلوب لعب فريقك واستفد من مهارات اللاعبين والتكتيكات المختلفة لتحقيق التفوق داخل الملعب. خُض مباريات محلية مع أصدقائك أو نافس لاعبين آخرين عبر الإنترنت في مواجهات مليئة بالحماس. ومع تنوع الفرق والبطولات وطرق اللعب، تمنحك FC 26 تجربة كرة قدم متجددة تناسب اللعب الفردي والجماعي.",{        screenshots:[
             "images/fc-26-1.jpg","images/fc-26-2.jpg","images/fc-26-3.jpg",
@@ -1337,63 +1336,95 @@ window.addEventListener("popstate",event=>{
 
 /* THEME SWITCHER */
 function createThemeToggle(){
-    if(document.getElementById("themeToggle")) return;
+    let controls = document.querySelector(".header-controls");
+    let button = document.getElementById("themeToggle");
+    let homeButton = document.getElementById("homePageButton");
 
-    const controls = document.createElement("div");
-    controls.className = "header-controls";
-    controls.style.cssText = `
-        position: fixed;
-        top: 15px;
-        right: 15px;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    `;
+    if(!controls){
+        controls = document.createElement("div");
+        controls.className = "header-controls";
 
-    const homeButton = document.createElement("button");
-    homeButton.id = "homePageButton";
-    homeButton.className = "theme-toggle";
-    homeButton.type = "button";
-    homeButton.innerHTML = '<span class="theme-icon">🏠</span><span>Home</span>';
-    homeButton.addEventListener("click",()=>{
-        window.location.href = "home.html";
-    });
+        controls.style.cssText = `
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        `;
 
-    const button = document.createElement("button");
-    button.id = "themeToggle";
-    button.className = "theme-toggle";
-    button.type = "button";
-    button.setAttribute("aria-label","Switch color theme");
-
-    const savedTheme = localStorage.getItem("futureGamesTheme");
-
-    if(savedTheme === "light"){
-        document.body.classList.add("light-mode");
+        document.body.appendChild(controls);
     }
 
-    function updateThemeButton(){
-        const isLight = document.body.classList.contains("light-mode");
+    if(!homeButton){
+        homeButton = document.createElement("button");
+        homeButton.id = "homePageButton";
+        homeButton.className = "theme-toggle";
+        homeButton.type = "button";
+        homeButton.innerHTML =
+            '<span class="theme-icon">🏠</span><span>Home</span>';
 
-        button.innerHTML = isLight
-            ? '<span class="theme-icon">🌙</span><span>Dark Mode</span>'
-            : '<span class="theme-icon">☀️</span><span>Light Mode</span>';
-
-        button.setAttribute("aria-pressed",isLight ? "true" : "false");
+        homeButton.addEventListener("click",()=>{
+            window.location.href = "home.html";
+        });
     }
 
-    button.addEventListener("click",()=>{
-        const isLight = document.body.classList.toggle("light-mode");
+    if(!button){
+        button = document.createElement("button");
+        button.id = "themeToggle";
+        button.className = "theme-toggle";
+        button.type = "button";
+        button.setAttribute("aria-label","Switch color theme");
 
-        localStorage.setItem("futureGamesTheme",isLight ? "light" : "dark");
+        const savedTheme = localStorage.getItem("futureGamesTheme");
+
+        if(savedTheme === "light"){
+            document.body.classList.add("light-mode");
+        }
+
+        function updateThemeButton(){
+            const isLight = document.body.classList.contains("light-mode");
+
+            button.innerHTML = isLight
+                ? '<span class="theme-icon">🌙</span><span>Dark Mode</span>'
+                : '<span class="theme-icon">☀️</span><span>Light Mode</span>';
+
+            button.setAttribute("aria-pressed",isLight ? "true" : "false");
+        }
+
+        button.addEventListener("click",()=>{
+            const isLight = document.body.classList.toggle("light-mode");
+
+            localStorage.setItem(
+                "futureGamesTheme",
+                isLight ? "light" : "dark"
+            );
+
+            updateThemeButton();
+        });
+
         updateThemeButton();
-    });
+    }else{
+        const savedTheme = localStorage.getItem("futureGamesTheme");
 
-    controls.appendChild(homeButton);
-    controls.appendChild(button);
-    document.body.appendChild(controls);
+        if(savedTheme === "light"){
+            document.body.classList.add("light-mode");
+        }
 
-    updateThemeButton();
+        button.setAttribute(
+            "aria-label",
+            "Switch color theme"
+        );
+    }
+
+    if(homeButton.parentElement !== controls){
+        controls.appendChild(homeButton);
+    }
+
+    if(button.parentElement !== controls){
+        controls.appendChild(button);
+    }
 }
 
 /* INITIALIZE */
