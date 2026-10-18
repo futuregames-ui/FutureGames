@@ -1640,6 +1640,31 @@ function createThemeToggle(){
     let button = document.getElementById("themeToggle");
     let homeButton = document.getElementById("homePageButton");
 
+    /* APPLY SHARED SAVED THEME */
+    function applySavedTheme(){
+        const savedTheme = localStorage.getItem("futureGamesTheme");
+
+        document.body.classList.toggle(
+            "light-mode",
+            savedTheme === "light"
+        );
+    }
+
+    /* UPDATE THEME BUTTON */
+    function updateThemeButton(){
+        if(!button) return;
+
+        const isLight = document.body.classList.contains("light-mode");
+
+        button.innerHTML = isLight
+            ? '<span class="theme-icon">🌙</span><span>Dark Mode</span>'
+            : '<span class="theme-icon">☀️</span><span>Light Mode</span>';
+
+        button.setAttribute("aria-label", "Switch color theme");
+        button.setAttribute("aria-pressed", isLight ? "true" : "false");
+    }
+
+    /* CREATE HEADER CONTROLS */
     if(!controls){
         controls = document.createElement("div");
         controls.className = "header-controls";
@@ -1657,6 +1682,7 @@ function createThemeToggle(){
         document.body.appendChild(controls);
     }
 
+    /* CREATE HOME BUTTON */
     if(!homeButton){
         homeButton = document.createElement("button");
         homeButton.id = "homePageButton";
@@ -1670,29 +1696,20 @@ function createThemeToggle(){
         });
     }
 
+    /* CREATE THEME BUTTON */
     if(!button){
         button = document.createElement("button");
         button.id = "themeToggle";
         button.className = "theme-toggle";
         button.type = "button";
-        button.setAttribute("aria-label","Switch color theme");
+        button.setAttribute("aria-label", "Switch color theme");
+    }
 
-        const savedTheme = localStorage.getItem("futureGamesTheme");
+    /* APPLY THEME BEFORE UPDATING BUTTON */
+    applySavedTheme();
 
-        if(savedTheme === "light"){
-            document.body.classList.add("light-mode");
-        }
-
-        function updateThemeButton(){
-            const isLight = document.body.classList.contains("light-mode");
-
-            button.innerHTML = isLight
-                ? '<span class="theme-icon">🌙</span><span>Dark Mode</span>'
-                : '<span class="theme-icon">☀️</span><span>Light Mode</span>';
-
-            button.setAttribute("aria-pressed",isLight ? "true" : "false");
-        }
-
+    /* CONNECT THEME BUTTON */
+    if(button.dataset.themeListener !== "true"){
         button.addEventListener("click",()=>{
             const isLight = document.body.classList.toggle("light-mode");
 
@@ -1704,20 +1721,10 @@ function createThemeToggle(){
             updateThemeButton();
         });
 
-        updateThemeButton();
-    }else{
-        const savedTheme = localStorage.getItem("futureGamesTheme");
-
-        if(savedTheme === "light"){
-            document.body.classList.add("light-mode");
-        }
-
-        button.setAttribute(
-            "aria-label",
-            "Switch color theme"
-        );
+        button.dataset.themeListener = "true";
     }
 
+    /* KEEP BUTTONS INSIDE HEADER */
     if(homeButton.parentElement !== controls){
         controls.appendChild(homeButton);
     }
@@ -1725,8 +1732,31 @@ function createThemeToggle(){
     if(button.parentElement !== controls){
         controls.appendChild(button);
     }
+
+    updateThemeButton();
 }
 
+/* SYNC THEME WHEN RETURNING TO A PAGE */
+window.addEventListener("pageshow",()=>{
+    const savedTheme = localStorage.getItem("futureGamesTheme");
+
+    document.body.classList.toggle(
+        "light-mode",
+        savedTheme === "light"
+    );
+
+    const button = document.getElementById("themeToggle");
+
+    if(button){
+        const isLight = document.body.classList.contains("light-mode");
+
+        button.innerHTML = isLight
+            ? '<span class="theme-icon">🌙</span><span>Dark Mode</span>'
+            : '<span class="theme-icon">☀️</span><span>Light Mode</span>';
+
+        button.setAttribute("aria-pressed", isLight ? "true" : "false");
+    }
+});
 /* INITIALIZE */
 createThemeToggle();
 createPlatformSidebar();
