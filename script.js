@@ -1034,8 +1034,7 @@ function priceText(value){
 
     return `(${value} LE)`;
 }
-
-function openDetails(id){
+function openDetails(id, fromHistory = false){
     const game = games.find(item=>item.id === id);
 
     if(!game) return;
@@ -1114,35 +1113,36 @@ function openDetails(id){
 
         <p class="details-description" dir="rtl">${game.description}</p>
 
-       <div class="prices-box">
-    ${game.prices?.secondary4 != null && game.prices?.secondary4 !== "لا تدعم" ? `
-        <div class="price-item">
-            <span>Secondary 4</span>
-            <strong>${priceText(game.prices.secondary4)}</strong>
-        </div>
-    ` : ""}
+        <div class="prices-box">
+            ${game.prices?.secondary4 != null && game.prices?.secondary4 !== "لا تدعم" ? `
+                <div class="price-item">
+                    <span>Secondary 4</span>
+                    <strong>${priceText(game.prices.secondary4)}</strong>
+                </div>
+            ` : ""}
 
-    ${game.prices?.secondary5 != null && game.prices?.secondary5 !== "لا تدعم" ? `
-        <div class="price-item">
-            <span>Secondary 5</span>
-            <strong>${priceText(game.prices.secondary5)}</strong>
-        </div>
-    ` : ""}
+            ${game.prices?.secondary5 != null && game.prices?.secondary5 !== "لا تدعم" ? `
+                <div class="price-item">
+                    <span>Secondary 5</span>
+                    <strong>${priceText(game.prices.secondary5)}</strong>
+                </div>
+            ` : ""}
 
-    ${game.prices?.primary4 != null && game.prices?.primary4 !== "لا تدعم" ? `
-        <div class="price-item">
-            <span>Primary 4</span>
-            <strong>${priceText(game.prices.primary4)}</strong>
-        </div>
-    ` : ""}
+            ${game.prices?.primary4 != null && game.prices?.primary4 !== "لا تدعم" ? `
+                <div class="price-item">
+                    <span>Primary 4</span>
+                    <strong>${priceText(game.prices.primary4)}</strong>
+                </div>
+            ` : ""}
 
-    ${game.prices?.primary5 != null && game.prices?.primary5 !== "لا تدعم" ? `
-        <div class="price-item">
-            <span>Primary 5</span>
-            <strong>${priceText(game.prices.primary5)}</strong>
+            ${game.prices?.primary5 != null && game.prices?.primary5 !== "لا تدعم" ? `
+                <div class="price-item">
+                    <span>Primary 5</span>
+                    <strong>${priceText(game.prices.primary5)}</strong>
+                </div>
+            ` : ""}
         </div>
-    ` : ""}
-</div>
+
         ${videoHTML}
         ${screenshotsHTML}
     `;
@@ -1158,14 +1158,40 @@ function openDetails(id){
             openGallery(Number(button.dataset.imageIndex));
         });
     });
+
+    if(!fromHistory){
+        history.pushState(
+            {
+                futureGamesViewGame:true,
+                gameId:id
+            },
+            "",
+            window.location.href
+        );
+    }
 }
 
-function closeDetails(){
+function closeDetails(fromHistory = false){
+    if(!detailsModal.classList.contains("active")) return;
+
+    const video = detailsContainer.querySelector(".gameplay-video");
+
+    if(video){
+        video.pause();
+        video.currentTime = 0;
+    }
+
     detailsModal.classList.remove("active");
     document.body.style.overflow = "";
+
+    if(!fromHistory){
+        history.back();
+    }
 }
 
-closeModal.addEventListener("click",closeDetails);
+closeModal.addEventListener("click",()=>{
+    closeDetails();
+});
 
 detailsModal.addEventListener("click",event=>{
     if(event.target.classList.contains("modal-background")){
@@ -1260,6 +1286,19 @@ document.addEventListener("keydown",event=>{
     if(gallery?.classList.contains("active")){
         if(event.key === "ArrowRight") nextGalleryImage();
         if(event.key === "ArrowLeft") previousGalleryImage();
+    }
+});
+
+window.addEventListener("popstate",event=>{
+    const gallery = document.getElementById("imageGallery");
+
+    if(gallery?.classList.contains("active")){
+        closeGallery();
+        return;
+    }
+
+    if(detailsModal.classList.contains("active")){
+        closeDetails(true);
     }
 });
 
