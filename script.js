@@ -997,48 +997,45 @@ function createPlatformSidebar(){
         );
     }
 
-    /*
-        PLATFORM BUTTONS
-    */
-    platformButtons.forEach(button=>{
-        button.addEventListener("click",()=>{
-            const platform = button.dataset.platform;
+   platformButtons.forEach(button=>{
+    button.addEventListener("click",()=>{
+        const platform = button.dataset.platform;
 
-            /*
-                XBOX 360 + XBOX SERIES S
+        /*
+            XBOX 360 + XBOX SERIES S
 
-                Both consoles use the same empty Xbox page.
-            */
-            if(
-                platform === "Xbox 360" ||
-                platform === "Xbox Series S"
-            ){
-                window.location.href = "xbox.html";
-                return;
-            }
+            Both consoles use the same empty Xbox page.
+        */
+        if(
+            platform === "Xbox 360" ||
+            platform === "Xbox Series S"
+        ){
+            window.location.href = "xbox.html";
+            return;
+        }
 
-            /*
-                NORMAL PLATFORM FILTERING
-                PS4 / PS5 / ALL GAMES
-            */
-            platformButtons.forEach(item=>{
-                item.classList.toggle(
-                    "active",
-                    item === button
-                );
-            });
-
-            if(typeof selectedPlatform !== "undefined"){
-                selectedPlatform = platform;
-            }
-
-            closeMenu();
-
-            if(typeof applyFilters === "function"){
-                applyFilters();
-            }
+        /*
+            NORMAL PLATFORM FILTERING
+            PS4 / PS5 / ALL GAMES
+        */
+        platformButtons.forEach(item=>{
+            item.classList.toggle(
+                "active",
+                item === button
+            );
         });
+
+        if(typeof selectedPlatform !== "undefined"){
+            selectedPlatform = platform;
+        }
+
+        closeMenu();
+
+        if(typeof applyFilters === "function"){
+            applyFilters();
+        }
     });
+});
 
     /*
         ESC KEY
