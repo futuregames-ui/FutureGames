@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Future Games | Xbox</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #050816;
+            --card: #0b1224;
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --cyan: #22d3ee;
+            --purple: #8b5cf6;
+            --border: #22d3ee44;
+        }
+
+        body {
+            min-height: 100vh;
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #22d3ee12,
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at top right,
+                    #8b5cf612,
+                    transparent 35%
+                ),
+                var(--bg);
+
+            color: var(--text);
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+        }
+
+        .xbox-page {
+            width: 100%;
+            max-width: 1000px;
+            min-height: 550px;
+
+            border: 1px solid var(--border);
+            border-radius: 24px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #0b1224ee,
+                    #080d1dee
+                );
+
+            box-shadow:
+                0 25px 80px #0008,
+                0 0 50px #22d3ee0d;
+
+            backdrop-filter: blur(15px);
+
+            display: flex;
+            flex-direction: column;
+
+            overflow: hidden;
+        }
+
+        .xbox-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 22px 28px;
+
+            border-bottom: 1px solid #ffffff12;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--cyan),
+                    var(--purple)
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .home-button {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+
+            padding: 10px 16px;
+
+            color: var(--text);
+            background: #ffffff08;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                background 0.2s,
+                transform 0.2s,
+                border-color 0.2s;
+        }
+
+        .home-button:hover {
+            background: #22d3ee18;
+            border-color: #22d3ee88;
+            transform: translateY(-2px);
+        }
+
+        .xbox-content {
+            flex: 1;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 60px 25px;
+        }
+
+        .xbox-icon {
+            width: 90px;
+            height: 90px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 25px;
+
+            border: 1px solid #22d3ee55;
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #22d3ee18,
+                    #8b5cf618
+                );
+
+            font-size: 42px;
+
+            box-shadow:
+                0 0 40px #22d3ee12;
+        }
+
+        .xbox-content h1 {
+            margin-bottom: 12px;
+
+            font-size: 34px;
+            font-weight: 800;
+        }
+
+        .xbox-content p {
+            max-width: 550px;
+
+            color: var(--muted);
+
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .empty-games {
+            margin-top: 30px;
+
+            padding: 14px 22px;
+
+            border: 1px dashed #22d3ee55;
+            border-radius: 12px;
+
+            color: #94a3b8;
+            background: #ffffff04;
+
+            font-size: 14px;
+        }
+
+        .xbox-footer {
+            padding: 18px 25px;
+
+            border-top: 1px solid #ffffff12;
+
+            text-align: center;
+
+            color: #64748b;
+
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .xbox-page {
+                min-height: calc(100vh - 30px);
+                border-radius: 18px;
+            }
+
+            .xbox-header {
+                padding: 18px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .home-button {
+                padding: 9px 12px;
+                font-size: 13px;
+            }
+
+            .xbox-content {
+                padding: 45px 20px;
+            }
+
+            .xbox-content h1 {
+                font-size: 28px;
+            }
+
+            .xbox-content p {
+                font-size: 14px;
+            }
+
+            .xbox-icon {
+                width: 75px;
+                height: 75px;
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="xbox-page">
+
+        <header class="xbox-header">
+            <div class="logo">
+                FUTURE GAMES
+            </div>
+
+            <button
+                class="home-button"
+                type="button"
+                onclick="window.location.href='home.html'"
+            >
+                🏠 Home
+            </button>
+        </header>
+
+
+        <section class="xbox-content">
+
+            <div class="xbox-icon">
+                🎮
+            </div>
+
+            <h1>
+                Xbox Games
+            </h1>
+
+            <p>
+                This page is ready for Xbox 360
+                and Xbox Series S games.
+            </p>
+
+            <div class="empty-games">
+                No games added yet.
+            </div>
+
+        </section>
+
+
+        <footer class="xbox-footer">
+            Future Games © 2026
+        </footer>
+
+    </main>
+
+</body>
+</html>

@@ -862,23 +862,39 @@ function createPlatformSidebar(){
                 class="sidebar-home-button"
             >🏠 Home</button>
 
-            <button type="button" data-platform="ALL" class="active">
+            <button
+                type="button"
+                data-platform="ALL"
+                class="active"
+            >
                 🎮 All Games
             </button>
 
-            <button type="button" data-platform="PS4">
+            <button
+                type="button"
+                data-platform="PS4"
+            >
                 🎮 PlayStation 4
             </button>
 
-            <button type="button" data-platform="PS5">
+            <button
+                type="button"
+                data-platform="PS5"
+            >
                 🎮 PlayStation 5
             </button>
 
-            <button type="button" data-platform="Xbox 360">
+            <button
+                type="button"
+                data-platform="Xbox 360"
+            >
                 🎮 Xbox 360
             </button>
 
-            <button type="button" data-platform="Xbox Series S">
+            <button
+                type="button"
+                data-platform="Xbox Series S"
+            >
                 🎮 Xbox Series S
             </button>
         </aside>
@@ -888,51 +904,128 @@ function createPlatformSidebar(){
         document.body.appendChild(wrapper.firstChild);
     }
 
-        const sidebarHomeButton = document.getElementById("sidebarHomeButton");
-        const menuButton = document.getElementById("platformMenuButton");
-        const overlay = document.getElementById("platformOverlay");
-        const sidebar = document.getElementById("platformSidebar");
-        const closeButton = document.getElementById("platformCloseButton");
+    const sidebarHomeButton =
+        document.getElementById("sidebarHomeButton");
+
+    const menuButton =
+        document.getElementById("platformMenuButton");
+
+    const overlay =
+        document.getElementById("platformOverlay");
+
+    const sidebar =
+        document.getElementById("platformSidebar");
+
+    const closeButton =
+        document.getElementById("platformCloseButton");
+
     if(!sidebar){
-        console.error("Future Games: platformSidebar was not created.");
+        console.error(
+            "Future Games: platformSidebar was not created."
+        );
         return;
     }
 
-    const platformButtons = sidebar.querySelectorAll("[data-platform]");
+    const platformButtons =
+        sidebar.querySelectorAll("[data-platform]");
 
+    /*
+        HOME BUTTON
+    */
+    if(sidebarHomeButton){
         sidebarHomeButton.addEventListener("click",()=>{
             window.location.href = "home.html";
         });
+    }
 
+    /*
+        OPEN SIDEBAR
+    */
     function openMenu(){
         sidebar.classList.add("open");
         overlay.classList.add("open");
-        menuButton.setAttribute("aria-expanded","true");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "true"
+        );
     }
 
+    /*
+        CLOSE SIDEBAR
+    */
     function closeMenu(){
         sidebar.classList.remove("open");
         overlay.classList.remove("open");
-        menuButton.setAttribute("aria-expanded","false");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
     }
 
-    menuButton.addEventListener("click",()=>{
-        if(sidebar.classList.contains("open")){
-            closeMenu();
-        }else{
-            openMenu();
-        }
-    });
+    /*
+        MENU BUTTON
+    */
+    if(menuButton){
+        menuButton.addEventListener("click",()=>{
+            if(sidebar.classList.contains("open")){
+                closeMenu();
+            }else{
+                openMenu();
+            }
+        });
+    }
 
-    closeButton.addEventListener("click",closeMenu);
-    overlay.addEventListener("click",closeMenu);
+    /*
+        CLOSE BUTTON
+    */
+    if(closeButton){
+        closeButton.addEventListener(
+            "click",
+            closeMenu
+        );
+    }
 
+    /*
+        OVERLAY
+    */
+    if(overlay){
+        overlay.addEventListener(
+            "click",
+            closeMenu
+        );
+    }
+
+    /*
+        PLATFORM BUTTONS
+    */
     platformButtons.forEach(button=>{
         button.addEventListener("click",()=>{
             const platform = button.dataset.platform;
 
+            /*
+                XBOX 360 + XBOX SERIES S
+
+                Both consoles use the same empty Xbox page.
+            */
+            if(
+                platform === "Xbox 360" ||
+                platform === "Xbox Series S"
+            ){
+                window.location.href = "xbox.html";
+                return;
+            }
+
+            /*
+                NORMAL PLATFORM FILTERING
+                PS4 / PS5 / ALL GAMES
+            */
             platformButtons.forEach(item=>{
-                item.classList.toggle("active",item === button);
+                item.classList.toggle(
+                    "active",
+                    item === button
+                );
             });
 
             if(typeof selectedPlatform !== "undefined"){
@@ -946,14 +1039,16 @@ function createPlatformSidebar(){
             }
         });
     });
-}    document.addEventListener("keydown",event=>{
+
+    /*
+        ESC KEY
+    */
+    document.addEventListener("keydown",event=>{
         if(event.key === "Escape"){
             closeMenu();
         }
     });
-
-
-function getCoverStyle(cover){
+}function getCoverStyle(cover){
     if(!cover) return "";
 
     if(
