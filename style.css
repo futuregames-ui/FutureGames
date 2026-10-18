@@ -205,12 +205,16 @@ button {
     background: var(--card);
     box-shadow: 0 15px 35px #0004;
     animation: cardIn 0.5s ease both;
-    transition: border-color 0.25s, box-shadow 0.25s;
+    transition:
+        border-color 0.25s,
+        box-shadow 0.25s,
+        transform 0.25s;
 }
 
 .game-card:hover {
     border-color: #22d3ee66;
     box-shadow: 0 22px 45px #0006;
+    transform: translateY(-4px);
 }
 
 @keyframes cardIn {
@@ -361,12 +365,16 @@ button {
     color: white;
     background: linear-gradient(135deg, #22d3ee1f, #8b5cf61f);
     text-align: center;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s,
+        transform 0.2s;
 }
 
 .details-button:hover {
     border-color: var(--cyan);
     box-shadow: 0 0 20px #22d3ee22;
+    transform: translateY(-2px);
 }
 
 .no-results {
@@ -1459,7 +1467,95 @@ body.light-mode
 
     border-color: #0891b255;
 }
-/* ==================== RESPONSIVE ==================== */
+
+
+/* ==================== MOBILE CARD ANIMATIONS ==================== */
+
+/*
+   على الموبايل مفيش Hover حقيقي،
+   لذلك الكروت تستخدم ظهور تدريجي أثناء الـ Scroll.
+*/
+
+@media (max-width: 768px) {
+
+    .game-card {
+        opacity: 0;
+        transform: translateY(30px) scale(0.985);
+
+        transition:
+            opacity 0.55s ease,
+            transform 0.55s ease,
+            border-color 0.25s ease,
+            box-shadow 0.25s ease;
+
+        animation: none;
+    }
+
+    .game-card.mobile-visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    .game-card.mobile-visible .game-cover {
+        animation: mobileCoverReveal 0.65s ease both;
+    }
+
+    .game-card.mobile-visible .game-info h3 {
+        animation: mobileTextReveal 0.45s ease 0.08s both;
+    }
+
+    .game-card.mobile-visible .tags {
+        animation: mobileTextReveal 0.45s ease 0.14s both;
+    }
+
+    .game-card.mobile-visible .game-description {
+        animation: mobileTextReveal 0.45s ease 0.19s both;
+    }
+
+    .game-card.mobile-visible .details-button {
+        animation: mobileTextReveal 0.45s ease 0.24s both;
+    }
+
+    /*
+       على الموبايل نستخدم الضغط بدل Hover
+       لإحساس تفاعلي طبيعي.
+    */
+    .game-card:active {
+        transform: scale(0.985);
+    }
+
+    .details-button:active {
+        transform: scale(0.98);
+    }
+}
+
+@keyframes mobileCoverReveal {
+    from {
+        opacity: 0.65;
+        transform: scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes mobileTextReveal {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==================== TABLET / MOBILE ==================== */
+
 @media (max-width: 1100px) {
     .games-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1650,5 +1746,28 @@ body.light-mode
     .header-controls .theme-toggle .theme-icon,
     .header-controls #themeToggle .theme-icon {
         font-size: 16px;
+    }
+}
+
+
+/* ==================== REDUCED MOTION ==================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .game-card,
+    .game-card.mobile-visible,
+    .game-card.mobile-visible .game-cover,
+    .game-card.mobile-visible .game-info h3,
+    .game-card.mobile-visible .tags,
+    .game-card.mobile-visible .game-description,
+    .game-card.mobile-visible .details-button {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
     }
 }

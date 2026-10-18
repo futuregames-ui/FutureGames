@@ -1211,12 +1211,60 @@ function getCoverStyle(cover){
     return `background-image: url('${cover}');`;
 }
 
+let mobileGameObserver = null;
+
+function initializeMobileGameAnimations(){
+    if(mobileGameObserver){
+        mobileGameObserver.disconnect();
+        mobileGameObserver = null;
+    }
+
+    if(window.innerWidth > 768){
+        return;
+    }
+
+    const cards = document.querySelectorAll(".game-card");
+
+    if(!cards.length){
+        return;
+    }
+
+    if(!("IntersectionObserver" in window)){
+        cards.forEach(card=>{
+            card.classList.add("mobile-visible");
+        });
+
+        return;
+    }
+
+    mobileGameObserver = new IntersectionObserver(
+        entries=>{
+            entries.forEach(entry=>{
+                if(entry.isIntersecting){
+                    entry.target.classList.add("mobile-visible");
+                    mobileGameObserver.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.12,
+            rootMargin: "0px 0px -40px 0px"
+        }
+    );
+
+    cards.forEach(card=>{
+        mobileGameObserver.observe(card);
+    });
+}
+
+
 function displayGames(gameList){
     gamesContainer.innerHTML = "";
     gameCount.textContent = `${gameList.length} Games`;
 
     if(!gameList.length){
         noResults.style.display = "block";
+        initializeMobileGameAnimations();
         return;
     }
 
@@ -1266,8 +1314,9 @@ function displayGames(gameList){
 
         gamesContainer.appendChild(card);
     });
-}
 
+    initializeMobileGameAnimations();
+}
 function applyFilters(){
     const searchText = searchInput.value.toLowerCase().trim();
 
