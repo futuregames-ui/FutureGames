@@ -889,16 +889,21 @@ function createPlatformSidebar(){
         document.body.appendChild(wrapper.firstChild);
     }
 
-    const sidebarHomeButton = document.getElementById("sidebarHomeButton");
-    const menuButton = document.getElementById("platformMenuButton");
-    const overlay = document.getElementById("platformOverlay");
-    const sidebar = document.getElementById("platformSidebar");
-    const closeButton = document.getElementById("platformCloseButton");
+        const sidebarHomeButton = document.getElementById("sidebarHomeButton");
+        const menuButton = document.getElementById("platformMenuButton");
+        const overlay = document.getElementById("platformOverlay");
+        const sidebar = document.getElementById("platformSidebar");
+        const closeButton = document.getElementById("platformCloseButton");
+    if(!sidebar){
+        console.error("Future Games: platformSidebar was not created.");
+        return;
+    }
+
     const platformButtons = sidebar.querySelectorAll("[data-platform]");
 
-    sidebarHomeButton.addEventListener("click",()=>{
-        window.location.href = "home.html";
-    });
+        sidebarHomeButton.addEventListener("click",()=>{
+            window.location.href = "home.html";
+        });
 
     function openMenu(){
         sidebar.classList.add("open");
