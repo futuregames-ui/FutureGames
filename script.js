@@ -554,7 +554,7 @@ g(60,"Sonic Frontiers",["غير متاح",550,"غير متاح","غير متاح
     videoTitle:"Forza Horizon 5 Official Trailer"
 }),
 
-    g(38,"FC 27 Standard",[1450,700,1450,2400],"1–4 Players","Up to 99 Players","Sports / Football","Sports","NEW","images/fc-27-standard.jpg","أحدث إصدار من سلسلة EA SPORTS FC، يقدم مباريات كرة قدم وأوضاعًا متعددة مع خيارات لعب محلية وعبر الإنترنت وتجربة تنافسية واسعة.",{
+    g(38,"FC 27 Standard",[1450,1450,700,2400],"1–4 Players","Up to 99 Players","Sports / Football","Sports","NEW","images/fc-27-standard.jpg","أحدث إصدار من سلسلة EA SPORTS FC، يقدم مباريات كرة قدم وأوضاعًا متعددة مع خيارات لعب محلية وعبر الإنترنت وتجربة تنافسية واسعة.",{
         screenshots:[
             "images/fc-27-1.jpg","images/fc-27-2.jpg","images/fc-27-3.jpg",
             "images/fc-27-4.jpg","images/fc-27-5.jpg","images/fc-27-6.jpg",
