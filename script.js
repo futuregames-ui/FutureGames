@@ -1695,7 +1695,6 @@ function createThemeToggle(){
             window.location.href = "home.html";
         });
     }
-
     /* CREATE THEME BUTTON */
     if(!button){
         button = document.createElement("button");
@@ -1794,6 +1793,23 @@ function initializePlatformFromURL(){
         );
     });
 }
+/* SYNC THEME BETWEEN PAGES AND TABS */
+window.addEventListener("storage", function (event) {
+    if (event.key !== "futureGamesTheme") return;
 
+    const isLight = event.newValue === "light";
+
+    document.body.classList.toggle("light-mode", isLight);
+
+    const button = document.getElementById("themeToggle");
+
+    if (button) {
+        button.innerHTML = isLight
+            ? '<span class="theme-icon">🌙</span><span>Dark Mode</span>'
+            : '<span class="theme-icon">☀️</span><span>Light Mode</span>';
+
+        button.setAttribute("aria-pressed", isLight ? "true" : "false");
+    }
+});
 initializePlatformFromURL();
 applyFilters();
