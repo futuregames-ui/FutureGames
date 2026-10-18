@@ -861,9 +861,7 @@ function createPlatformSidebar(){
                 type="button"
                 id="sidebarHomeButton"
                 class="sidebar-home-button"
-            >
-                🏠 Home
-            </button>
+            >🏠 Home</button>
 
             <button type="button" data-platform="ALL" class="active">
                 🎮 All Games
@@ -892,16 +890,15 @@ function createPlatformSidebar(){
     }
 
     const sidebarHomeButton = document.getElementById("sidebarHomeButton");
-
-    sidebarHomeButton.addEventListener("click",()=>{
-        window.location.href = "home.html";
-    });
-}  
-  const menuButton = document.getElementById("platformMenuButton");
+    const menuButton = document.getElementById("platformMenuButton");
     const overlay = document.getElementById("platformOverlay");
     const sidebar = document.getElementById("platformSidebar");
     const closeButton = document.getElementById("platformCloseButton");
     const platformButtons = sidebar.querySelectorAll("[data-platform]");
+
+    sidebarHomeButton.addEventListener("click",()=>{
+        window.location.href = "home.html";
+    });
 
     function openMenu(){
         sidebar.classList.add("open");
@@ -928,23 +925,29 @@ function createPlatformSidebar(){
 
     platformButtons.forEach(button=>{
         button.addEventListener("click",()=>{
-            activePlatform = button.dataset.platform;
+            const platform = button.dataset.platform;
 
             platformButtons.forEach(item=>{
                 item.classList.toggle("active",item === button);
             });
 
-            applyFilters();
+            if(typeof selectedPlatform !== "undefined"){
+                selectedPlatform = platform;
+            }
+
             closeMenu();
+
+            if(typeof applyFilters === "function"){
+                applyFilters();
+            }
         });
     });
-
-    document.addEventListener("keydown",event=>{
+}    document.addEventListener("keydown",event=>{
         if(event.key === "Escape"){
             closeMenu();
         }
     });
-        
+
 
 function getCoverStyle(cover){
     if(!cover) return "";
