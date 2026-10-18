@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +32,7 @@
         /*
          * ACCESSORIES HERO
          */
+
         .accessories-hero {
             position: relative;
             padding: 110px 20px 70px;
@@ -52,11 +54,7 @@
         }
 
         .accessories-hero h1 span {
-            background: linear-gradient(
-                90deg,
-                #22d3ee,
-                #8b5cf6
-            );
+            background: linear-gradient(90deg, #22d3ee, #8b5cf6);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -73,6 +71,7 @@
         /*
          * ACCESSORIES SEARCH
          */
+
         .accessories-search-box {
             width: min(700px, 100%);
             margin: 0 auto;
@@ -82,28 +81,16 @@
             width: 100%;
             min-height: 54px;
             padding: 15px 20px;
-
             border: 1px solid #22d3ee44;
             border-radius: 14px;
-
             outline: none;
-
             color: #f8fafc;
             background: #080d1de8;
-
             font-family: "Poppins", sans-serif;
             font-size: 14px;
-
-            box-shadow:
-                0 10px 35px #0004,
-                0 0 30px #22d3ee08;
-
+            box-shadow: 0 10px 35px #0004, 0 0 30px #22d3ee08;
             backdrop-filter: blur(15px);
-
-            transition:
-                border-color .25s,
-                box-shadow .25s,
-                background .25s;
+            transition: border-color .25s, box-shadow .25s, background .25s;
         }
 
         .accessories-search-box input::placeholder {
@@ -112,19 +99,16 @@
 
         .accessories-search-box input:focus {
             border-color: #22d3ee99;
-
-            box-shadow:
-                0 10px 35px #0005,
-                0 0 30px #22d3ee18;
+            box-shadow: 0 10px 35px #0005, 0 0 30px #22d3ee18;
         }
 
         /*
          * ACCESSORIES CONTAINER
          */
+
         .accessories-container {
             position: relative;
             z-index: 2;
-
             width: min(1400px, calc(100% - 40px));
             margin: 0 auto;
             padding-bottom: 80px;
@@ -133,18 +117,17 @@
         /*
          * SECTION HEADER
          */
+
         .accessories-section-header {
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
             gap: 20px;
-
             margin-bottom: 30px;
         }
 
         .accessories-section-header h2 {
             margin: 5px 0 0;
-
             font-family: "Orbitron", sans-serif;
             font-size: clamp(24px, 4vw, 34px);
             font-weight: 800;
@@ -152,54 +135,39 @@
 
         .accessories-count {
             flex-shrink: 0;
-
             padding: 10px 16px;
-
             border: 1px solid #22d3ee44;
             border-radius: 12px;
-
             color: #cbd5e1;
             background: #ffffff06;
-
             font-size: 13px;
             font-weight: 600;
-
             backdrop-filter: blur(10px);
         }
 
         /*
          * CATEGORY FILTERS
          */
+
         .accessories-filters {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-
             margin-bottom: 30px;
         }
 
         .accessory-filter {
             min-height: 42px;
-
             padding: 9px 15px;
-
             border: 1px solid #22d3ee33;
             border-radius: 11px;
-
             color: #94a3b8;
             background: #080d1dcc;
-
             cursor: pointer;
-
             font-family: "Poppins", sans-serif;
             font-size: 13px;
             font-weight: 600;
-
-            transition:
-                color .2s,
-                background .2s,
-                border-color .2s,
-                transform .2s;
+            transition: color .2s, background .2s, border-color .2s, transform .2s;
         }
 
         .accessory-filter:hover {
@@ -211,217 +179,168 @@
 
         .accessory-filter.active {
             color: #ffffff;
-
             border-color: #22d3ee99;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #22d3ee20,
-                    #8b5cf620
-                );
-
+            background: linear-gradient(135deg, #22d3ee20, #8b5cf620);
             box-shadow: 0 8px 25px #0003;
         }
 
         /*
          * ACCESSORIES GRID
          */
+
         .accessories-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(
-                    auto-fill,
-                    minmax(250px, 1fr)
-                );
-
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 22px;
         }
 
         /*
          * ACCESSORY CARD
          */
+
         .accessory-card {
             min-height: 330px;
-
             display: flex;
             flex-direction: column;
-
             overflow: hidden;
-
             border: 1px solid #22d3ee22;
             border-radius: 18px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #0b1224ee,
-                    #080d1dee
-                );
-
-            box-shadow:
-                0 15px 40px #0004;
-
+            background: linear-gradient(145deg, #0b1224ee, #080d1dee);
+            box-shadow: 0 15px 40px #0004;
             backdrop-filter: blur(15px);
-
-            transition:
-                transform .25s,
-                border-color .25s,
-                box-shadow .25s;
+            transition: transform .25s, border-color .25s, box-shadow .25s;
+            animation: accessoryCardReveal .4s ease both;
         }
 
         .accessory-card:hover {
             transform: translateY(-7px);
-
             border-color: #22d3ee66;
+            box-shadow: 0 22px 55px #0006, 0 0 30px #22d3ee0c;
+        }
 
-            box-shadow:
-                0 22px 55px #0006,
-                0 0 30px #22d3ee0c;
+        @keyframes accessoryCardReveal {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /*
          * ACCESSORY COVER
          */
+
         .accessory-cover {
             position: relative;
-
             height: 190px;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             overflow: hidden;
-
             border-bottom: 1px solid #ffffff0d;
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    #22d3ee0e,
-                    transparent 65%
-                ),
-                #080b12;
-
+            background: radial-gradient(circle at center, #22d3ee0e, transparent 65%), #080b12;
             font-size: 52px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         .accessory-cover::after {
             content: "";
-
             position: absolute;
             inset: 0;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    transparent,
-                    #22d3ee06,
-                    transparent
-                );
-
+            background: linear-gradient(135deg, transparent, #22d3ee06, transparent);
             pointer-events: none;
         }
 
         .accessory-placeholder-icon {
             position: relative;
             z-index: 1;
-
             width: 78px;
             height: 78px;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             border: 1px solid #22d3ee44;
             border-radius: 20px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #22d3ee12,
-                    #8b5cf612
-                );
-
+            background: linear-gradient(135deg, #22d3ee12, #8b5cf612);
             box-shadow: 0 0 35px #22d3ee0c;
         }
 
         /*
          * ACCESSORY INFO
          */
+
         .accessory-info {
             display: flex;
             flex-direction: column;
             flex: 1;
-
             padding: 20px;
         }
 
         .accessory-info h3 {
             margin: 0 0 10px;
-
             color: #f8fafc;
-
             font-family: "Orbitron", sans-serif;
             font-size: 17px;
             font-weight: 700;
+            line-height: 1.5;
         }
 
         .accessory-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 7px;
-
             margin-bottom: 12px;
         }
 
         .accessory-tag {
             padding: 5px 9px;
-
             border: 1px solid #8b5cf633;
             border-radius: 7px;
-
             color: #c4b5fd;
             background: #8b5cf610;
-
             font-size: 11px;
             font-weight: 600;
         }
 
         .accessory-description {
             margin: 0;
-
             color: #94a3b8;
-
             font-size: 13px;
             line-height: 1.7;
         }
 
+        /*
+         * ACCESSORY PRICE
+         */
+
+        .accessory-price {
+            margin: 15px 0;
+            color: #22d3ee;
+            font-family: "Orbitron", sans-serif;
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: .4px;
+        }
+
         .accessory-button {
             width: 100%;
-
             margin-top: auto;
             padding: 11px 14px;
-
             border: 1px solid #22d3ee44;
             border-radius: 10px;
-
             color: #f8fafc;
             background: #22d3ee0d;
-
             cursor: pointer;
-
             font-family: "Poppins", sans-serif;
             font-size: 13px;
             font-weight: 700;
-
-            transition:
-                background .2s,
-                border-color .2s,
-                transform .2s;
+            transition: background .2s, border-color .2s, transform .2s;
         }
 
         .accessory-button:hover {
@@ -433,78 +352,51 @@
         /*
          * EMPTY STATE
          */
+
         .accessories-empty {
             display: none;
-
             padding: 70px 25px;
-
             border: 1px dashed #22d3ee44;
             border-radius: 18px;
-
             text-align: center;
-
             background: #ffffff03;
         }
 
         .accessories-empty-icon {
             width: 76px;
             height: 76px;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             margin: 0 auto 20px;
-
             border: 1px solid #22d3ee33;
             border-radius: 50%;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #22d3ee12,
-                    #8b5cf612
-                );
-
+            background: linear-gradient(135deg, #22d3ee12, #8b5cf612);
             font-size: 32px;
         }
 
         .accessories-empty h3 {
             margin: 0 0 10px;
-
             font-family: "Orbitron", sans-serif;
             font-size: 24px;
         }
 
         .accessories-empty p {
             max-width: 500px;
-
             margin: 0 auto;
-
             color: #64748b;
-
             font-size: 14px;
             line-height: 1.7;
         }
 
         /*
          * ACCESSORIES SIDEBAR
-         *
-         * Uses the same sidebar structure/classes
-         * already added to style.css.
          */
 
         .accessories-sidebar-wrapper {
             position: relative;
             z-index: 5000;
         }
-
-        /*
-         * ALL ACCESSORIES + ALL GAMES
-         *
-         * Use the same class as Home so they receive
-         * the exact same sidebar animation and styling.
-         */
 
         .sidebar-all-accessories-button,
         .sidebar-all-games-button {
@@ -514,6 +406,7 @@
         /*
          * LIGHT MODE
          */
+
         body.light-mode .accessories-search-box input {
             color: #0f172a;
             background: #ffffffdd;
@@ -535,11 +428,7 @@
         body.light-mode .accessory-filter.active {
             color: #0f172a;
             border-color: #0891b277;
-            background: linear-gradient(
-                135deg,
-                #22d3ee20,
-                #8b5cf620
-            );
+            background: linear-gradient(135deg, #22d3ee20, #8b5cf620);
         }
 
         body.light-mode .accessory-card {
@@ -565,11 +454,19 @@
             border-color: #0891b233;
         }
 
+        body.light-mode .accessory-price {
+            color: #0891b2;
+        }
+
+        body.light-mode .accessory-button {
+            color: #0f172a;
+        }
+
         /*
          * RESPONSIVE
          */
-        @media(max-width: 800px){
 
+        @media(max-width: 800px) {
             .accessories-hero {
                 padding-top: 90px;
             }
@@ -580,21 +477,13 @@
             }
 
             .accessories-grid {
-                grid-template-columns:
-                    repeat(
-                        auto-fill,
-                        minmax(220px, 1fr)
-                    );
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             }
-
         }
 
-        @media(max-width: 550px){
-
+        @media(max-width: 550px) {
             .accessories-hero {
-                padding:
-                    85px 15px
-                    55px;
+                padding: 85px 15px 55px;
             }
 
             .accessories-container {
@@ -628,7 +517,6 @@
             .accessory-filter {
                 flex: 1 1 auto;
             }
-
         }
     </style>
 
@@ -640,160 +528,82 @@
      */
 
     (function () {
-
-        const scrollKey =
-            "futureGamesRefreshScroll-accessories";
+        const scrollKey = "futureGamesRefreshScroll-accessories";
 
         if ("scrollRestoration" in history) {
             history.scrollRestoration = "manual";
         }
 
-        window.addEventListener(
-            "pagehide",
-            function () {
+        window.addEventListener("pagehide", function () {
+            try {
+                sessionStorage.setItem(
+                    scrollKey,
+                    String(window.scrollY || window.pageYOffset || 0)
+                );
+            } catch (error) {}
+        });
 
+        window.addEventListener("load", function () {
+            const navigation = performance.getEntriesByType("navigation")[0];
+            let savedPosition = null;
+
+            try {
+                savedPosition = sessionStorage.getItem(scrollKey);
+            } catch (error) {}
+
+            if (
+                navigation &&
+                navigation.type === "reload" &&
+                savedPosition !== null
+            ) {
                 try {
+                    sessionStorage.removeItem(scrollKey);
+                } catch (error) {}
 
-                    sessionStorage.setItem(
-                        scrollKey,
-                        String(
-                            window.scrollY ||
-                            window.pageYOffset ||
-                            0
-                        )
+                const previousY = Number(savedPosition);
+
+                if (Number.isFinite(previousY) && previousY > 0) {
+                    const maxScroll = Math.max(
+                        0,
+                        document.documentElement.scrollHeight - window.innerHeight
                     );
 
-                } catch (error) {}
+                    window.scrollTo(0, Math.min(previousY, maxScroll));
 
-            }
-        );
-
-        window.addEventListener(
-            "load",
-            function () {
-
-                const navigation =
-                    performance.getEntriesByType(
-                        "navigation"
-                    )[0];
-
-                let savedPosition = null;
-
-                try {
-
-                    savedPosition =
-                        sessionStorage.getItem(
-                            scrollKey
-                        );
-
-                } catch (error) {}
-
-                if (
-                    navigation &&
-                    navigation.type === "reload" &&
-                    savedPosition !== null
-                ) {
-
-                    try {
-
-                        sessionStorage.removeItem(
-                            scrollKey
-                        );
-
-                    } catch (error) {}
-
-                    const previousY =
-                        Number(
-                            savedPosition
-                        );
-
-                    if (
-                        Number.isFinite(
-                            previousY
-                        ) &&
-                        previousY > 0
-                    ) {
-
-                        const maxScroll =
-                            Math.max(
-                                0,
-                                document.documentElement
-                                    .scrollHeight -
-                                window.innerHeight
-                            );
-
-                        window.scrollTo(
-                            0,
-                            Math.min(
-                                previousY,
-                                maxScroll
-                            )
-                        );
-
-                        requestAnimationFrame(
-                            function () {
-
-                                requestAnimationFrame(
-                                    function () {
-
-                                        window.scrollTo({
-                                            top: 0,
-                                            behavior: "smooth"
-                                        });
-
-                                    }
-                                );
-
-                            }
-                        );
-
-                    } else {
-
-                        window.scrollTo(
-                            0,
-                            0
-                        );
-
-                    }
-
+                    requestAnimationFrame(function () {
+                        requestAnimationFrame(function () {
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth"
+                            });
+                        });
+                    });
                 } else {
-
-                    try {
-
-                        sessionStorage.removeItem(
-                            scrollKey
-                        );
-
-                    } catch (error) {}
-
+                    window.scrollTo(0, 0);
                 }
-
+            } else {
+                try {
+                    sessionStorage.removeItem(scrollKey);
+                } catch (error) {}
             }
-        );
-
+        });
     })();
     </script>
 </head>
 
 <body>
 
-    <!-- ==========================================================
-         BACKGROUND
-    =========================================================== -->
+    <!-- BACKGROUND -->
 
     <div class="background-glow glow-one"></div>
     <div class="background-glow glow-two"></div>
 
-
-    <!-- ==========================================================
-         ACCESSORIES SIDEBAR
-    =========================================================== -->
+    <!-- ACCESSORIES SIDEBAR -->
 
     <div
         class="accessories-sidebar-wrapper"
         id="accessoriesSidebarWrapper"
     >
-
         <button
             class="platform-menu-button"
             id="platformMenuButton"
@@ -804,19 +614,13 @@
             ☰
         </button>
 
-
-        <div
-            class="platform-overlay"
-            id="platformOverlay"
-        ></div>
-
+        <div class="platform-overlay" id="platformOverlay"></div>
 
         <aside
             class="platform-sidebar"
             id="platformSidebar"
             aria-label="Console selection"
         >
-
             <button
                 class="platform-close"
                 id="platformCloseButton"
@@ -826,13 +630,7 @@
                 ×
             </button>
 
-
-            <h2>
-                Choose Console
-            </h2>
-
-
-            <!-- HOME -->
+            <h2>Choose Console</h2>
 
             <button
                 type="button"
@@ -842,9 +640,6 @@
                 🏠 Home
             </button>
 
-
-            <!-- ALL ACCESSORIES -->
-
             <button
                 type="button"
                 id="sidebarAllAccessoriesButton"
@@ -852,9 +647,6 @@
             >
                 🧩 All Accessories
             </button>
-
-
-            <!-- ALL GAMES -->
 
             <button
                 type="button"
@@ -864,17 +656,10 @@
                 🎮 All Games
             </button>
 
-
-            <!-- ==================================================
-                 PS4
-            =================================================== -->
+            <!-- PS4 -->
 
             <div class="sidebar-console-group">
-
-                <div class="sidebar-console-title">
-                    🎮 PlayStation 4
-                </div>
-
+                <div class="sidebar-console-title">🎮 PlayStation 4</div>
 
                 <button
                     type="button"
@@ -885,7 +670,6 @@
                     🎮 Games
                 </button>
 
-
                 <button
                     type="button"
                     class="sidebar-sub-button"
@@ -894,20 +678,12 @@
                 >
                     🧩 Accessories
                 </button>
-
             </div>
 
-
-            <!-- ==================================================
-                 PS5
-            =================================================== -->
+            <!-- PS5 -->
 
             <div class="sidebar-console-group">
-
-                <div class="sidebar-console-title">
-                    🎮 PlayStation 5
-                </div>
-
+                <div class="sidebar-console-title">🎮 PlayStation 5</div>
 
                 <button
                     type="button"
@@ -918,7 +694,6 @@
                     🎮 Games
                 </button>
 
-
                 <button
                     type="button"
                     class="sidebar-sub-button"
@@ -927,20 +702,12 @@
                 >
                     🧩 Accessories
                 </button>
-
             </div>
 
-
-            <!-- ==================================================
-                 XBOX
-            =================================================== -->
+            <!-- XBOX -->
 
             <div class="sidebar-console-group">
-
-                <div class="sidebar-console-title">
-                    🎮 Xbox
-                </div>
-
+                <div class="sidebar-console-title">🎮 Xbox</div>
 
                 <button
                     type="button"
@@ -951,7 +718,6 @@
                     🎮 Games
                 </button>
 
-
                 <button
                     type="button"
                     class="sidebar-sub-button"
@@ -960,38 +726,24 @@
                 >
                     🧩 Accessories
                 </button>
-
             </div>
-
         </aside>
-
     </div>
 
-
-    <!-- ==========================================================
-         MAIN PAGE
-    =========================================================== -->
+    <!-- MAIN PAGE -->
 
     <main class="accessories-page">
 
-        <!-- ======================================================
-             HERO
-        ======================================================= -->
+        <!-- HERO -->
 
         <header class="accessories-hero">
-
             <div class="hero-content">
-
-                <p class="small-title">
-                    LEVEL UP YOUR SETUP
-                </p>
-
+                <p class="small-title">LEVEL UP YOUR SETUP</p>
 
                 <h1>
                     ACCESSORIES
                     <span>&amp; GEAR</span>
                 </h1>
-
 
                 <p class="accessories-description">
                     Everything you need for your gaming setup.
@@ -999,64 +751,35 @@
                     cooling solutions, headsets, cables and more.
                 </p>
 
-
                 <div class="accessories-search-box">
-
                     <input
                         type="text"
                         id="accessorySearchInput"
                         placeholder="Search for an accessory..."
                         autocomplete="off"
                     >
-
                 </div>
-
             </div>
-
         </header>
 
-
-        <!-- ======================================================
-             MAIN ACCESSORIES CONTENT
-        ======================================================= -->
+        <!-- MAIN ACCESSORIES CONTENT -->
 
         <section class="accessories-container">
 
             <div class="accessories-section-header">
-
                 <div>
-
-                    <p class="small-title">
-                        GAMING GEAR
-                    </p>
-
-
-                    <h2>
-                        Featured Accessories
-                    </h2>
-
+                    <p class="small-title">GAMING GEAR</p>
+                    <h2>Featured Accessories</h2>
                 </div>
 
-
-                <div
-                    id="accessoryCount"
-                    class="accessories-count"
-                >
+                <div id="accessoryCount" class="accessories-count">
                     0 Accessories
                 </div>
-
             </div>
 
+            <!-- CATEGORY FILTERS -->
 
-            <!-- ==================================================
-                 CATEGORY FILTERS
-            =================================================== -->
-
-            <div
-                id="accessoryFilters"
-                class="accessories-filters"
-            >
-
+            <div id="accessoryFilters" class="accessories-filters">
                 <button
                     type="button"
                     class="accessory-filter active"
@@ -1064,7 +787,6 @@
                 >
                     ✨ All
                 </button>
-
 
                 <button
                     type="button"
@@ -1074,7 +796,6 @@
                     🎮 Controllers
                 </button>
 
-
                 <button
                     type="button"
                     class="accessory-filter"
@@ -1082,7 +803,6 @@
                 >
                     🔋 Chargers
                 </button>
-
 
                 <button
                     type="button"
@@ -1092,7 +812,6 @@
                     🗄️ Stands
                 </button>
 
-
                 <button
                     type="button"
                     class="accessory-filter"
@@ -1100,7 +819,6 @@
                 >
                     ❄️ Cooling
                 </button>
-
 
                 <button
                     type="button"
@@ -1110,7 +828,6 @@
                     🛡️ Cases
                 </button>
 
-
                 <button
                     type="button"
                     class="accessory-filter"
@@ -1118,7 +835,6 @@
                 >
                     🎧 Headsets
                 </button>
-
 
                 <button
                     type="button"
@@ -1128,7 +844,6 @@
                     🔌 Cables
                 </button>
 
-
                 <button
                     type="button"
                     class="accessory-filter"
@@ -1136,120 +851,66 @@
                 >
                     ⚙️ Other
                 </button>
-
             </div>
 
-
-            <!-- ==================================================
-                 ACCESSORIES GRID
-            =================================================== -->
+            <!-- ACCESSORIES GRID -->
 
             <section
                 id="accessoriesContainer"
                 class="accessories-grid"
             ></section>
 
+            <!-- EMPTY STATE -->
 
-            <!-- ==================================================
-                 EMPTY STATE
-            =================================================== -->
+            <div id="accessoriesEmpty" class="accessories-empty">
+                <div class="accessories-empty-icon">🎮</div>
 
-            <div
-                id="accessoriesEmpty"
-                class="accessories-empty"
-            >
-
-                <div class="accessories-empty-icon">
-                    🎮
-                </div>
-
-
-                <h3>
-                    0 Accessories
-                </h3>
-
+                <h3>No Accessories Found</h3>
 
                 <p>
-                    No accessories have been added yet.
-                    This section is ready for controllers,
-                    chargers, stands, cooling, cases,
-                    headsets, cables and more.
+                    No accessories match your current search or filters.
+                    Try changing your search or selecting another category.
                 </p>
-
             </div>
 
         </section>
-
     </main>
 
+    <!-- DETAILS MODAL -->
 
-    <!-- ==========================================================
-         DETAILS MODAL
-    =========================================================== -->
-
-    <div
-        id="accessoryDetailsModal"
-        class="modal"
-    >
-
+    <div id="accessoryDetailsModal" class="modal">
         <div class="modal-background"></div>
 
-
         <div class="modal-content">
-
             <button
                 id="closeAccessoryModal"
                 class="close-button"
                 type="button"
+                aria-label="Close accessory details"
             >
                 ×
             </button>
 
-
-            <div
-                id="accessoryDetailsContainer"
-            ></div>
-
+            <div id="accessoryDetailsContainer"></div>
         </div>
-
     </div>
 
-
-    <!-- ==========================================================
-         ACCESSORIES JAVASCRIPT
-    =========================================================== -->
+    <!-- ACCESSORIES JAVASCRIPT -->
 
     <script>
-
     /*
      * ============================================================
      * THEME TOGGLE
      * ============================================================
      */
 
-    function createThemeToggle(){
+    function createThemeToggle() {
+        let controls = document.querySelector(".header-controls");
+        let button = document.getElementById("themeToggle");
 
-        let controls =
-            document.querySelector(
-                ".header-controls"
-            );
-
-
-        let button =
-            document.getElementById(
-                "themeToggle"
-            );
-
-
-        if(!controls){
-
-            controls =
-                document.createElement(
-                    "div"
-                );
-
-            controls.className =
-                "header-controls";
+        if (!controls) {
+            controls = document.createElement("div");
+            controls.className = "header-controls";
 
             controls.style.cssText = `
                 position: fixed;
@@ -1261,113 +922,50 @@
                 gap: 10px;
             `;
 
-            document.body.appendChild(
-                controls
-            );
-
+            document.body.appendChild(controls);
         }
 
+        if (!button) {
+            button = document.createElement("button");
+            button.id = "themeToggle";
+            button.className = "theme-toggle";
+            button.type = "button";
+            button.setAttribute("aria-label", "Switch color theme");
 
-        if(!button){
+            const savedTheme = localStorage.getItem("futureGamesTheme");
 
-            button =
-                document.createElement(
-                    "button"
-                );
-
-            button.id =
-                "themeToggle";
-
-            button.className =
-                "theme-toggle";
-
-            button.type =
-                "button";
-
-            button.setAttribute(
-                "aria-label",
-                "Switch color theme"
-            );
-
-
-            const savedTheme =
-                localStorage.getItem(
-                    "futureGamesTheme"
-                );
-
-
-            if(savedTheme === "light"){
-
-                document.body.classList.add(
-                    "light-mode"
-                );
-
+            if (savedTheme === "light") {
+                document.body.classList.add("light-mode");
             }
 
+            function updateThemeButton() {
+                const isLight = document.body.classList.contains("light-mode");
 
-            function updateThemeButton(){
+                button.innerHTML = isLight
+                    ? '<span class="theme-icon">🌙</span><span>Dark Mode</span>'
+                    : '<span class="theme-icon">☀️</span><span>Light Mode</span>';
 
-                const isLight =
-                    document.body.classList.contains(
-                        "light-mode"
-                    );
-
-
-                button.innerHTML =
-                    isLight
-                        ? '<span class="theme-icon">🌙</span><span>Dark Mode</span>'
-                        : '<span class="theme-icon">☀️</span><span>Light Mode</span>';
-
-
-                button.setAttribute(
-                    "aria-pressed",
-                    isLight
-                        ? "true"
-                        : "false"
-                );
-
+                button.setAttribute("aria-pressed", isLight ? "true" : "false");
             }
 
+            button.addEventListener("click", function () {
+                const isLight = document.body.classList.toggle("light-mode");
 
-            button.addEventListener(
-                "click",
-                function(){
+                localStorage.setItem(
+                    "futureGamesTheme",
+                    isLight ? "light" : "dark"
+                );
 
-                    const isLight =
-                        document.body.classList.toggle(
-                            "light-mode"
-                        );
-
-
-                    localStorage.setItem(
-                        "futureGamesTheme",
-                        isLight
-                            ? "light"
-                            : "dark"
-                    );
-
-
-                    updateThemeButton();
-
-                }
-            );
-
+                updateThemeButton();
+            });
 
             updateThemeButton();
-
         }
 
-
-        if(button.parentElement !== controls){
-
-            controls.appendChild(
-                button
-            );
-
+        if (button.parentElement !== controls) {
+            controls.appendChild(button);
         }
-
     }
-
 
     /*
      * ============================================================
@@ -1375,362 +973,187 @@
      * ============================================================
      */
 
-    function createAccessoriesSidebar(){
+    function createAccessoriesSidebar() {
+        const sidebar = document.getElementById("platformSidebar");
+        const menuButton = document.getElementById("platformMenuButton");
+        const overlay = document.getElementById("platformOverlay");
+        const closeButton = document.getElementById("platformCloseButton");
+        const homeButton = document.getElementById("sidebarHomeButton");
 
-        const sidebar =
-            document.getElementById(
-                "platformSidebar"
-            );
+        const allAccessoriesButton = document.getElementById(
+            "sidebarAllAccessoriesButton"
+        );
 
+        const allGamesButton = document.getElementById(
+            "sidebarAllGamesButton"
+        );
 
-        const menuButton =
-            document.getElementById(
-                "platformMenuButton"
-            );
-
-
-        const overlay =
-            document.getElementById(
-                "platformOverlay"
-            );
-
-
-        const closeButton =
-            document.getElementById(
-                "platformCloseButton"
-            );
-
-
-        const homeButton =
-            document.getElementById(
-                "sidebarHomeButton"
-            );
-
-
-        const allAccessoriesButton =
-            document.getElementById(
-                "sidebarAllAccessoriesButton"
-            );
-
-
-        const allGamesButton =
-            document.getElementById(
-                "sidebarAllGamesButton"
-            );
-
-
-        if(!sidebar){
-
+        if (!sidebar) {
             console.error(
                 "Future Games: Accessories sidebar was not created."
             );
-
             return;
-
         }
 
+        function openMenu() {
+            sidebar.classList.add("open");
+            overlay.classList.add("open");
 
-        function openMenu(){
-
-            sidebar.classList.add(
-                "open"
-            );
-
-
-            overlay.classList.add(
-                "open"
-            );
-
-
-            if(menuButton){
-
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    "true"
-                );
-
+            if (menuButton) {
+                menuButton.setAttribute("aria-expanded", "true");
             }
-
         }
 
+        function closeMenu() {
+            sidebar.classList.remove("open");
+            overlay.classList.remove("open");
 
-        function closeMenu(){
-
-            sidebar.classList.remove(
-                "open"
-            );
-
-
-            overlay.classList.remove(
-                "open"
-            );
-
-
-            if(menuButton){
-
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
+            if (menuButton) {
+                menuButton.setAttribute("aria-expanded", "false");
             }
-
         }
-
 
         /*
          * HOME
          */
 
-        if(homeButton){
-
-            homeButton.addEventListener(
-                "click",
-                function(){
-
-                    window.location.href =
-                        "home.html";
-
-                }
-            );
-
+        if (homeButton) {
+            homeButton.addEventListener("click", function () {
+                window.location.href = "home.html";
+            });
         }
-
 
         /*
          * ALL ACCESSORIES
          */
 
-        if(allAccessoriesButton){
-
-            allAccessoriesButton.addEventListener(
-                "click",
-                function(){
-
-                    activePlatform =
-                        "ALL";
-
-
-                    window.location.href =
-                        "accessories.html";
-
-                }
-            );
-
+        if (allAccessoriesButton) {
+            allAccessoriesButton.addEventListener("click", function () {
+                window.location.href = "accessories.html";
+            });
         }
-
 
         /*
          * ALL GAMES
          */
 
-        if(allGamesButton){
-
-            allGamesButton.addEventListener(
-                "click",
-                function(){
-
-                    window.location.href =
-                        "index.html?games=1";
-
-                }
-            );
-
+        if (allGamesButton) {
+            allGamesButton.addEventListener("click", function () {
+                window.location.href = "index.html?games=1";
+            });
         }
-
 
         /*
          * OPEN MENU
          */
 
-        if(menuButton){
-
-            menuButton.addEventListener(
-                "click",
-                function(){
-
-                    if(
-                        sidebar.classList.contains(
-                            "open"
-                        )
-                    ){
-
-                        closeMenu();
-
-                    }else{
-
-                        openMenu();
-
-                    }
-
+        if (menuButton) {
+            menuButton.addEventListener("click", function () {
+                if (sidebar.classList.contains("open")) {
+                    closeMenu();
+                } else {
+                    openMenu();
                 }
-            );
-
+            });
         }
-
 
         /*
          * CLOSE BUTTON
          */
 
-        if(closeButton){
-
-            closeButton.addEventListener(
-                "click",
-                closeMenu
-            );
-
+        if (closeButton) {
+            closeButton.addEventListener("click", closeMenu);
         }
-
 
         /*
          * OVERLAY
          */
 
-        if(overlay){
-
-            overlay.addEventListener(
-                "click",
-                closeMenu
-            );
-
+        if (overlay) {
+            overlay.addEventListener("click", closeMenu);
         }
-
 
         /*
          * NAVIGATION BUTTONS
          */
 
-        const navigationButtons =
-            sidebar.querySelectorAll(
-                "[data-action][data-platform]"
-            );
-
-
-        navigationButtons.forEach(
-            function(button){
-
-                button.addEventListener(
-                    "click",
-                    function(){
-
-                        const action =
-                            button.dataset.action;
-
-
-                        const platform =
-                            button.dataset.platform;
-
-
-                        /*
-                         * ACCESSORIES
-                         */
-
-                        if(
-                            action ===
-                            "accessories"
-                        ){
-
-                            window.location.href =
-                                "accessories.html?platform=" +
-                                encodeURIComponent(
-                                    platform
-                                );
-
-                            return;
-
-                        }
-
-
-                        /*
-                         * PS4 GAMES
-                         */
-
-                        if(
-                            action === "games" &&
-                            platform === "PS4"
-                        ){
-
-                            window.location.href =
-                                "index.html?platform=PS4";
-
-                            return;
-
-                        }
-
-
-                        /*
-                         * PS5 GAMES
-                         */
-
-                        if(
-                            action === "games" &&
-                            platform === "PS5"
-                        ){
-
-                            window.location.href =
-                                "index.html?platform=PS5";
-
-                            return;
-
-                        }
-
-
-                        /*
-                         * XBOX GAMES
-                         */
-
-                        if(
-                            action === "games" &&
-                            platform === "Xbox"
-                        ){
-
-                            window.location.href =
-                                "xbox.html";
-
-                            return;
-
-                        }
-
-                    }
-                );
-
-            }
+        const navigationButtons = sidebar.querySelectorAll(
+            "[data-action][data-platform]"
         );
 
+        navigationButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                const action = button.dataset.action;
+                const platform = button.dataset.platform;
+
+                if (action === "accessories") {
+                    window.location.href =
+                        "accessories.html?platform=" +
+                        encodeURIComponent(platform);
+
+                    return;
+                }
+
+                if (action === "games" && platform === "PS4") {
+                    window.location.href = "index.html?platform=PS4";
+                    return;
+                }
+
+                if (action === "games" && platform === "PS5") {
+                    window.location.href = "index.html?platform=PS5";
+                    return;
+                }
+
+                if (action === "games" && platform === "Xbox") {
+                    window.location.href = "xbox.html";
+                }
+            });
+        });
 
         /*
          * ESC KEY
          */
 
-        document.addEventListener(
-            "keydown",
-            function(event){
-
-                if(
-                    event.key === "Escape"
-                ){
-
-                    closeMenu();
-
-                }
-
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeMenu();
             }
-        );
-
+        });
     }
-
 
     /*
      * ============================================================
      * ACCESSORIES DATA
      * ============================================================
-     *
-     * Keep this array empty for now.
      */
 
-    const accessories = [];
+    const accessories = [
+        {
+            id: 1,
+            name: "PS4 Original Controller",
+            price: 1500,
+            currency: "LE",
+            category: "Controllers",
+            platforms: ["PS4"],
+            cover: "",
+            description:
+                "Original PlayStation 4 wireless controller. " +
+                "Price: 1500 LE."
+        },
 
+        {
+            id: 2,
+            name: "PS4 Copy Controller",
+            price: 800,
+            currency: "LE",
+            category: "Controllers",
+            platforms: ["PS4"],
+            cover: "",
+            description:
+                "Copy PlayStation 4 wireless controller. " +
+                "Price: 800 LE."
+        }
+    ];
 
     /*
      * ============================================================
@@ -1739,9 +1162,7 @@
      */
 
     let activeCategory = "ALL";
-
     let activePlatform = "ALL";
-
 
     /*
      * ============================================================
@@ -1749,35 +1170,25 @@
      * ============================================================
      */
 
-    const accessorySearchInput =
-        document.getElementById(
-            "accessorySearchInput"
-        );
+    const accessorySearchInput = document.getElementById(
+        "accessorySearchInput"
+    );
 
+    const accessoriesContainer = document.getElementById(
+        "accessoriesContainer"
+    );
 
-    const accessoriesContainer =
-        document.getElementById(
-            "accessoriesContainer"
-        );
+    const accessoriesEmpty = document.getElementById(
+        "accessoriesEmpty"
+    );
 
+    const accessoryCount = document.getElementById(
+        "accessoryCount"
+    );
 
-    const accessoriesEmpty =
-        document.getElementById(
-            "accessoriesEmpty"
-        );
-
-
-    const accessoryCount =
-        document.getElementById(
-            "accessoryCount"
-        );
-
-
-    const accessoryFilters =
-        document.querySelectorAll(
-            ".accessory-filter"
-        );
-
+    const accessoryFilters = document.querySelectorAll(
+        ".accessory-filter"
+    );
 
     /*
      * ============================================================
@@ -1785,32 +1196,13 @@
      * ============================================================
      */
 
-    function initializeAccessoriesFromURL(){
+    function initializeAccessoriesFromURL() {
+        const params = new URLSearchParams(window.location.search);
 
-        const params =
-            new URLSearchParams(
-                window.location.search
-            );
+        const requestedPlatform = params.get("platform");
+        const requestedCategory = params.get("category");
 
-
-        const requestedPlatform =
-            params.get(
-                "platform"
-            );
-
-
-        const requestedCategory =
-            params.get(
-                "category"
-            );
-
-
-        const supportedPlatforms = [
-            "PS4",
-            "PS5",
-            "Xbox"
-        ];
-
+        const supportedPlatforms = ["PS4", "PS5", "Xbox"];
 
         const supportedCategories = [
             "Controllers",
@@ -1823,47 +1215,27 @@
             "Other Accessories"
         ];
 
-
-        if(
+        if (
             requestedPlatform &&
-            supportedPlatforms.includes(
-                requestedPlatform
-            )
-        ){
-
-            activePlatform =
-                requestedPlatform;
-
+            supportedPlatforms.includes(requestedPlatform)
+        ) {
+            activePlatform = requestedPlatform;
         }
 
-
-        if(
+        if (
             requestedCategory &&
-            supportedCategories.includes(
-                requestedCategory
-            )
-        ){
-
-            activeCategory =
-                requestedCategory;
-
+            supportedCategories.includes(requestedCategory)
+        ) {
+            activeCategory = requestedCategory;
         }
 
-
-        accessoryFilters.forEach(
-            function(button){
-
-                button.classList.toggle(
-                    "active",
-                    button.dataset.category ===
-                    activeCategory
-                );
-
-            }
-        );
-
+        accessoryFilters.forEach(function (button) {
+            button.classList.toggle(
+                "active",
+                button.dataset.category === activeCategory
+            );
+        });
     }
-
 
     /*
      * ============================================================
@@ -1871,41 +1243,41 @@
      * ============================================================
      */
 
-    function getAccessoryCoverStyle(
-        cover
-    ){
-
-        if(!cover){
-
+    function getAccessoryCoverStyle(cover) {
+        if (!cover) {
             return "";
-
         }
 
-
-        if(
-            cover.startsWith(
-                "linear-gradient"
-            ) ||
-            cover.startsWith(
-                "radial-gradient"
-            )
-        ){
-
-            return `
-                background-image:
-                ${cover};
-            `;
-
+        if (
+            cover.startsWith("linear-gradient") ||
+            cover.startsWith("radial-gradient")
+        ) {
+            return `background-image: ${cover};`;
         }
 
-
-        return `
-            background-image:
-            url('${cover}');
-        `;
-
+        return `background-image: url('${cover}');`;
     }
 
+    /*
+     * ============================================================
+     * PRICE FORMAT
+     * ============================================================
+     */
+
+    function getAccessoryPrice(accessory) {
+        if (
+            accessory.price === null ||
+            accessory.price === undefined ||
+            accessory.price === "" ||
+            !Number.isFinite(Number(accessory.price))
+        ) {
+            return "Price unavailable";
+        }
+
+        return `${Number(accessory.price).toLocaleString("en-US")} ${
+            accessory.currency || "LE"
+        }`;
+    }
 
     /*
      * ============================================================
@@ -1913,184 +1285,102 @@
      * ============================================================
      */
 
-    function displayAccessories(
-        accessoryList
-    ){
-
-        accessoriesContainer.innerHTML =
-            "";
-
+    function displayAccessories(accessoryList) {
+        accessoriesContainer.innerHTML = "";
 
         accessoryCount.textContent =
-            `${accessoryList.length} Accessories`;
+            `${accessoryList.length} ${
+                accessoryList.length === 1 ? "Accessory" : "Accessories"
+            }`;
 
-
-        if(!accessoryList.length){
-
-            accessoriesEmpty.style.display =
-                "block";
-
+        if (!accessoryList.length) {
+            accessoriesEmpty.style.display = "block";
             return;
-
         }
 
+        accessoriesEmpty.style.display = "none";
 
-        accessoriesEmpty.style.display =
-            "none";
+        accessoryList.forEach(function (accessory, index) {
+            const card = document.createElement("article");
+            card.className = "accessory-card";
+            card.style.animationDelay = `${index * 0.035}s`;
 
+            const cover = accessory.cover || "";
+            const coverStyle = getAccessoryCoverStyle(cover);
 
-        accessoryList.forEach(
-            function(accessory,index){
+            const platformTags = Array.isArray(accessory.platforms)
+                ? accessory.platforms
+                : [];
 
-                const card =
-                    document.createElement(
-                        "article"
-                    );
-
-
-                card.className =
-                    "accessory-card";
-
-
-                card.style.animationDelay =
-                    `${index * 0.035}s`;
-
-
-                const cover =
-                    accessory.cover ||
-                    "";
-
-
-                const coverStyle =
-                    getAccessoryCoverStyle(
-                        cover
-                    );
-
-
-                const platformTags =
-                    Array.isArray(
-                        accessory.platforms
-                    )
-                        ? accessory.platforms
-                        : [];
-
-
-                const tagsHTML =
-                    platformTags.length
-                        ? platformTags
-                            .map(
-                                function(platform){
-
-                                    return `
-                                        <span class="accessory-tag">
-                                            ${platform}
-                                        </span>
-                                    `;
-
-                                }
-                            )
-                            .join("")
-                        : `
-                            <span class="accessory-tag">
-                                ${
-                                    accessory.category ||
-                                    "Accessory"
-                                }
-                            </span>
-                        `;
-
-
-                card.innerHTML = `
-
-                    <div
-                        class="accessory-cover"
-                        style="
-                            ${coverStyle}
-                            background-size:contain;
-                            background-repeat:no-repeat;
-                            background-position:center;
-                        "
-                    >
-
-                        ${
-                            cover
-                                ? ""
-                                : `
-                                    <div
-                                        class="accessory-placeholder-icon"
-                                    >
-                                        🎮
-                                    </div>
-                                `
-                        }
-
-                    </div>
-
-
-                    <div class="accessory-info">
-
-                        <h3>
-                            ${accessory.name}
-                        </h3>
-
-
-                        <div class="accessory-tags">
-
-                            ${tagsHTML}
-
-                        </div>
-
-
-                        <p class="accessory-description">
-
-                            ${
-                                accessory.description ||
-                                "Gaming accessory."
-                            }
-
-                        </p>
-
-
-                        <button
-                            class="accessory-button"
-                            type="button"
-                            data-accessory-id="${accessory.id}"
-                        >
-                            View Accessory
-                        </button>
-
-                    </div>
-
+            const tagsHTML = platformTags.length
+                ? platformTags.map(function (platform) {
+                    return `
+                        <span class="accessory-tag">
+                            ${platform}
+                        </span>
+                    `;
+                }).join("")
+                : `
+                    <span class="accessory-tag">
+                        ${accessory.category || "Accessory"}
+                    </span>
                 `;
 
-
-                const detailsButton =
-                    card.querySelector(
-                        ".accessory-button"
-                    );
-
-
-                detailsButton.addEventListener(
-                    "click",
-                    function(){
-
-                        openAccessoryDetails(
-                            accessory.id
-                        );
-
+            card.innerHTML = `
+                <div
+                    class="accessory-cover"
+                    style="
+                        ${coverStyle}
+                        background-size:contain;
+                        background-repeat:no-repeat;
+                        background-position:center;
+                    "
+                >
+                    ${
+                        cover
+                            ? ""
+                            : `
+                                <div class="accessory-placeholder-icon">
+                                    🎮
+                                </div>
+                            `
                     }
-                );
+                </div>
 
+                <div class="accessory-info">
+                    <h3>${accessory.name}</h3>
 
-                accessoriesContainer.appendChild(
-                    card
-                );
+                    <div class="accessory-tags">
+                        ${tagsHTML}
+                    </div>
 
-            }
-        );
+                    <p class="accessory-description">
+                        ${accessory.description || "Gaming accessory."}
+                    </p>
 
+                    <div class="accessory-price">
+                        ${getAccessoryPrice(accessory)}
+                    </div>
+
+                    <button
+                        class="accessory-button"
+                        type="button"
+                        data-accessory-id="${accessory.id}"
+                    >
+                        View Accessory
+                    </button>
+                </div>
+            `;
+
+            const detailsButton = card.querySelector(".accessory-button");
+
+            detailsButton.addEventListener("click", function () {
+                openAccessoryDetails(accessory.id);
+            });
+
+            accessoriesContainer.appendChild(card);
+        });
     }
-
 
     /*
      * ============================================================
@@ -2098,88 +1388,43 @@
      * ============================================================
      */
 
-    function applyAccessoryFilters(){
+    function applyAccessoryFilters() {
+        const searchText = accessorySearchInput.value.toLowerCase().trim();
 
-        const searchText =
-            accessorySearchInput
-                .value
-                .toLowerCase()
-                .trim();
+        const filteredAccessories = accessories.filter(function (accessory) {
+            const name = (accessory.name || "").toLowerCase();
+            const category = (accessory.category || "").toLowerCase();
+            const description = (accessory.description || "").toLowerCase();
+            const price = String(accessory.price ?? "").toLowerCase();
+            const currency = (accessory.currency || "").toLowerCase();
 
+            const matchesCategory =
+                activeCategory === "ALL" ||
+                accessory.category === activeCategory;
 
-        const filteredAccessories =
-            accessories.filter(
-                function(accessory){
+            const matchesSearch =
+                name.includes(searchText) ||
+                category.includes(searchText) ||
+                description.includes(searchText) ||
+                price.includes(searchText) ||
+                currency.includes(searchText);
 
-                    const name =
-                        (
-                            accessory.name ||
-                            ""
-                        ).toLowerCase();
+            const matchesPlatform =
+                activePlatform === "ALL" ||
+                (
+                    Array.isArray(accessory.platforms) &&
+                    accessory.platforms.includes(activePlatform)
+                );
 
-
-                    const category =
-                        (
-                            accessory.category ||
-                            ""
-                        ).toLowerCase();
-
-
-                    const description =
-                        (
-                            accessory.description ||
-                            ""
-                        ).toLowerCase();
-
-
-                    const matchesCategory =
-                        activeCategory ===
-                        "ALL" ||
-                        accessory.category ===
-                        activeCategory;
-
-
-                    const matchesSearch =
-                        name.includes(
-                            searchText
-                        ) ||
-                        category.includes(
-                            searchText
-                        ) ||
-                        description.includes(
-                            searchText
-                        );
-
-
-                    const matchesPlatform =
-                        activePlatform ===
-                        "ALL" ||
-                        (
-                            Array.isArray(
-                                accessory.platforms
-                            ) &&
-                            accessory.platforms.includes(
-                                activePlatform
-                            )
-                        );
-
-
-                    return (
-                        matchesCategory &&
-                        matchesSearch &&
-                        matchesPlatform
-                    );
-
-                }
+            return (
+                matchesCategory &&
+                matchesSearch &&
+                matchesPlatform
             );
+        });
 
-
-        displayAccessories(
-            filteredAccessories
-        );
-
+        displayAccessories(filteredAccessories);
     }
-
 
     /*
      * ============================================================
@@ -2187,37 +1432,17 @@
      * ============================================================
      */
 
-    accessoryFilters.forEach(
-        function(button){
+    accessoryFilters.forEach(function (button) {
+        button.addEventListener("click", function () {
+            activeCategory = button.dataset.category;
 
-            button.addEventListener(
-                "click",
-                function(){
+            accessoryFilters.forEach(function (item) {
+                item.classList.toggle("active", item === button);
+            });
 
-                    activeCategory =
-                        button.dataset.category;
-
-
-                    accessoryFilters.forEach(
-                        function(item){
-
-                            item.classList.toggle(
-                                "active",
-                                item === button
-                            );
-
-                        }
-                    );
-
-
-                    applyAccessoryFilters();
-
-                }
-            );
-
-        }
-    );
-
+            applyAccessoryFilters();
+        });
+    });
 
     /*
      * ============================================================
@@ -2230,75 +1455,43 @@
         applyAccessoryFilters
     );
 
-
     /*
      * ============================================================
      * DETAILS MODAL
      * ============================================================
      */
 
-    const accessoryDetailsModal =
-        document.getElementById(
-            "accessoryDetailsModal"
-        );
+    const accessoryDetailsModal = document.getElementById(
+        "accessoryDetailsModal"
+    );
 
+    const accessoryDetailsContainer = document.getElementById(
+        "accessoryDetailsContainer"
+    );
 
-    const accessoryDetailsContainer =
-        document.getElementById(
-            "accessoryDetailsContainer"
-        );
+    const closeAccessoryModal = document.getElementById(
+        "closeAccessoryModal"
+    );
 
+    const accessoryModalBackground = accessoryDetailsModal.querySelector(
+        ".modal-background"
+    );
 
-    const closeAccessoryModal =
-        document.getElementById(
-            "closeAccessoryModal"
-        );
+    function openAccessoryDetails(accessoryId) {
+        const accessory = accessories.find(function (item) {
+            return item.id === accessoryId;
+        });
 
-
-    const accessoryModalBackground =
-        accessoryDetailsModal.querySelector(
-            ".modal-background"
-        );
-
-
-    function openAccessoryDetails(
-        accessoryId
-    ){
-
-        const accessory =
-            accessories.find(
-                function(item){
-
-                    return item.id ===
-                        accessoryId;
-
-                }
-            );
-
-
-        if(!accessory){
-
+        if (!accessory) {
             return;
-
         }
 
-
-        const platforms =
-            Array.isArray(
-                accessory.platforms
-            )
-                ? accessory.platforms.join(
-                    " • "
-                )
-                : "All Platforms";
-
+        const platforms = Array.isArray(accessory.platforms)
+            ? accessory.platforms.join(" • ")
+            : "All Platforms";
 
         accessoryDetailsContainer.innerHTML = `
-
-            <div style="
-                padding:10px;
-                text-align:center;
-            ">
+            <div style="padding:10px;text-align:center;">
 
                 <p
                     class="small-title"
@@ -2307,7 +1500,6 @@
                     ACCESSORY DETAILS
                 </p>
 
-
                 <h2 style="
                     margin-bottom:15px;
                     font-family:'Orbitron',sans-serif;
@@ -2315,18 +1507,13 @@
                     ${accessory.name}
                 </h2>
 
-
                 <p style="
                     margin-bottom:10px;
                     color:#94a3b8;
                 ">
                     Category:
-                    ${
-                        accessory.category ||
-                        "Accessory"
-                    }
+                    ${accessory.category || "Accessory"}
                 </p>
-
 
                 <p style="
                     margin-bottom:20px;
@@ -2336,6 +1523,15 @@
                     ${platforms}
                 </p>
 
+                <div style="
+                    margin-bottom:20px;
+                    color:#22d3ee;
+                    font-family:'Orbitron',sans-serif;
+                    font-size:24px;
+                    font-weight:800;
+                ">
+                    ${getAccessoryPrice(accessory)}
+                </div>
 
                 <p style="
                     max-width:600px;
@@ -2343,68 +1539,38 @@
                     color:#cbd5e1;
                     line-height:1.8;
                 ">
-                    ${
-                        accessory.description ||
-                        "Gaming accessory."
-                    }
+                    ${accessory.description || "Gaming accessory."}
                 </p>
 
             </div>
-
         `;
 
-
-        accessoryDetailsModal.classList.add(
-            "active"
-        );
-
+        accessoryDetailsModal.classList.add("active");
     }
 
-
-    function closeAccessoryDetails(){
-
-        accessoryDetailsModal.classList.remove(
-            "active"
-        );
-
+    function closeAccessoryDetails() {
+        accessoryDetailsModal.classList.remove("active");
     }
 
-
-    if(closeAccessoryModal){
-
+    if (closeAccessoryModal) {
         closeAccessoryModal.addEventListener(
             "click",
             closeAccessoryDetails
         );
-
     }
 
-
-    if(accessoryModalBackground){
-
+    if (accessoryModalBackground) {
         accessoryModalBackground.addEventListener(
             "click",
             closeAccessoryDetails
         );
-
     }
 
-
-    document.addEventListener(
-        "keydown",
-        function(event){
-
-            if(
-                event.key === "Escape"
-            ){
-
-                closeAccessoryDetails();
-
-            }
-
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closeAccessoryDetails();
         }
-    );
-
+    });
 
     /*
      * ============================================================
@@ -2413,11 +1579,8 @@
      */
 
     createThemeToggle();
-
     createAccessoriesSidebar();
-
     initializeAccessoriesFromURL();
-
     applyAccessoryFilters();
 
     </script>
