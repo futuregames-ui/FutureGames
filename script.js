@@ -944,7 +944,7 @@ function createPlatformSidebar(){
             closeMenu();
         }
     });
-}
+        
 
 function getCoverStyle(cover){
     if(!cover) return "";
