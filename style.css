@@ -655,6 +655,7 @@ body.light-mode .price-item strong {
 }
 
 /* ==================== FULLSCREEN & GALLERY ==================== */
+
 .fullscreen-button {
     position: fixed;
     right: 20px;
@@ -663,11 +664,20 @@ body.light-mode .price-item strong {
     padding: 11px 15px;
     border: 1px solid #22d3ee4d;
     border-radius: 10px;
-    color: white;
-    background: #080d1de0;
+    color: #fff;
+    background: rgba(8, 13, 29, 0.9);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
 }
 
+.fullscreen-button:hover {
+    background: rgba(34, 211, 238, 0.18);
+    border-color: #22d3ee;
+}
+
+/* Gallery Overlay */
 .image-gallery {
     position: fixed;
     inset: 0;
@@ -675,67 +685,109 @@ body.light-mode .price-item strong {
     align-items: center;
     justify-content: center;
     z-index: 3000;
+    overflow: hidden;
+    isolation: isolate;
 }
 
 .image-gallery.active {
     display: flex;
 }
 
+/* Dark and blurred background */
 .gallery-background {
     position: absolute;
-    inset: 0;
-    background: #000eb;
+    inset: -15px;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.94);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 }
 
+/* Main image container */
 .gallery-content {
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: min(1000px, 82vw);
+    max-height: 90vh;
+    margin: 0 auto;
 }
 
 .gallery-content img {
     display: block;
     width: 100%;
+    max-width: 100%;
     max-height: 82vh;
     object-fit: contain;
     border-radius: 12px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.65);
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
+/* Image counter */
 .gallery-counter {
     width: fit-content;
-    margin: 12px auto 0;
-    padding: 7px 12px;
-    border-radius: 8px;
-    color: white;
-    background: #000a;
+    margin: 14px auto 0;
+    padding: 7px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    text-align: center;
 }
 
+/* Close and navigation buttons */
 .gallery-close,
 .gallery-arrow {
     position: absolute;
     z-index: 4;
-    border: 1px solid #ffffff26;
-    color: white;
-    background: #0a0f1ec7;
-    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    background: rgba(10, 15, 30, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
 }
 
+.gallery-close:hover,
+.gallery-arrow:hover {
+    background: rgba(34, 211, 238, 0.2);
+    border-color: #22d3ee;
+}
+
+/* Close button */
 .gallery-close {
-    top: 22px;
-    right: 25px;
+    top: 20px;
+    right: 20px;
     width: 46px;
     height: 46px;
+    padding: 0;
     border-radius: 50%;
     font-size: 28px;
+    line-height: 1;
 }
 
+/* Previous and next buttons */
 .gallery-arrow {
     top: 50%;
     width: 50px;
     height: 50px;
+    padding: 0;
     border-radius: 50%;
     transform: translateY(-50%);
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .gallery-prev {
@@ -744,6 +796,77 @@ body.light-mode .price-item strong {
 
 .gallery-next {
     right: 25px;
+}
+
+/* Mobile and tablet */
+@media (max-width: 768px) {
+    .fullscreen-button {
+        right: 12px;
+        bottom: 12px;
+        padding: 10px 12px;
+    }
+
+    .gallery-content {
+        width: 94vw;
+        max-height: 85vh;
+    }
+
+    .gallery-content img {
+        max-height: 72vh;
+        border-radius: 8px;
+    }
+
+    .gallery-close {
+        top: 12px;
+        right: 12px;
+        width: 42px;
+        height: 42px;
+        font-size: 26px;
+    }
+
+    .gallery-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+
+    .gallery-prev {
+        left: 10px;
+    }
+
+    .gallery-next {
+        right: 10px;
+    }
+
+    .gallery-counter {
+        margin-top: 10px;
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    .gallery-content {
+        width: 96vw;
+    }
+
+    .gallery-content img {
+        max-height: 65vh;
+    }
+
+    .gallery-arrow {
+        width: 36px;
+        height: 36px;
+    }
+
+    .gallery-prev {
+        left: 6px;
+    }
+
+    .gallery-next {
+        right: 6px;
+    }
 }
 
 /* ==================== THEME SWITCHER ==================== */
