@@ -1003,8 +1003,6 @@ function createPlatformSidebar(){
 
         /*
             XBOX 360 + XBOX SERIES S
-
-            Both consoles use the same empty Xbox page.
         */
         if(
             platform === "Xbox 360" ||
@@ -1015,7 +1013,6 @@ function createPlatformSidebar(){
         }
 
         /*
-            NORMAL PLATFORM FILTERING
             PS4 / PS5 / ALL GAMES
         */
         platformButtons.forEach(item=>{
@@ -1025,8 +1022,8 @@ function createPlatformSidebar(){
             );
         });
 
-        if(typeof selectedPlatform !== "undefined"){
-            selectedPlatform = platform;
+        if(typeof activePlatform !== "undefined"){
+            activePlatform = platform;
         }
 
         closeMenu();
@@ -1133,16 +1130,22 @@ function applyFilters(){
 
         const matchesPlatform =
             activePlatform === "ALL" ||
-            game.platforms.includes(activePlatform);
+            (
+                Array.isArray(game.platforms) &&
+                game.platforms.includes(activePlatform)
+            );
 
-        return matchesCategory && matchesSearch && matchesPlatform;
+        return (
+            matchesCategory &&
+            matchesSearch &&
+            matchesPlatform
+        );
     });
 
     displayGames(filteredGames);
 }
 
 searchInput.addEventListener("input",applyFilters);
-
 function priceText(value){
     if(value === "لا تدعم"){
         return "لا تدعم";
