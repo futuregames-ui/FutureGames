@@ -500,6 +500,18 @@
         }
 
         /*
+         * ALL ACCESSORIES + ALL GAMES
+         *
+         * Use the same class as Home so they receive
+         * the exact same sidebar animation and styling.
+         */
+
+        .sidebar-all-accessories-button,
+        .sidebar-all-games-button {
+            margin-top: 10px;
+        }
+
+        /*
          * LIGHT MODE
          */
         body.light-mode .accessories-search-box input {
@@ -836,9 +848,20 @@
             <button
                 type="button"
                 id="sidebarAllAccessoriesButton"
-                class="sidebar-all-accessories-button"
+                class="sidebar-home-button sidebar-all-accessories-button"
             >
                 🧩 All Accessories
+            </button>
+
+
+            <!-- ALL GAMES -->
+
+            <button
+                type="button"
+                id="sidebarAllGamesButton"
+                class="sidebar-home-button sidebar-all-games-button"
+            >
+                🎮 All Games
             </button>
 
 
@@ -1390,6 +1413,12 @@
             );
 
 
+        const allGamesButton =
+            document.getElementById(
+                "sidebarAllGamesButton"
+            );
+
+
         if(!sidebar){
 
             console.error(
@@ -1484,6 +1513,25 @@
 
                     window.location.href =
                         "accessories.html";
+
+                }
+            );
+
+        }
+
+
+        /*
+         * ALL GAMES
+         */
+
+        if(allGamesButton){
+
+            allGamesButton.addEventListener(
+                "click",
+                function(){
+
+                    window.location.href =
+                        "index.html?games=1";
 
                 }
             );
