@@ -328,6 +328,19 @@
             letter-spacing: .4px;
         }
 
+        .accessory-offer {
+            display: inline-block;
+            align-self: flex-start;
+            margin: 0 0 12px;
+            padding: 5px 10px;
+            border: 1px solid #22c55e66;
+            border-radius: 8px;
+            color: #86efac;
+            background: #22c55e14;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
         .accessory-button {
             width: 100%;
             margin-top: auto;
@@ -460,6 +473,11 @@
 
         body.light-mode .accessory-button {
             color: #0f172a;
+        }
+
+        body.light-mode .accessory-offer {
+            color: #166534;
+            background: #22c55e16;
         }
 
         /*
@@ -825,7 +843,7 @@
                     class="accessory-filter"
                     data-category="Cases"
                 >
-                    🛡️ Cases
+                    🛡️ Cases & Bags
                 </button>
 
                 <button
@@ -1124,10 +1142,16 @@
     /*
      * ============================================================
      * ACCESSORIES DATA
+     * Total: 25 products
+     * Images will be added in a later phase.
      * ============================================================
      */
 
     const accessories = [
+        /*
+         * CONTROLLERS
+         */
+
         {
             id: 1,
             name: "PS4 Original Controller",
@@ -1137,8 +1161,7 @@
             platforms: ["PS4"],
             cover: "",
             description:
-                "Original PlayStation 4 wireless controller. " +
-                "Price: 1500 LE."
+                "Original PlayStation 4 wireless controller."
         },
 
         {
@@ -1150,8 +1173,308 @@
             platforms: ["PS4"],
             cover: "",
             description:
-                "Copy PlayStation 4 wireless controller. " +
-                "Price: 800 LE."
+                "Copy PlayStation 4 wireless controller."
+        },
+
+        {
+            id: 3,
+            name: "PS5 Controller - New",
+            price: 4200,
+            currency: "LE",
+            category: "Controllers",
+            platforms: ["PS5"],
+            cover: "",
+            description:
+                "New PlayStation 5 DualSense wireless controller."
+        },
+
+        {
+            id: 4,
+            name: "PS5 Controller - Used",
+            price: 3000,
+            maxPrice: 3700,
+            currency: "LE",
+            category: "Controllers",
+            platforms: ["PS5"],
+            cover: "",
+            description:
+                "Used PlayStation 5 DualSense controller. " +
+                "Price varies by condition, from 3000 to 3700 LE."
+        },
+
+        {
+            id: 5,
+            name: "Xbox 360 Wired Controller",
+            price: 700,
+            currency: "LE",
+            category: "Controllers",
+            platforms: ["Xbox"],
+            cover: "",
+            description:
+                "Wired controller compatible with Xbox 360."
+        },
+
+        {
+            id: 6,
+            name: "Xbox 360 Wireless Controller",
+            price: 1000,
+            currency: "LE",
+            category: "Controllers",
+            platforms: ["Xbox"],
+            cover: "",
+            description:
+                "Wireless gamepad for Xbox 360."
+        },
+
+        /*
+         * CABLES
+         */
+
+        {
+            id: 7,
+            name: "PS5 USB Cable - 2m",
+            price: 200,
+            currency: "LE",
+            category: "Cables",
+            platforms: ["PS5"],
+            cover: "",
+            description:
+                "Two-meter USB cable for a PS5 gaming setup."
+        },
+
+        {
+            id: 8,
+            name: "PS4 Original Controller Cable",
+            price: 125,
+            currency: "LE",
+            category: "Cables",
+            platforms: ["PS4"],
+            cover: "",
+            description:
+                "Charging cable for the PS4 controller."
+        },
+
+        {
+            id: 9,
+            name: "PS4 Power Cable",
+            price: 125,
+            currency: "LE",
+            category: "Cables",
+            platforms: ["PS4"],
+            cover: "",
+            description:
+                "Power cable for a PlayStation 4 console."
+        },
+
+        {
+            id: 10,
+            name: "PS5 Original HDMI Cable",
+            price: 250,
+            currency: "LE",
+            category: "Cables",
+            platforms: ["PS5"],
+            cover: "",
+            description:
+                "Original HDMI cable for a PlayStation 5 console."
+        },
+
+        {
+            id: 11,
+            name: "Xbox 360 Charging Cable",
+            price: 150,
+            currency: "LE",
+            category: "Cables",
+            platforms: ["Xbox"],
+            cover: "",
+            description:
+                "Charging cable for an Xbox 360 controller battery."
+        },
+
+        /*
+         * CHARGERS AND BATTERIES
+         */
+
+        {
+            id: 12,
+            name: "Xbox 360 Battery + Cable",
+            price: 225,
+            currency: "LE",
+            category: "Chargers",
+            platforms: ["Xbox"],
+            cover: "",
+            description:
+                "Xbox 360 rechargeable battery with charging cable."
+        },
+
+        {
+            id: 13,
+            name: "Xbox 360 Two Batteries + Cable Bundle",
+            price: 350,
+            currency: "LE",
+            category: "Chargers",
+            platforms: ["Xbox"],
+            cover: "",
+            isOffer: true,
+            description:
+                "Special bundle with two Xbox 360 batteries and a charging cable."
+        },
+
+        {
+            id: 14,
+            name: "Dobe PS5 Controller Charging Arm",
+            price: 400,
+            currency: "LE",
+            category: "Chargers",
+            platforms: ["PS5"],
+            cover: "",
+            description:
+                "Charging accessory for a PS5 DualSense controller."
+        },
+
+        /*
+         * STANDS AND CHARGING STATIONS
+         */
+
+        {
+            id: 15,
+            name: "PS4 Horizontal Fan + Charging Stand",
+            price: 475,
+            currency: "LE",
+            category: "Cooling",
+            platforms: ["PS4"],
+            cover: "",
+            description:
+                "Horizontal PS4 stand with a cooling fan and charging function."
+        },
+
+        {
+            id: 16,
+            name: "PS4 Stand with Socket + Charger",
+            price: 225,
+            currency: "LE",
+            category: "Stands",
+            platforms: ["PS4"],
+            cover: "",
+            description:
+                "PS4 stand with a power socket and controller charging function."
+        },
+
+        {
+            id: 17,
+            name: "PS4 / PS4 Pro / PS4 Slim Stand",
+            price: 850,
+            currency: "LE",
+            category: "Stands",
+            platforms: ["PS4"],
+            cover: "",
+            description:
+                "Stand compatible with PS4, PS4 Pro and PS4 Slim consoles."
+        },
+
+        {
+            id: 18,
+            name: "Choetech PS5 Controller Charging Stand",
+            price: 650,
+            currency: "LE",
+            category: "Stands",
+            platforms: ["PS5"],
+            cover: "",
+            description:
+                "Choetech charging stand for PS5 controllers."
+        },
+
+        {
+            id: 19,
+            name: "PS5 Slim / Fat Stand",
+            price: 1350,
+            currency: "LE",
+            category: "Stands",
+            platforms: ["PS5"],
+            cover: "",
+            description:
+                "Console stand compatible with PS5 Slim and Fat models."
+        },
+
+        {
+            id: 20,
+            name: "Sony Original PS5 Stand",
+            price: 1550,
+            currency: "LE",
+            category: "Stands",
+            platforms: ["PS5"],
+            cover: "",
+            description:
+                "Original Sony stand for a PlayStation 5 console."
+        },
+
+        /*
+         * CASES AND BAGS
+         */
+
+        {
+            id: 21,
+            name: "PS4 / PS5 Console Bag",
+            price: 650,
+            currency: "LE",
+            category: "Cases",
+            platforms: ["PS4", "PS5"],
+            cover: "",
+            description:
+                "Carrying bag for compatible PlayStation consoles."
+        },
+
+        {
+            id: 22,
+            name: "Dobe PS4 / PS5 Protective Case",
+            price: 200,
+            maxPrice: 250,
+            currency: "LE",
+            category: "Cases",
+            platforms: ["PS4", "PS5"],
+            cover: "",
+            description:
+                "Protective case for PS4 or PS5. " +
+                "Price ranges from 200 to 250 LE depending on the version."
+        },
+
+        {
+            id: 23,
+            name: "PS5 Console Bag - New",
+            price: 2500,
+            currency: "LE",
+            category: "Cases",
+            platforms: ["PS5"],
+            cover: "",
+            description:
+                "New carrying bag for a PlayStation 5 console."
+        },
+
+        {
+            id: 24,
+            name: "PS5 Slim Console Bag - KW",
+            price: 3250,
+            currency: "LE",
+            category: "Cases",
+            platforms: ["PS5"],
+            cover: "",
+            description:
+                "KW-brand carrying bag for a PS5 Slim console."
+        },
+
+        /*
+         * HEADSETS
+         */
+
+        {
+            id: 25,
+            name: "Sony Headset for PS4 / PS5",
+            price: 4000,
+            currency: "LE",
+            category: "Headsets",
+            platforms: ["PS4", "PS5"],
+            cover: "",
+            description:
+                "Sony gaming headset compatible with PS4 and PS5."
         }
     ];
 
@@ -1261,10 +1584,13 @@
     /*
      * ============================================================
      * PRICE FORMAT
+     * Supports fixed prices and price ranges.
      * ============================================================
      */
 
     function getAccessoryPrice(accessory) {
+        const currency = accessory.currency || "LE";
+
         if (
             accessory.price === null ||
             accessory.price === undefined ||
@@ -1274,9 +1600,24 @@
             return "Price unavailable";
         }
 
-        return `${Number(accessory.price).toLocaleString("en-US")} ${
-            accessory.currency || "LE"
-        }`;
+        const minPrice = Number(accessory.price);
+        const maxPrice =
+            accessory.maxPrice === null ||
+            accessory.maxPrice === undefined
+                ? null
+                : Number(accessory.maxPrice);
+
+        const formattedMin = minPrice.toLocaleString("en-US");
+
+        if (
+            maxPrice !== null &&
+            Number.isFinite(maxPrice) &&
+            maxPrice !== minPrice
+        ) {
+            return `${formattedMin} - ${maxPrice.toLocaleString("en-US")} ${currency}`;
+        }
+
+        return `${formattedMin} ${currency}`;
     }
 
     /*
@@ -1362,6 +1703,12 @@
                         ${getAccessoryPrice(accessory)}
                     </div>
 
+                    ${
+                        accessory.isOffer
+                            ? '<span class="accessory-offer">SPECIAL OFFER</span>'
+                            : ""
+                    }
+
                     <button
                         class="accessory-button"
                         type="button"
@@ -1396,7 +1743,10 @@
             const category = (accessory.category || "").toLowerCase();
             const description = (accessory.description || "").toLowerCase();
             const price = String(accessory.price ?? "").toLowerCase();
+            const maxPrice = String(accessory.maxPrice ?? "").toLowerCase();
             const currency = (accessory.currency || "").toLowerCase();
+            const platformText = (accessory.platforms || []).join(" ").toLowerCase();
+            const offerText = accessory.isOffer ? "offer special offer عرض" : "";
 
             const matchesCategory =
                 activeCategory === "ALL" ||
@@ -1407,7 +1757,10 @@
                 category.includes(searchText) ||
                 description.includes(searchText) ||
                 price.includes(searchText) ||
-                currency.includes(searchText);
+                maxPrice.includes(searchText) ||
+                currency.includes(searchText) ||
+                platformText.includes(searchText) ||
+                offerText.includes(searchText);
 
             const matchesPlatform =
                 activePlatform === "ALL" ||
@@ -1532,6 +1885,12 @@
                 ">
                     ${getAccessoryPrice(accessory)}
                 </div>
+
+                ${
+                    accessory.isOffer
+                        ? '<div class="accessory-offer" style="margin-bottom:18px;">SPECIAL OFFER</div>'
+                        : ""
+                }
 
                 <p style="
                     max-width:600px;
