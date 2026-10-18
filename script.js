@@ -824,7 +824,6 @@ function createFilterBar(){
         });
     });
 }
-
 /* PLATFORM SIDEBAR */
 function createPlatformSidebar(){
     if(document.getElementById("platformSidebar")) return;
@@ -856,12 +855,17 @@ function createPlatformSidebar(){
 
             <h2>Choose Console</h2>
 
+            <!-- HOME -->
             <button
                 type="button"
                 id="sidebarHomeButton"
                 class="sidebar-home-button"
-            >🏠 Home</button>
+            >
+                🏠 Home
+            </button>
 
+
+            <!-- ALL GAMES -->
             <button
                 type="button"
                 data-platform="ALL"
@@ -870,39 +874,97 @@ function createPlatformSidebar(){
                 🎮 All Games
             </button>
 
-            <button
-                type="button"
-                data-platform="PS4"
-            >
-                🎮 PlayStation 4
-            </button>
 
-            <button
-                type="button"
-                data-platform="PS5"
-            >
-                🎮 PlayStation 5
-            </button>
+            <!-- PS4 -->
+            <div class="sidebar-console-group">
 
-            <button
-                type="button"
-                data-platform="Xbox 360"
-            >
-                🎮 Xbox 360
-            </button>
+                <div class="sidebar-console-title">
+                    🎮 PlayStation 4
+                </div>
 
-            <button
-                type="button"
-                data-platform="Xbox Series S"
-            >
-                🎮 Xbox Series S
-            </button>
+                <button
+                    type="button"
+                    class="sidebar-sub-button"
+                    data-action="games"
+                    data-platform="PS4"
+                >
+                    🎮 Games
+                </button>
+
+                <button
+                    type="button"
+                    class="sidebar-sub-button"
+                    data-action="accessories"
+                    data-platform="PS4"
+                >
+                    🧩 Accessories
+                </button>
+
+            </div>
+
+
+            <!-- PS5 -->
+            <div class="sidebar-console-group">
+
+                <div class="sidebar-console-title">
+                    🎮 PlayStation 5
+                </div>
+
+                <button
+                    type="button"
+                    class="sidebar-sub-button"
+                    data-action="games"
+                    data-platform="PS5"
+                >
+                    🎮 Games
+                </button>
+
+                <button
+                    type="button"
+                    class="sidebar-sub-button"
+                    data-action="accessories"
+                    data-platform="PS5"
+                >
+                    🧩 Accessories
+                </button>
+
+            </div>
+
+
+            <!-- XBOX -->
+            <div class="sidebar-console-group">
+
+                <div class="sidebar-console-title">
+                    🎮 Xbox
+                </div>
+
+                <button
+                    type="button"
+                    class="sidebar-sub-button"
+                    data-action="games"
+                    data-platform="Xbox"
+                >
+                    🎮 Games
+                </button>
+
+                <button
+                    type="button"
+                    class="sidebar-sub-button"
+                    data-action="accessories"
+                    data-platform="Xbox"
+                >
+                    🧩 Accessories
+                </button>
+
+            </div>
+
         </aside>
     `;
 
     while(wrapper.firstChild){
         document.body.appendChild(wrapper.firstChild);
     }
+
 
     const sidebarHomeButton =
         document.getElementById("sidebarHomeButton");
@@ -919,6 +981,7 @@ function createPlatformSidebar(){
     const closeButton =
         document.getElementById("platformCloseButton");
 
+
     if(!sidebar){
         console.error(
             "Future Games: platformSidebar was not created."
@@ -926,8 +989,6 @@ function createPlatformSidebar(){
         return;
     }
 
-    const platformButtons =
-        sidebar.querySelectorAll("[data-platform]");
 
     /*
         HOME BUTTON
@@ -938,35 +999,36 @@ function createPlatformSidebar(){
         });
     }
 
+
     /*
-        OPEN SIDEBAR
+        MENU
     */
     function openMenu(){
         sidebar.classList.add("open");
         overlay.classList.add("open");
 
-        menuButton.setAttribute(
-            "aria-expanded",
-            "true"
-        );
+        if(menuButton){
+            menuButton.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+        }
     }
 
-    /*
-        CLOSE SIDEBAR
-    */
+
     function closeMenu(){
         sidebar.classList.remove("open");
         overlay.classList.remove("open");
 
-        menuButton.setAttribute(
-            "aria-expanded",
-            "false"
-        );
+        if(menuButton){
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+        }
     }
 
-    /*
-        MENU BUTTON
-    */
+
     if(menuButton){
         menuButton.addEventListener("click",()=>{
             if(sidebar.classList.contains("open")){
@@ -977,9 +1039,7 @@ function createPlatformSidebar(){
         });
     }
 
-    /*
-        CLOSE BUTTON
-    */
+
     if(closeButton){
         closeButton.addEventListener(
             "click",
@@ -987,9 +1047,7 @@ function createPlatformSidebar(){
         );
     }
 
-    /*
-        OVERLAY
-    */
+
     if(overlay){
         overlay.addEventListener(
             "click",
@@ -997,52 +1055,150 @@ function createPlatformSidebar(){
         );
     }
 
-   platformButtons.forEach(button=>{
-    button.addEventListener("click",()=>{
-        const platform = button.dataset.platform;
 
-        /*
-            XBOX 360 + XBOX SERIES S
-        */
-        if(
-            platform === "Xbox 360" ||
-            platform === "Xbox Series S"
-        ){
-            window.location.href = "xbox.html";
-            return;
-        }
+    /*
+        ALL GAMES
+    */
+    const allGamesButton =
+        sidebar.querySelector(
+            '[data-platform="ALL"]'
+        );
 
-        /*
-            PS4 / PS5 / ALL GAMES
-        */
-        platformButtons.forEach(item=>{
-            item.classList.toggle(
-                "active",
-                item === button
-            );
-        });
 
-        if(typeof activePlatform !== "undefined"){
-            activePlatform = platform;
-        }
+    if(allGamesButton){
+        allGamesButton.addEventListener(
+            "click",
+            ()=>{
+                if(typeof activePlatform !== "undefined"){
+                    activePlatform = "ALL";
+                }
 
-        closeMenu();
+                sidebar
+                    .querySelectorAll(
+                        "[data-platform]"
+                    )
+                    .forEach(item=>{
+                        item.classList.remove(
+                            "active"
+                        );
+                    });
 
-        if(typeof applyFilters === "function"){
-            applyFilters();
-        }
+                allGamesButton.classList.add(
+                    "active"
+                );
+
+                closeMenu();
+
+                if(typeof applyFilters === "function"){
+                    applyFilters();
+                }
+            }
+        );
+    }
+
+
+    /*
+        GAMES + ACCESSORIES BUTTONS
+    */
+    const navigationButtons =
+        sidebar.querySelectorAll(
+            "[data-action][data-platform]"
+        );
+
+
+    navigationButtons.forEach(button=>{
+
+        button.addEventListener(
+            "click",
+            ()=>{
+
+                const action =
+                    button.dataset.action;
+
+                const platform =
+                    button.dataset.platform;
+
+
+                /*
+                    ACCESSORIES
+                */
+                if(action === "accessories"){
+
+                    window.location.href =
+                        "accessories.html?platform=" +
+                        encodeURIComponent(
+                            platform
+                        );
+
+                    return;
+                }
+
+
+                /*
+                    PS4 GAMES
+                */
+                if(
+                    action === "games" &&
+                    platform === "PS4"
+                ){
+
+                    window.location.href =
+                        "index.html?platform=PS4";
+
+                    return;
+                }
+
+
+                /*
+                    PS5 GAMES
+                */
+                if(
+                    action === "games" &&
+                    platform === "PS5"
+                ){
+
+                    window.location.href =
+                        "index.html?platform=PS5";
+
+                    return;
+                }
+
+
+                /*
+                    XBOX GAMES
+                    Xbox 360 + Xbox Series S
+                    use the same Xbox page.
+                */
+                if(
+                    action === "games" &&
+                    platform === "Xbox"
+                ){
+
+                    window.location.href =
+                        "xbox.html";
+
+                    return;
+                }
+
+            }
+        );
+
     });
-});
+
 
     /*
         ESC KEY
     */
-    document.addEventListener("keydown",event=>{
-        if(event.key === "Escape"){
-            closeMenu();
+    document.addEventListener(
+        "keydown",
+        event=>{
+            if(event.key === "Escape"){
+                closeMenu();
+            }
         }
-    });
-}function getCoverStyle(cover){
+    );
+}
+function getCoverStyle(cover){
     if(!cover) return "";
 
     if(

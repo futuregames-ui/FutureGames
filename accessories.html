@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Future Games | Accessories & Gear</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /*
+         * ============================================================
+         * ACCESSORIES PAGE
+         * ============================================================
+         */
+
+        .accessories-page {
+            position: relative;
+            z-index: 2;
+        }
+
+        /*
+         * ACCESSORIES HERO
+         */
+        .accessories-hero {
+            position: relative;
+            padding: 110px 20px 70px;
+            text-align: center;
+        }
+
+        .accessories-hero .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .accessories-hero h1 {
+            margin: 10px 0 18px;
+            font-family: "Orbitron", sans-serif;
+            font-size: clamp(38px, 7vw, 72px);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: 1px;
+        }
+
+        .accessories-hero h1 span {
+            background: linear-gradient(
+                90deg,
+                #22d3ee,
+                #8b5cf6
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .accessories-description {
+            max-width: 680px;
+            margin: 0 auto 30px;
+            color: #94a3b8;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /*
+         * ACCESSORIES SEARCH
+         */
+        .accessories-search-box {
+            width: min(700px, 100%);
+            margin: 0 auto;
+        }
+
+        .accessories-search-box input {
+            width: 100%;
+            min-height: 54px;
+            padding: 15px 20px;
+
+            border: 1px solid #22d3ee44;
+            border-radius: 14px;
+
+            outline: none;
+
+            color: #f8fafc;
+            background: #080d1de8;
+
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+
+            box-shadow:
+                0 10px 35px #0004,
+                0 0 30px #22d3ee08;
+
+            backdrop-filter: blur(15px);
+
+            transition:
+                border-color .25s,
+                box-shadow .25s,
+                background .25s;
+        }
+
+        .accessories-search-box input::placeholder {
+            color: #64748b;
+        }
+
+        .accessories-search-box input:focus {
+            border-color: #22d3ee99;
+
+            box-shadow:
+                0 10px 35px #0005,
+                0 0 30px #22d3ee18;
+        }
+
+        /*
+         * ACCESSORIES CONTAINER
+         */
+        .accessories-container {
+            position: relative;
+            z-index: 2;
+
+            width: min(1400px, calc(100% - 40px));
+            margin: 0 auto;
+            padding-bottom: 80px;
+        }
+
+        /*
+         * SECTION HEADER
+         */
+        .accessories-section-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 20px;
+
+            margin-bottom: 30px;
+        }
+
+        .accessories-section-header h2 {
+            margin: 5px 0 0;
+
+            font-family: "Orbitron", sans-serif;
+            font-size: clamp(24px, 4vw, 34px);
+            font-weight: 800;
+        }
+
+        .accessories-count {
+            flex-shrink: 0;
+
+            padding: 10px 16px;
+
+            border: 1px solid #22d3ee44;
+            border-radius: 12px;
+
+            color: #cbd5e1;
+            background: #ffffff06;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            backdrop-filter: blur(10px);
+        }
+
+        /*
+         * CATEGORY FILTERS
+         */
+        .accessories-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            margin-bottom: 30px;
+        }
+
+        .accessory-filter {
+            min-height: 42px;
+
+            padding: 9px 15px;
+
+            border: 1px solid #22d3ee33;
+            border-radius: 11px;
+
+            color: #94a3b8;
+            background: #080d1dcc;
+
+            cursor: pointer;
+
+            font-family: "Poppins", sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+
+            transition:
+                color .2s,
+                background .2s,
+                border-color .2s,
+                transform .2s;
+        }
+
+        .accessory-filter:hover {
+            color: #f8fafc;
+            border-color: #22d3ee77;
+            background: #22d3ee12;
+            transform: translateY(-2px);
+        }
+
+        .accessory-filter.active {
+            color: #ffffff;
+
+            border-color: #22d3ee99;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #22d3ee20,
+                    #8b5cf620
+                );
+
+            box-shadow: 0 8px 25px #0003;
+        }
+
+        /*
+         * ACCESSORIES GRID
+         */
+        .accessories-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fill,
+                    minmax(250px, 1fr)
+                );
+
+            gap: 22px;
+        }
+
+        /*
+         * ACCESSORY CARD
+         */
+        .accessory-card {
+            min-height: 330px;
+
+            display: flex;
+            flex-direction: column;
+
+            overflow: hidden;
+
+            border: 1px solid #22d3ee22;
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #0b1224ee,
+                    #080d1dee
+                );
+
+            box-shadow:
+                0 15px 40px #0004;
+
+            backdrop-filter: blur(15px);
+
+            transition:
+                transform .25s,
+                border-color .25s,
+                box-shadow .25s;
+        }
+
+        .accessory-card:hover {
+            transform: translateY(-7px);
+
+            border-color: #22d3ee66;
+
+            box-shadow:
+                0 22px 55px #0006,
+                0 0 30px #22d3ee0c;
+        }
+
+        /*
+         * ACCESSORY COVER
+         */
+        .accessory-cover {
+            position: relative;
+
+            height: 190px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            border-bottom: 1px solid #ffffff0d;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #22d3ee0e,
+                    transparent 65%
+                ),
+                #080b12;
+
+            font-size: 52px;
+        }
+
+        .accessory-cover::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    transparent,
+                    #22d3ee06,
+                    transparent
+                );
+
+            pointer-events: none;
+        }
+
+        .accessory-placeholder-icon {
+            position: relative;
+            z-index: 1;
+
+            width: 78px;
+            height: 78px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid #22d3ee44;
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #22d3ee12,
+                    #8b5cf612
+                );
+
+            box-shadow: 0 0 35px #22d3ee0c;
+        }
+
+        /*
+         * ACCESSORY INFO
+         */
+        .accessory-info {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+
+            padding: 20px;
+        }
+
+        .accessory-info h3 {
+            margin: 0 0 10px;
+
+            color: #f8fafc;
+
+            font-family: "Orbitron", sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .accessory-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+
+            margin-bottom: 12px;
+        }
+
+        .accessory-tag {
+            padding: 5px 9px;
+
+            border: 1px solid #8b5cf633;
+            border-radius: 7px;
+
+            color: #c4b5fd;
+            background: #8b5cf610;
+
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .accessory-description {
+            margin: 0;
+
+            color: #94a3b8;
+
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .accessory-button {
+            width: 100%;
+
+            margin-top: auto;
+            padding: 11px 14px;
+
+            border: 1px solid #22d3ee44;
+            border-radius: 10px;
+
+            color: #f8fafc;
+            background: #22d3ee0d;
+
+            cursor: pointer;
+
+            font-family: "Poppins", sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+
+            transition:
+                background .2s,
+                border-color .2s,
+                transform .2s;
+        }
+
+        .accessory-button:hover {
+            border-color: #22d3ee88;
+            background: #22d3ee18;
+            transform: translateY(-2px);
+        }
+
+        /*
+         * EMPTY STATE
+         */
+        .accessories-empty {
+            display: none;
+
+            padding: 70px 25px;
+
+            border: 1px dashed #22d3ee44;
+            border-radius: 18px;
+
+            text-align: center;
+
+            background: #ffffff03;
+        }
+
+        .accessories-empty-icon {
+            width: 76px;
+            height: 76px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 20px;
+
+            border: 1px solid #22d3ee33;
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #22d3ee12,
+                    #8b5cf612
+                );
+
+            font-size: 32px;
+        }
+
+        .accessories-empty h3 {
+            margin: 0 0 10px;
+
+            font-family: "Orbitron", sans-serif;
+            font-size: 24px;
+        }
+
+        .accessories-empty p {
+            max-width: 500px;
+
+            margin: 0 auto;
+
+            color: #64748b;
+
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /*
+         * ACCESSORIES SIDEBAR
+         *
+         * Uses the same sidebar structure/classes
+         * already added to style.css.
+         */
+
+        .accessories-sidebar-wrapper {
+            position: relative;
+            z-index: 5000;
+        }
+
+        /*
+         * LIGHT MODE
+         */
+        body.light-mode .accessories-search-box input {
+            color: #0f172a;
+            background: #ffffffdd;
+            border-color: #0891b244;
+        }
+
+        body.light-mode .accessory-filter {
+            color: #475569;
+            background: #ffffffcc;
+            border-color: #0891b233;
+        }
+
+        body.light-mode .accessory-filter:hover {
+            color: #0f172a;
+            background: #0891b210;
+            border-color: #0891b266;
+        }
+
+        body.light-mode .accessory-filter.active {
+            color: #0f172a;
+            border-color: #0891b277;
+            background: linear-gradient(
+                135deg,
+                #22d3ee20,
+                #8b5cf620
+            );
+        }
+
+        body.light-mode .accessory-card {
+            background: #ffffffdd;
+            border-color: #0891b222;
+        }
+
+        body.light-mode .accessory-card:hover {
+            border-color: #0891b266;
+        }
+
+        body.light-mode .accessory-info h3 {
+            color: #0f172a;
+        }
+
+        body.light-mode .accessory-description {
+            color: #64748b;
+        }
+
+        body.light-mode .accessories-count {
+            color: #475569;
+            background: #ffffff99;
+            border-color: #0891b233;
+        }
+
+        /*
+         * RESPONSIVE
+         */
+        @media(max-width: 800px){
+
+            .accessories-hero {
+                padding-top: 90px;
+            }
+
+            .accessories-section-header {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .accessories-grid {
+                grid-template-columns:
+                    repeat(
+                        auto-fill,
+                        minmax(220px, 1fr)
+                    );
+            }
+
+        }
+
+        @media(max-width: 550px){
+
+            .accessories-hero {
+                padding:
+                    85px 15px
+                    55px;
+            }
+
+            .accessories-container {
+                width: calc(100% - 24px);
+            }
+
+            .accessories-hero h1 {
+                font-size: 38px;
+            }
+
+            .accessories-description {
+                font-size: 14px;
+            }
+
+            .accessories-section-header h2 {
+                font-size: 24px;
+            }
+
+            .accessories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .accessory-cover {
+                height: 180px;
+            }
+
+            .accessories-filters {
+                gap: 7px;
+            }
+
+            .accessory-filter {
+                flex: 1 1 auto;
+            }
+
+        }
+    </style>
+
+    <script>
+    /*
+     * ============================================================
+     * ACCESSORIES PAGE NAVIGATION
+     * ============================================================
+     */
+
+    (function () {
+
+        const scrollKey =
+            "futureGamesRefreshScroll-accessories";
+
+        if ("scrollRestoration" in history) {
+            history.scrollRestoration = "manual";
+        }
+
+        window.addEventListener(
+            "pagehide",
+            function () {
+
+                try {
+
+                    sessionStorage.setItem(
+                        scrollKey,
+                        String(
+                            window.scrollY ||
+                            window.pageYOffset ||
+                            0
+                        )
+                    );
+
+                } catch (error) {}
+
+            }
+        );
+
+        window.addEventListener(
+            "load",
+            function () {
+
+                const navigation =
+                    performance.getEntriesByType(
+                        "navigation"
+                    )[0];
+
+                let savedPosition = null;
+
+                try {
+
+                    savedPosition =
+                        sessionStorage.getItem(
+                            scrollKey
+                        );
+
+                } catch (error) {}
+
+                if (
+                    navigation &&
+                    navigation.type === "reload" &&
+                    savedPosition !== null
+                ) {
+
+                    try {
+
+                        sessionStorage.removeItem(
+                            scrollKey
+                        );
+
+                    } catch (error) {}
+
+                    const previousY =
+                        Number(
+                            savedPosition
+                        );
+
+                    if (
+                        Number.isFinite(
+                            previousY
+                        ) &&
+                        previousY > 0
+                    ) {
+
+                        const maxScroll =
+                            Math.max(
+                                0,
+                                document.documentElement
+                                    .scrollHeight -
+                                window.innerHeight
+                            );
+
+                        window.scrollTo(
+                            0,
+                            Math.min(
+                                previousY,
+                                maxScroll
+                            )
+                        );
+
+                        requestAnimationFrame(
+                            function () {
+
+                                requestAnimationFrame(
+                                    function () {
+
+                                        window.scrollTo({
+                                            top: 0,
+                                            behavior: "smooth"
+                                        });
+
+                                    }
+                                );
+
+                            }
+                        );
+
+                    } else {
+
+                        window.scrollTo(
+                            0,
+                            0
+                        );
+
+                    }
+
+                } else {
+
+                    try {
+
+                        sessionStorage.removeItem(
+                            scrollKey
+                        );
+
+                    } catch (error) {}
+
+                }
+
+            }
+        );
+
+    })();
+    </script>
+</head>
+
+<body>
+
+    <!-- ==========================================================
+         BACKGROUND
+    =========================================================== -->
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+
+    <!-- ==========================================================
+         ACCESSORIES SIDEBAR
+    =========================================================== -->
+
+    <div
+        class="accessories-sidebar-wrapper"
+        id="accessoriesSidebarWrapper"
+    >
+
+        <button
+            class="platform-menu-button"
+            id="platformMenuButton"
+            type="button"
+            aria-label="Open console menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+
+        <div
+            class="platform-overlay"
+            id="platformOverlay"
+        ></div>
+
+
+        <aside
+            class="platform-sidebar"
+            id="platformSidebar"
+            aria-label="Console selection"
+        >
+
+            <button
+                class="platform-close"
+                id="platformCloseButton"
+                type="button"
+                aria-label="Close menu"
+            >
+                ×
+            </button>
+
+
+            <h2>
+                Choose Console
+            </h2>
+
+
+            <!-- HOME -->
+
+            <button
+                type="button"
+                id="sidebarHomeButton"
+                class="sidebar-home-button"
+            >
+                🏠 Home
+            </button>
+
+
+            <!-- ALL ACCESSORIES -->
+
+            <button
+                type="button"
+                id="sidebarAllAccessoriesButton"
+                class="sidebar-all-accessories-button"
+            >
+                🧩 All Accessories
+            </button>
+
+
+            <!-- ==================================================
+                 PS4
+            =================================================== -->
+
+            <div class="sidebar-console-group">
+
+                <div class="sidebar-console-title">
+                    🎮 PlayStation 4
+                </div>
+
+
+                <button
+                    type="button"
+                    class="sidebar-sub-button"
+                    data-action="games"
+                    data-platform="PS4"
+                >
+                    🎮 Games
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-sub-button"
+                    data-action="accessories"
+                    data-platform="PS4"
+                >
+                    🧩 Accessories
+                </button>
+
+            </div>
+
+
+            <!-- ==================================================
+                 PS5
+            =================================================== -->
+
+            <div class="sidebar-console-group">
+
+                <div class="sidebar-console-title">
+                    🎮 PlayStation 5
+                </div>
+
+
+                <button
+                    type="button"
+                    class="sidebar-sub-button"
+                    data-action="games"
+                    data-platform="PS5"
+                >
+                    🎮 Games
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-sub-button"
+                    data-action="accessories"
+                    data-platform="PS5"
+                >
+                    🧩 Accessories
+                </button>
+
+            </div>
+
+
+            <!-- ==================================================
+                 XBOX
+            =================================================== -->
+
+            <div class="sidebar-console-group">
+
+                <div class="sidebar-console-title">
+                    🎮 Xbox
+                </div>
+
+
+                <button
+                    type="button"
+                    class="sidebar-sub-button"
+                    data-action="games"
+                    data-platform="Xbox"
+                >
+                    🎮 Games
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-sub-button"
+                    data-action="accessories"
+                    data-platform="Xbox"
+                >
+                    🧩 Accessories
+                </button>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+
+    <!-- ==========================================================
+         MAIN PAGE
+    =========================================================== -->
+
+    <main class="accessories-page">
+
+        <!-- ======================================================
+             HERO
+        ======================================================= -->
+
+        <header class="accessories-hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">
+                    LEVEL UP YOUR SETUP
+                </p>
+
+
+                <h1>
+                    ACCESSORIES
+                    <span>&amp; GEAR</span>
+                </h1>
+
+
+                <p class="accessories-description">
+                    Everything you need for your gaming setup.
+                    Explore controllers, chargers, stands,
+                    cooling solutions, headsets, cables and more.
+                </p>
+
+
+                <div class="accessories-search-box">
+
+                    <input
+                        type="text"
+                        id="accessorySearchInput"
+                        placeholder="Search for an accessory..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ======================================================
+             MAIN ACCESSORIES CONTENT
+        ======================================================= -->
+
+        <section class="accessories-container">
+
+            <div class="accessories-section-header">
+
+                <div>
+
+                    <p class="small-title">
+                        GAMING GEAR
+                    </p>
+
+
+                    <h2>
+                        Featured Accessories
+                    </h2>
+
+                </div>
+
+
+                <div
+                    id="accessoryCount"
+                    class="accessories-count"
+                >
+                    0 Accessories
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 CATEGORY FILTERS
+            =================================================== -->
+
+            <div
+                id="accessoryFilters"
+                class="accessories-filters"
+            >
+
+                <button
+                    type="button"
+                    class="accessory-filter active"
+                    data-category="ALL"
+                >
+                    ✨ All
+                </button>
+
+
+                <button
+                    type="button"
+                    class="accessory-filter"
+                    data-category="Controllers"
+                >
+                    🎮 Controllers
+                </button>
+
+
+                <button
+                    type="button"
+                    class="accessory-filter"
+                    data-category="Chargers"
+                >
+                    🔋 Chargers
+                </button>
+
+
+                <button
+                    type="button"
+                    class="accessory-filter"
+                    data-category="Stands"
+                >
+                    🗄️ Stands
+                </button>
+
+
+                <button
+                    type="button"
+                    class="accessory-filter"
+                    data-category="Cooling"
+                >
+                    ❄️ Cooling
+                </button>
+
+
+                <button
+                    type="button"
+                    class="accessory-filter"
+                    data-category="Cases"
+                >
+                    🛡️ Cases
+                </button>
+
+
+                <button
+                    type="button"
+                    class="accessory-filter"
+                    data-category="Headsets"
+                >
+                    🎧 Headsets
+                </button>
+
+
+                <button
+                    type="button"
+                    class="accessory-filter"
+                    data-category="Cables"
+                >
+                    🔌 Cables
+                </button>
+
+
+                <button
+                    type="button"
+                    class="accessory-filter"
+                    data-category="Other Accessories"
+                >
+                    ⚙️ Other
+                </button>
+
+            </div>
+
+
+            <!-- ==================================================
+                 ACCESSORIES GRID
+            =================================================== -->
+
+            <section
+                id="accessoriesContainer"
+                class="accessories-grid"
+            ></section>
+
+
+            <!-- ==================================================
+                 EMPTY STATE
+            =================================================== -->
+
+            <div
+                id="accessoriesEmpty"
+                class="accessories-empty"
+            >
+
+                <div class="accessories-empty-icon">
+                    🎮
+                </div>
+
+
+                <h3>
+                    0 Accessories
+                </h3>
+
+
+                <p>
+                    No accessories have been added yet.
+                    This section is ready for controllers,
+                    chargers, stands, cooling, cases,
+                    headsets, cables and more.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================================
+         DETAILS MODAL
+    =========================================================== -->
+
+    <div
+        id="accessoryDetailsModal"
+        class="modal"
+    >
+
+        <div class="modal-background"></div>
+
+
+        <div class="modal-content">
+
+            <button
+                id="closeAccessoryModal"
+                class="close-button"
+                type="button"
+            >
+                ×
+            </button>
+
+
+            <div
+                id="accessoryDetailsContainer"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================================
+         ACCESSORIES JAVASCRIPT
+    =========================================================== -->
+
+    <script>
+
+    /*
+     * ============================================================
+     * THEME TOGGLE
+     * ============================================================
+     */
+
+    function createThemeToggle(){
+
+        let controls =
+            document.querySelector(
+                ".header-controls"
+            );
+
+
+        let button =
+            document.getElementById(
+                "themeToggle"
+            );
+
+
+        if(!controls){
+
+            controls =
+                document.createElement(
+                    "div"
+                );
+
+            controls.className =
+                "header-controls";
+
+            controls.style.cssText = `
+                position: fixed;
+                top: 15px;
+                right: 15px;
+                z-index: 5005;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            `;
+
+            document.body.appendChild(
+                controls
+            );
+
+        }
+
+
+        if(!button){
+
+            button =
+                document.createElement(
+                    "button"
+                );
+
+            button.id =
+                "themeToggle";
+
+            button.className =
+                "theme-toggle";
+
+            button.type =
+                "button";
+
+            button.setAttribute(
+                "aria-label",
+                "Switch color theme"
+            );
+
+
+            const savedTheme =
+                localStorage.getItem(
+                    "futureGamesTheme"
+                );
+
+
+            if(savedTheme === "light"){
+
+                document.body.classList.add(
+                    "light-mode"
+                );
+
+            }
+
+
+            function updateThemeButton(){
+
+                const isLight =
+                    document.body.classList.contains(
+                        "light-mode"
+                    );
+
+
+                button.innerHTML =
+                    isLight
+                        ? '<span class="theme-icon">🌙</span><span>Dark Mode</span>'
+                        : '<span class="theme-icon">☀️</span><span>Light Mode</span>';
+
+
+                button.setAttribute(
+                    "aria-pressed",
+                    isLight
+                        ? "true"
+                        : "false"
+                );
+
+            }
+
+
+            button.addEventListener(
+                "click",
+                function(){
+
+                    const isLight =
+                        document.body.classList.toggle(
+                            "light-mode"
+                        );
+
+
+                    localStorage.setItem(
+                        "futureGamesTheme",
+                        isLight
+                            ? "light"
+                            : "dark"
+                    );
+
+
+                    updateThemeButton();
+
+                }
+            );
+
+
+            updateThemeButton();
+
+        }
+
+
+        if(button.parentElement !== controls){
+
+            controls.appendChild(
+                button
+            );
+
+        }
+
+    }
+
+
+    /*
+     * ============================================================
+     * ACCESSORIES SIDEBAR
+     * ============================================================
+     */
+
+    function createAccessoriesSidebar(){
+
+        const sidebar =
+            document.getElementById(
+                "platformSidebar"
+            );
+
+
+        const menuButton =
+            document.getElementById(
+                "platformMenuButton"
+            );
+
+
+        const overlay =
+            document.getElementById(
+                "platformOverlay"
+            );
+
+
+        const closeButton =
+            document.getElementById(
+                "platformCloseButton"
+            );
+
+
+        const homeButton =
+            document.getElementById(
+                "sidebarHomeButton"
+            );
+
+
+        const allAccessoriesButton =
+            document.getElementById(
+                "sidebarAllAccessoriesButton"
+            );
+
+
+        if(!sidebar){
+
+            console.error(
+                "Future Games: Accessories sidebar was not created."
+            );
+
+            return;
+
+        }
+
+
+        function openMenu(){
+
+            sidebar.classList.add(
+                "open"
+            );
+
+
+            overlay.classList.add(
+                "open"
+            );
+
+
+            if(menuButton){
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+            }
+
+        }
+
+
+        function closeMenu(){
+
+            sidebar.classList.remove(
+                "open"
+            );
+
+
+            overlay.classList.remove(
+                "open"
+            );
+
+
+            if(menuButton){
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        }
+
+
+        /*
+         * HOME
+         */
+
+        if(homeButton){
+
+            homeButton.addEventListener(
+                "click",
+                function(){
+
+                    window.location.href =
+                        "home.html";
+
+                }
+            );
+
+        }
+
+
+        /*
+         * ALL ACCESSORIES
+         */
+
+        if(allAccessoriesButton){
+
+            allAccessoriesButton.addEventListener(
+                "click",
+                function(){
+
+                    activePlatform =
+                        "ALL";
+
+
+                    window.location.href =
+                        "accessories.html";
+
+                }
+            );
+
+        }
+
+
+        /*
+         * OPEN MENU
+         */
+
+        if(menuButton){
+
+            menuButton.addEventListener(
+                "click",
+                function(){
+
+                    if(
+                        sidebar.classList.contains(
+                            "open"
+                        )
+                    ){
+
+                        closeMenu();
+
+                    }else{
+
+                        openMenu();
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        /*
+         * CLOSE BUTTON
+         */
+
+        if(closeButton){
+
+            closeButton.addEventListener(
+                "click",
+                closeMenu
+            );
+
+        }
+
+
+        /*
+         * OVERLAY
+         */
+
+        if(overlay){
+
+            overlay.addEventListener(
+                "click",
+                closeMenu
+            );
+
+        }
+
+
+        /*
+         * NAVIGATION BUTTONS
+         */
+
+        const navigationButtons =
+            sidebar.querySelectorAll(
+                "[data-action][data-platform]"
+            );
+
+
+        navigationButtons.forEach(
+            function(button){
+
+                button.addEventListener(
+                    "click",
+                    function(){
+
+                        const action =
+                            button.dataset.action;
+
+
+                        const platform =
+                            button.dataset.platform;
+
+
+                        /*
+                         * ACCESSORIES
+                         */
+
+                        if(
+                            action ===
+                            "accessories"
+                        ){
+
+                            window.location.href =
+                                "accessories.html?platform=" +
+                                encodeURIComponent(
+                                    platform
+                                );
+
+                            return;
+
+                        }
+
+
+                        /*
+                         * PS4 GAMES
+                         */
+
+                        if(
+                            action === "games" &&
+                            platform === "PS4"
+                        ){
+
+                            window.location.href =
+                                "index.html?platform=PS4";
+
+                            return;
+
+                        }
+
+
+                        /*
+                         * PS5 GAMES
+                         */
+
+                        if(
+                            action === "games" &&
+                            platform === "PS5"
+                        ){
+
+                            window.location.href =
+                                "index.html?platform=PS5";
+
+                            return;
+
+                        }
+
+
+                        /*
+                         * XBOX GAMES
+                         */
+
+                        if(
+                            action === "games" &&
+                            platform === "Xbox"
+                        ){
+
+                            window.location.href =
+                                "xbox.html";
+
+                            return;
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+        /*
+         * ESC KEY
+         */
+
+        document.addEventListener(
+            "keydown",
+            function(event){
+
+                if(
+                    event.key === "Escape"
+                ){
+
+                    closeMenu();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /*
+     * ============================================================
+     * ACCESSORIES DATA
+     * ============================================================
+     *
+     * Keep this array empty for now.
+     */
+
+    const accessories = [];
+
+
+    /*
+     * ============================================================
+     * PAGE STATE
+     * ============================================================
+     */
+
+    let activeCategory = "ALL";
+
+    let activePlatform = "ALL";
+
+
+    /*
+     * ============================================================
+     * ELEMENTS
+     * ============================================================
+     */
+
+    const accessorySearchInput =
+        document.getElementById(
+            "accessorySearchInput"
+        );
+
+
+    const accessoriesContainer =
+        document.getElementById(
+            "accessoriesContainer"
+        );
+
+
+    const accessoriesEmpty =
+        document.getElementById(
+            "accessoriesEmpty"
+        );
+
+
+    const accessoryCount =
+        document.getElementById(
+            "accessoryCount"
+        );
+
+
+    const accessoryFilters =
+        document.querySelectorAll(
+            ".accessory-filter"
+        );
+
+
+    /*
+     * ============================================================
+     * URL PARAMETERS
+     * ============================================================
+     */
+
+    function initializeAccessoriesFromURL(){
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const requestedPlatform =
+            params.get(
+                "platform"
+            );
+
+
+        const requestedCategory =
+            params.get(
+                "category"
+            );
+
+
+        const supportedPlatforms = [
+            "PS4",
+            "PS5",
+            "Xbox"
+        ];
+
+
+        const supportedCategories = [
+            "Controllers",
+            "Chargers",
+            "Stands",
+            "Cooling",
+            "Cases",
+            "Headsets",
+            "Cables",
+            "Other Accessories"
+        ];
+
+
+        if(
+            requestedPlatform &&
+            supportedPlatforms.includes(
+                requestedPlatform
+            )
+        ){
+
+            activePlatform =
+                requestedPlatform;
+
+        }
+
+
+        if(
+            requestedCategory &&
+            supportedCategories.includes(
+                requestedCategory
+            )
+        ){
+
+            activeCategory =
+                requestedCategory;
+
+        }
+
+
+        accessoryFilters.forEach(
+            function(button){
+
+                button.classList.toggle(
+                    "active",
+                    button.dataset.category ===
+                    activeCategory
+                );
+
+            }
+        );
+
+    }
+
+
+    /*
+     * ============================================================
+     * COVER STYLE
+     * ============================================================
+     */
+
+    function getAccessoryCoverStyle(
+        cover
+    ){
+
+        if(!cover){
+
+            return "";
+
+        }
+
+
+        if(
+            cover.startsWith(
+                "linear-gradient"
+            ) ||
+            cover.startsWith(
+                "radial-gradient"
+            )
+        ){
+
+            return `
+                background-image:
+                ${cover};
+            `;
+
+        }
+
+
+        return `
+            background-image:
+            url('${cover}');
+        `;
+
+    }
+
+
+    /*
+     * ============================================================
+     * DISPLAY ACCESSORIES
+     * ============================================================
+     */
+
+    function displayAccessories(
+        accessoryList
+    ){
+
+        accessoriesContainer.innerHTML =
+            "";
+
+
+        accessoryCount.textContent =
+            `${accessoryList.length} Accessories`;
+
+
+        if(!accessoryList.length){
+
+            accessoriesEmpty.style.display =
+                "block";
+
+            return;
+
+        }
+
+
+        accessoriesEmpty.style.display =
+            "none";
+
+
+        accessoryList.forEach(
+            function(accessory,index){
+
+                const card =
+                    document.createElement(
+                        "article"
+                    );
+
+
+                card.className =
+                    "accessory-card";
+
+
+                card.style.animationDelay =
+                    `${index * 0.035}s`;
+
+
+                const cover =
+                    accessory.cover ||
+                    "";
+
+
+                const coverStyle =
+                    getAccessoryCoverStyle(
+                        cover
+                    );
+
+
+                const platformTags =
+                    Array.isArray(
+                        accessory.platforms
+                    )
+                        ? accessory.platforms
+                        : [];
+
+
+                const tagsHTML =
+                    platformTags.length
+                        ? platformTags
+                            .map(
+                                function(platform){
+
+                                    return `
+                                        <span class="accessory-tag">
+                                            ${platform}
+                                        </span>
+                                    `;
+
+                                }
+                            )
+                            .join("")
+                        : `
+                            <span class="accessory-tag">
+                                ${
+                                    accessory.category ||
+                                    "Accessory"
+                                }
+                            </span>
+                        `;
+
+
+                card.innerHTML = `
+
+                    <div
+                        class="accessory-cover"
+                        style="
+                            ${coverStyle}
+                            background-size:contain;
+                            background-repeat:no-repeat;
+                            background-position:center;
+                        "
+                    >
+
+                        ${
+                            cover
+                                ? ""
+                                : `
+                                    <div
+                                        class="accessory-placeholder-icon"
+                                    >
+                                        🎮
+                                    </div>
+                                `
+                        }
+
+                    </div>
+
+
+                    <div class="accessory-info">
+
+                        <h3>
+                            ${accessory.name}
+                        </h3>
+
+
+                        <div class="accessory-tags">
+
+                            ${tagsHTML}
+
+                        </div>
+
+
+                        <p class="accessory-description">
+
+                            ${
+                                accessory.description ||
+                                "Gaming accessory."
+                            }
+
+                        </p>
+
+
+                        <button
+                            class="accessory-button"
+                            type="button"
+                            data-accessory-id="${accessory.id}"
+                        >
+                            View Accessory
+                        </button>
+
+                    </div>
+
+                `;
+
+
+                const detailsButton =
+                    card.querySelector(
+                        ".accessory-button"
+                    );
+
+
+                detailsButton.addEventListener(
+                    "click",
+                    function(){
+
+                        openAccessoryDetails(
+                            accessory.id
+                        );
+
+                    }
+                );
+
+
+                accessoriesContainer.appendChild(
+                    card
+                );
+
+            }
+        );
+
+    }
+
+
+    /*
+     * ============================================================
+     * FILTER ACCESSORIES
+     * ============================================================
+     */
+
+    function applyAccessoryFilters(){
+
+        const searchText =
+            accessorySearchInput
+                .value
+                .toLowerCase()
+                .trim();
+
+
+        const filteredAccessories =
+            accessories.filter(
+                function(accessory){
+
+                    const name =
+                        (
+                            accessory.name ||
+                            ""
+                        ).toLowerCase();
+
+
+                    const category =
+                        (
+                            accessory.category ||
+                            ""
+                        ).toLowerCase();
+
+
+                    const description =
+                        (
+                            accessory.description ||
+                            ""
+                        ).toLowerCase();
+
+
+                    const matchesCategory =
+                        activeCategory ===
+                        "ALL" ||
+                        accessory.category ===
+                        activeCategory;
+
+
+                    const matchesSearch =
+                        name.includes(
+                            searchText
+                        ) ||
+                        category.includes(
+                            searchText
+                        ) ||
+                        description.includes(
+                            searchText
+                        );
+
+
+                    const matchesPlatform =
+                        activePlatform ===
+                        "ALL" ||
+                        (
+                            Array.isArray(
+                                accessory.platforms
+                            ) &&
+                            accessory.platforms.includes(
+                                activePlatform
+                            )
+                        );
+
+
+                    return (
+                        matchesCategory &&
+                        matchesSearch &&
+                        matchesPlatform
+                    );
+
+                }
+            );
+
+
+        displayAccessories(
+            filteredAccessories
+        );
+
+    }
+
+
+    /*
+     * ============================================================
+     * CATEGORY BUTTONS
+     * ============================================================
+     */
+
+    accessoryFilters.forEach(
+        function(button){
+
+            button.addEventListener(
+                "click",
+                function(){
+
+                    activeCategory =
+                        button.dataset.category;
+
+
+                    accessoryFilters.forEach(
+                        function(item){
+
+                            item.classList.toggle(
+                                "active",
+                                item === button
+                            );
+
+                        }
+                    );
+
+
+                    applyAccessoryFilters();
+
+                }
+            );
+
+        }
+    );
+
+
+    /*
+     * ============================================================
+     * SEARCH
+     * ============================================================
+     */
+
+    accessorySearchInput.addEventListener(
+        "input",
+        applyAccessoryFilters
+    );
+
+
+    /*
+     * ============================================================
+     * DETAILS MODAL
+     * ============================================================
+     */
+
+    const accessoryDetailsModal =
+        document.getElementById(
+            "accessoryDetailsModal"
+        );
+
+
+    const accessoryDetailsContainer =
+        document.getElementById(
+            "accessoryDetailsContainer"
+        );
+
+
+    const closeAccessoryModal =
+        document.getElementById(
+            "closeAccessoryModal"
+        );
+
+
+    const accessoryModalBackground =
+        accessoryDetailsModal.querySelector(
+            ".modal-background"
+        );
+
+
+    function openAccessoryDetails(
+        accessoryId
+    ){
+
+        const accessory =
+            accessories.find(
+                function(item){
+
+                    return item.id ===
+                        accessoryId;
+
+                }
+            );
+
+
+        if(!accessory){
+
+            return;
+
+        }
+
+
+        const platforms =
+            Array.isArray(
+                accessory.platforms
+            )
+                ? accessory.platforms.join(
+                    " • "
+                )
+                : "All Platforms";
+
+
+        accessoryDetailsContainer.innerHTML = `
+
+            <div style="
+                padding:10px;
+                text-align:center;
+            ">
+
+                <p
+                    class="small-title"
+                    style="margin-bottom:10px;"
+                >
+                    ACCESSORY DETAILS
+                </p>
+
+
+                <h2 style="
+                    margin-bottom:15px;
+                    font-family:'Orbitron',sans-serif;
+                ">
+                    ${accessory.name}
+                </h2>
+
+
+                <p style="
+                    margin-bottom:10px;
+                    color:#94a3b8;
+                ">
+                    Category:
+                    ${
+                        accessory.category ||
+                        "Accessory"
+                    }
+                </p>
+
+
+                <p style="
+                    margin-bottom:20px;
+                    color:#94a3b8;
+                ">
+                    Platforms:
+                    ${platforms}
+                </p>
+
+
+                <p style="
+                    max-width:600px;
+                    margin:0 auto;
+                    color:#cbd5e1;
+                    line-height:1.8;
+                ">
+                    ${
+                        accessory.description ||
+                        "Gaming accessory."
+                    }
+                </p>
+
+            </div>
+
+        `;
+
+
+        accessoryDetailsModal.classList.add(
+            "active"
+        );
+
+    }
+
+
+    function closeAccessoryDetails(){
+
+        accessoryDetailsModal.classList.remove(
+            "active"
+        );
+
+    }
+
+
+    if(closeAccessoryModal){
+
+        closeAccessoryModal.addEventListener(
+            "click",
+            closeAccessoryDetails
+        );
+
+    }
+
+
+    if(accessoryModalBackground){
+
+        accessoryModalBackground.addEventListener(
+            "click",
+            closeAccessoryDetails
+        );
+
+    }
+
+
+    document.addEventListener(
+        "keydown",
+        function(event){
+
+            if(
+                event.key === "Escape"
+            ){
+
+                closeAccessoryDetails();
+
+            }
+
+        }
+    );
+
+
+    /*
+     * ============================================================
+     * INITIALIZE
+     * ============================================================
+     */
+
+    createThemeToggle();
+
+    createAccessoriesSidebar();
+
+    initializeAccessoriesFromURL();
+
+    applyAccessoryFilters();
+
+    </script>
+
+</body>
+</html>

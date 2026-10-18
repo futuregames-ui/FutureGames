@@ -79,7 +79,10 @@
     </script>
 
     <style>
-        /* CONTACT SOCIAL LINKS */
+        /* =========================================================
+           CONTACT SOCIAL LINKS
+           ========================================================= */
+
         .contact-section .contact-panel {
             display: block;
         }
@@ -199,8 +202,469 @@
             line-height: 1.8;
         }
 
+        /* =========================================================
+           ACCESSORIES & GEAR
+           ========================================================= */
+
+        .accessories-section {
+            position: relative;
+            overflow: hidden;
+            padding-top: 30px;
+        }
+
+        .accessories-heading {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .accessories-heading .section-description {
+            max-width: 650px;
+        }
+
+        .accessories-view-all {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-shrink: 0;
+            padding: 12px 18px;
+            color: #f8fbff;
+            text-decoration: none;
+            border: 1px solid rgba(70, 231, 255, 0.35);
+            border-radius: 12px;
+            background: rgba(70, 231, 255, 0.06);
+            font-size: 13px;
+            font-weight: 600;
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .accessories-view-all:hover,
+        .accessories-view-all:focus-visible {
+            transform: translateY(-3px);
+            background: rgba(70, 231, 255, 0.12);
+            border-color: rgba(70, 231, 255, 0.65);
+            outline: none;
+        }
+
+        .accessories-platform-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .accessories-platform-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 285px;
+            overflow: hidden;
+            padding: 25px;
+            color: inherit;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            border-radius: 22px;
+            background:
+                radial-gradient(
+                    circle at 90% 5%,
+                    rgba(70, 231, 255, 0.14),
+                    transparent 38%
+                ),
+                rgba(255, 255, 255, 0.035);
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .accessories-platform-card::before {
+            content: "";
+            position: absolute;
+            inset: auto -40px -70px auto;
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            background: rgba(123, 92, 255, 0.10);
+            filter: blur(4px);
+            pointer-events: none;
+        }
+
+        .accessories-platform-card:hover,
+        .accessories-platform-card:focus-visible {
+            transform: translateY(-7px);
+            border-color: rgba(70, 231, 255, 0.48);
+            box-shadow:
+                0 18px 50px rgba(0, 0, 0, 0.22),
+                0 0 35px rgba(70, 231, 255, 0.07);
+            outline: none;
+        }
+
+        .accessories-platform-card.ps4 {
+            background:
+                radial-gradient(
+                    circle at 90% 5%,
+                    rgba(70, 231, 255, 0.15),
+                    transparent 38%
+                ),
+                rgba(255, 255, 255, 0.035);
+        }
+
+        .accessories-platform-card.ps5 {
+            background:
+                radial-gradient(
+                    circle at 90% 5%,
+                    rgba(140, 103, 255, 0.17),
+                    transparent 38%
+                ),
+                rgba(255, 255, 255, 0.035);
+        }
+
+        .accessories-platform-card.xbox {
+            background:
+                radial-gradient(
+                    circle at 90% 5%,
+                    rgba(82, 255, 150, 0.13),
+                    transparent 38%
+                ),
+                rgba(255, 255, 255, 0.035);
+        }
+
+        .accessories-platform-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 24px;
+        }
+
+        .accessories-platform-number {
+            color: rgba(255, 255, 255, 0.35);
+            font-family: "Orbitron", sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+        }
+
+        .accessories-platform-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 65px;
+            min-height: 38px;
+            padding: 7px 11px;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.055);
+            font-family: "Orbitron", sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+        }
+
+        .accessories-platform-card h3 {
+            margin: 0 0 9px;
+            font-family: "Orbitron", sans-serif;
+            font-size: 21px;
+            line-height: 1.35;
+        }
+
+        .accessories-platform-card > p {
+            max-width: 300px;
+            margin: 0;
+            color: #a9b0c7;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .accessory-types {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 20px;
+        }
+
+        .accessory-type {
+            padding: 6px 9px;
+            color: #cdd4e8;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.035);
+            font-size: 10px;
+            line-height: 1;
+        }
+
+        .accessories-platform-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            margin-top: auto;
+            padding-top: 24px;
+            color: #46e7ff;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* =========================================================
+           ACCESSORIES BANNER
+           ========================================================= */
+
+        .accessories-banner {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+            min-height: 220px;
+            margin-top: 24px;
+            overflow: hidden;
+            padding: 35px 40px;
+            border: 1px solid rgba(70, 231, 255, 0.18);
+            border-radius: 24px;
+            background:
+                radial-gradient(
+                    circle at 85% 50%,
+                    rgba(140, 103, 255, 0.20),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(70, 231, 255, 0.15),
+                    transparent 30%
+                ),
+                rgba(255, 255, 255, 0.035);
+        }
+
+        .accessories-banner::before {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            right: 8%;
+            top: -130px;
+            border: 1px solid rgba(70, 231, 255, 0.10);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .accessories-banner::after {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            right: 15%;
+            bottom: -100px;
+            border: 1px solid rgba(140, 103, 255, 0.12);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .accessories-banner-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .accessories-banner-content .section-label {
+            margin-bottom: 10px;
+        }
+
+        .accessories-banner h3 {
+            margin: 0 0 10px;
+            font-family: "Orbitron", sans-serif;
+            font-size: clamp(23px, 3vw, 34px);
+            line-height: 1.25;
+        }
+
+        .accessories-banner h3 span {
+            color: #46e7ff;
+        }
+
+        .accessories-banner p {
+            max-width: 600px;
+            margin: 0;
+            color: #a9b0c7;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .accessories-banner-button {
+            position: relative;
+            z-index: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-shrink: 0;
+            min-width: 180px;
+            padding: 14px 20px;
+            color: #08101b;
+            background: #46e7ff;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 800;
+            box-shadow: 0 10px 30px rgba(70, 231, 255, 0.18);
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+        }
+
+        .accessories-banner-button:hover,
+        .accessories-banner-button:focus-visible {
+            transform: translateY(-4px);
+            background: #75edff;
+            box-shadow: 0 15px 40px rgba(70, 231, 255, 0.28);
+            outline: none;
+        }
+
+        /* =========================================================
+           FEATURED ACCESSORIES
+           ========================================================= */
+
+        .featured-accessories {
+            margin-top: 58px;
+        }
+
+        .featured-accessories-heading {
+            margin-bottom: 24px;
+        }
+
+        .featured-accessories-heading h3 {
+            margin: 0 0 8px;
+            font-family: "Orbitron", sans-serif;
+            font-size: 24px;
+        }
+
+        .featured-accessories-heading p {
+            max-width: 650px;
+            margin: 0;
+            color: #a9b0c7;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .featured-accessories-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .featured-accessory-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 165px;
+            padding: 20px 14px;
+            overflow: hidden;
+            color: inherit;
+            text-decoration: none;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 17px;
+            background: rgba(255, 255, 255, 0.028);
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                background 0.25s ease;
+        }
+
+        .featured-accessory-card:hover,
+        .featured-accessory-card:focus-visible {
+            transform: translateY(-5px);
+            border-color: rgba(70, 231, 255, 0.42);
+            background: rgba(255, 255, 255, 0.055);
+            outline: none;
+        }
+
+        .featured-accessory-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 62px;
+            height: 62px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(70, 231, 255, 0.18);
+            border-radius: 16px;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(70, 231, 255, 0.10),
+                    rgba(140, 103, 255, 0.10)
+                );
+            font-size: 27px;
+        }
+
+        .featured-accessory-card h4 {
+            margin: 0 0 5px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .featured-accessory-card p {
+            margin: 0;
+            color: #8f98b1;
+            font-size: 10px;
+            line-height: 1.5;
+        }
+
+        /* =========================================================
+           ACCESSORIES RESPONSIVE
+           ========================================================= */
+
+        @media (max-width: 1050px) {
+            .featured-accessories-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
         @media (max-width: 900px) {
             .contact-social-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .accessories-platform-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .accessories-platform-card {
+                min-height: 245px;
+            }
+
+            .accessories-banner {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .accessories-banner-button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .accessories-heading {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            .accessories-view-all {
+                width: 100%;
+            }
+
+            .accessories-banner {
+                padding: 28px 22px;
+                border-radius: 20px;
+            }
+
+            .featured-accessories-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
@@ -231,6 +695,36 @@
                 height: 46px;
                 font-size: 24px;
             }
+
+            .accessories-platform-card {
+                min-height: 265px;
+                padding: 22px;
+            }
+
+            .accessories-platform-card h3 {
+                font-size: 19px;
+            }
+
+            .featured-accessories-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .featured-accessory-card {
+                min-height: 145px;
+                padding: 15px 10px;
+            }
+
+            .featured-accessory-icon {
+                width: 54px;
+                height: 54px;
+                margin-bottom: 12px;
+                font-size: 24px;
+            }
+
+            .featured-accessory-card h4 {
+                font-size: 13px;
+            }
         }
     </style>
 </head>
@@ -247,6 +741,7 @@
         <nav class="nav-links" aria-label="Main navigation">
             <a href="#home">Home</a>
             <a href="#devices">Platforms</a>
+            <a href="#accessories">Accessories</a>
             <a href="#about">About Us</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -257,6 +752,11 @@
     </header>
 
     <main>
+
+        <!-- =====================================================
+             HERO
+             ===================================================== -->
+
         <section class="hero" id="home">
             <div class="hero-content">
                 <div class="eyebrow">
@@ -373,6 +873,11 @@
             </a>
         </section>
 
+
+        <!-- =====================================================
+             PLATFORMS
+             ===================================================== -->
+
         <section class="platform-section section-container" id="devices">
             <div class="section-heading">
                 <div>
@@ -385,12 +890,15 @@
             </div>
 
             <div class="platform-grid">
+
                 <a class="platform-card platform-ps4" href="index.html?platform=PS4">
                     <span class="platform-number">01</span>
                     <span class="platform-icon">PS4</span>
                     <h3>PlayStation 4</h3>
                     <p>Explore games for PS4.</p>
-                    <span class="platform-link">Explore platform <span>↗</span></span>
+                    <span class="platform-link">
+                        Explore platform <span>↗</span>
+                    </span>
                 </a>
 
                 <a class="platform-card platform-ps5" href="index.html?platform=PS5">
@@ -398,7 +906,9 @@
                     <span class="platform-icon">PS5</span>
                     <h3>PlayStation 5</h3>
                     <p>Discover your next PS5 adventure.</p>
-                    <span class="platform-link">Explore platform <span>↗</span></span>
+                    <span class="platform-link">
+                        Explore platform <span>↗</span>
+                    </span>
                 </a>
 
                 <!-- XBOX 360 -->
@@ -407,7 +917,9 @@
                     <span class="platform-icon">X360</span>
                     <h3>Xbox 360</h3>
                     <p>Revisit legendary Xbox games.</p>
-                    <span class="platform-link">Explore platform <span>↗</span></span>
+                    <span class="platform-link">
+                        Explore platform <span>↗</span>
+                    </span>
                 </a>
 
                 <!-- XBOX SERIES S -->
@@ -416,15 +928,20 @@
                     <span class="platform-icon">X|S</span>
                     <h3>Xbox Series S</h3>
                     <p>Find games for your Xbox console.</p>
-                    <span class="platform-link">Explore platform <span>↗</span></span>
+                    <span class="platform-link">
+                        Explore platform <span>↗</span>
+                    </span>
                 </a>
+
             </div>
 
             <div class="all-games-banner">
                 <div>
                     <p class="section-label">THE WHOLE COLLECTION</p>
                     <h3>Can't decide? Explore them all.</h3>
-                    <p>Browse the complete Future Games collection in one place.</p>
+                    <p>
+                        Browse the complete Future Games collection in one place.
+                    </p>
                 </div>
 
                 <a href="index.html?games=1" class="primary-button">
@@ -433,8 +950,296 @@
             </div>
         </section>
 
+
+        <!-- =====================================================
+             ACCESSORIES & GEAR
+             ===================================================== -->
+
+        <section class="accessories-section section-container" id="accessories">
+
+            <div class="accessories-heading">
+                <div>
+                    <p class="section-label">POWER UP YOUR SETUP</p>
+
+                    <h2>
+                        Accessories <span>&amp; Gear</span>
+                    </h2>
+
+                    <p class="section-description">
+                        Complete your gaming setup with controllers, chargers,
+                        stands, cooling solutions, headsets, cases, and more.
+                    </p>
+                </div>
+
+                <a href="accessories.html" class="accessories-view-all">
+                    Explore All Accessories <span>↗</span>
+                </a>
+            </div>
+
+
+            <!-- PLATFORM ACCESSORIES -->
+
+            <div class="accessories-platform-grid">
+
+                <!-- PS4 -->
+
+                <a
+                    href="accessories.html?platform=PS4"
+                    class="accessories-platform-card ps4"
+                >
+                    <div class="accessories-platform-top">
+                        <span class="accessories-platform-number">
+                            01 / PLAYSTATION
+                        </span>
+
+                        <span class="accessories-platform-icon">
+                            PS4
+                        </span>
+                    </div>
+
+                    <h3>PlayStation 4</h3>
+
+                    <p>
+                        Upgrade your PS4 setup with the accessories
+                        you need for a better gaming experience.
+                    </p>
+
+                    <div class="accessory-types">
+                        <span class="accessory-type">Controllers</span>
+                        <span class="accessory-type">Chargers</span>
+                        <span class="accessory-type">Stands</span>
+                        <span class="accessory-type">Headsets</span>
+                    </div>
+
+                    <span class="accessories-platform-link">
+                        Explore PS4 Accessories <span>→</span>
+                    </span>
+                </a>
+
+
+                <!-- PS5 -->
+
+                <a
+                    href="accessories.html?platform=PS5"
+                    class="accessories-platform-card ps5"
+                >
+                    <div class="accessories-platform-top">
+                        <span class="accessories-platform-number">
+                            02 / PLAYSTATION
+                        </span>
+
+                        <span class="accessories-platform-icon">
+                            PS5
+                        </span>
+                    </div>
+
+                    <h3>PlayStation 5</h3>
+
+                    <p>
+                        Find accessories designed to complete
+                        and enhance your PS5 gaming setup.
+                    </p>
+
+                    <div class="accessory-types">
+                        <span class="accessory-type">Controllers</span>
+                        <span class="accessory-type">Cooling</span>
+                        <span class="accessory-type">Stands</span>
+                        <span class="accessory-type">Cases</span>
+                    </div>
+
+                    <span class="accessories-platform-link">
+                        Explore PS5 Accessories <span>→</span>
+                    </span>
+                </a>
+
+
+                <!-- XBOX -->
+
+                <a
+                    href="accessories.html?platform=Xbox"
+                    class="accessories-platform-card xbox"
+                >
+                    <div class="accessories-platform-top">
+                        <span class="accessories-platform-number">
+                            03 / XBOX
+                        </span>
+
+                        <span class="accessories-platform-icon">
+                            XBOX
+                        </span>
+                    </div>
+
+                    <h3>Xbox</h3>
+
+                    <p>
+                        Discover useful Xbox accessories for
+                        controllers, charging, cooling, audio, and more.
+                    </p>
+
+                    <div class="accessory-types">
+                        <span class="accessory-type">Controllers</span>
+                        <span class="accessory-type">Chargers</span>
+                        <span class="accessory-type">Cooling</span>
+                        <span class="accessory-type">Headsets</span>
+                    </div>
+
+                    <span class="accessories-platform-link">
+                        Explore Xbox Accessories <span>→</span>
+                    </span>
+                </a>
+
+            </div>
+
+
+            <!-- LEVEL UP BANNER -->
+
+            <div class="accessories-banner">
+
+                <div class="accessories-banner-content">
+
+                    <p class="section-label">
+                        BUILD YOUR PERFECT SETUP
+                    </p>
+
+                    <h3>
+                        LEVEL UP <span>YOUR SETUP.</span>
+                    </h3>
+
+                    <p>
+                        Controllers, chargers, stands, cooling, headsets,
+                        cases, cables, and everything else you need
+                        to take your gaming setup to the next level.
+                    </p>
+
+                </div>
+
+                <a
+                    href="accessories.html"
+                    class="accessories-banner-button"
+                >
+                    Explore Accessories <span>↗</span>
+                </a>
+
+            </div>
+
+
+            <!-- FEATURED ACCESSORIES -->
+
+            <div class="featured-accessories">
+
+                <div class="featured-accessories-heading">
+
+                    <p class="section-label">
+                        EXPLORE THE ESSENTIALS
+                    </p>
+
+                    <h3>
+                        Featured Accessories
+                    </h3>
+
+                    <p>
+                        Discover the accessories every gamer can use
+                        to improve their setup.
+                    </p>
+
+                </div>
+
+
+                <div class="featured-accessories-grid">
+
+                    <a
+                        href="accessories.html?category=Controllers"
+                        class="featured-accessory-card"
+                    >
+                        <span class="featured-accessory-icon">
+                            🎮
+                        </span>
+
+                        <h4>Controllers</h4>
+
+                        <p>
+                            Original &amp; compatible
+                        </p>
+                    </a>
+
+
+                    <a
+                        href="accessories.html?category=Chargers"
+                        class="featured-accessory-card"
+                    >
+                        <span class="featured-accessory-icon">
+                            🔋
+                        </span>
+
+                        <h4>Chargers</h4>
+
+                        <p>
+                            Keep your controllers ready
+                        </p>
+                    </a>
+
+
+                    <a
+                        href="accessories.html?category=Stands"
+                        class="featured-accessory-card"
+                    >
+                        <span class="featured-accessory-icon">
+                            🧍
+                        </span>
+
+                        <h4>Stands</h4>
+
+                        <p>
+                            Organize your setup
+                        </p>
+                    </a>
+
+
+                    <a
+                        href="accessories.html?category=Cooling"
+                        class="featured-accessory-card"
+                    >
+                        <span class="featured-accessory-icon">
+                            🧊
+                        </span>
+
+                        <h4>Cooling</h4>
+
+                        <p>
+                            Keep your console cool
+                        </p>
+                    </a>
+
+
+                    <a
+                        href="accessories.html?category=Headsets"
+                        class="featured-accessory-card"
+                    >
+                        <span class="featured-accessory-icon">
+                            🎧
+                        </span>
+
+                        <h4>Headsets</h4>
+
+                        <p>
+                            Hear every detail
+                        </p>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ABOUT
+             ===================================================== -->
+
         <section class="about-section" id="about">
             <div class="section-container about-content">
+
                 <div class="about-decoration" aria-hidden="true">
                     <span class="about-orbit orbit-a"></span>
                     <span class="about-orbit orbit-b"></span>
@@ -443,8 +1248,15 @@
                 </div>
 
                 <div class="about-text">
-                    <p class="section-label">WELCOME TO FUTURE GAMES</p>
-                    <h2>Gaming is more than a game. <span>It's an experience.</span></h2>
+
+                    <p class="section-label">
+                        WELCOME TO FUTURE GAMES
+                    </p>
+
+                    <h2>
+                        Gaming is more than a game.
+                        <span>It's an experience.</span>
+                    </h2>
 
                     <p>
                         Future Games is your destination for exploring games
@@ -456,24 +1268,43 @@
                     <a href="index.html?games=1" class="text-link">
                         Start Exploring <span>→</span>
                     </a>
+
                 </div>
+
             </div>
         </section>
 
-        <!-- CONTACT US -->
+
+        <!-- =====================================================
+             CONTACT US
+             ===================================================== -->
+
         <section class="contact-section section-container" id="contact">
+
             <div class="contact-panel">
+
                 <div class="contact-social-content">
+
                     <div class="contact-social-heading">
-                        <p class="section-label">STAY CONNECTED</p>
-                        <h2>Connect with <span>Future Games.</span></h2>
+
+                        <p class="section-label">
+                            STAY CONNECTED
+                        </p>
+
+                        <h2>
+                            Connect with <span>Future Games.</span>
+                        </h2>
+
                         <p>
                             Follow us on social media for gaming updates,
                             new arrivals, and the latest news from Future Games.
                         </p>
+
                     </div>
 
+
                     <div class="contact-social-grid">
+
                         <a
                             class="contact-social-card"
                             href="https://www.facebook.com/share/1FJ4ShUewW/"
@@ -481,15 +1312,23 @@
                             rel="noopener noreferrer"
                             aria-label="Visit Future Games on Facebook"
                         >
-                            <span class="contact-social-icon facebook" aria-hidden="true">f</span>
+                            <span
+                                class="contact-social-icon facebook"
+                                aria-hidden="true"
+                            >
+                                f
+                            </span>
 
                             <span class="contact-social-info">
                                 <h3>Facebook</h3>
                                 <p>Visit our Facebook page.</p>
                             </span>
 
-                            <span class="contact-social-action">Visit page ↗</span>
+                            <span class="contact-social-action">
+                                Visit page ↗
+                            </span>
                         </a>
+
 
                         <a
                             class="contact-social-card"
@@ -498,15 +1337,23 @@
                             rel="noopener noreferrer"
                             aria-label="Contact Future Games on WhatsApp"
                         >
-                            <span class="contact-social-icon whatsapp" aria-hidden="true">W</span>
+                            <span
+                                class="contact-social-icon whatsapp"
+                                aria-hidden="true"
+                            >
+                                W
+                            </span>
 
                             <span class="contact-social-info">
                                 <h3>WhatsApp</h3>
                                 <p>01099375725</p>
                             </span>
 
-                            <span class="contact-social-action">Message us ↗</span>
+                            <span class="contact-social-action">
+                                Message us ↗
+                            </span>
                         </a>
+
 
                         <a
                             class="contact-social-card"
@@ -515,15 +1362,23 @@
                             rel="noopener noreferrer"
                             aria-label="Visit Future Games on TikTok"
                         >
-                            <span class="contact-social-icon tiktok" aria-hidden="true">♪</span>
+                            <span
+                                class="contact-social-icon tiktok"
+                                aria-hidden="true"
+                            >
+                                ♪
+                            </span>
 
                             <span class="contact-social-info">
                                 <h3>TikTok</h3>
                                 <p>@future.games4</p>
                             </span>
 
-                            <span class="contact-social-action">View profile ↗</span>
+                            <span class="contact-social-action">
+                                View profile ↗
+                            </span>
                         </a>
+
 
                         <a
                             class="contact-social-card"
@@ -532,44 +1387,69 @@
                             rel="noopener noreferrer"
                             aria-label="Visit Future Games on Instagram"
                         >
-                            <span class="contact-social-icon instagram" aria-hidden="true">◎</span>
+                            <span
+                                class="contact-social-icon instagram"
+                                aria-hidden="true"
+                            >
+                                ◎
+                            </span>
 
                             <span class="contact-social-info">
                                 <h3>Instagram</h3>
                                 <p>Follow our Instagram account.</p>
                             </span>
 
-                            <span class="contact-social-action">View profile ↗</span>
+                            <span class="contact-social-action">
+                                View profile ↗
+                            </span>
                         </a>
+
                     </div>
+
 
                     <p class="contact-social-note">
                         Thank you for being part of the Future Games community.
                     </p>
+
                 </div>
+
             </div>
+
         </section>
+
     </main>
 
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
     <footer class="footer">
+
         <a href="home.html" class="logo">
             FUTURE <span>GAMES</span>
         </a>
 
-        <p>Discover your next adventure.</p>
+        <p>
+            Discover your next adventure.
+        </p>
 
         <a href="index.html?games=1" class="footer-link">
             Browse Games
         </a>
 
         <span class="copyright">
-            © <span id="currentYear">2026</span> Future Games. All rights reserved.
+            © <span id="currentYear">2026</span>
+            Future Games. All rights reserved.
         </span>
+
     </footer>
+
 
     <script>
         document.getElementById("currentYear").textContent =
             new Date().getFullYear();
     </script>
+
 </body>
 </html>
