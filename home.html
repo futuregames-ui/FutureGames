@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090b18">
+    <meta name="description" content="Welcome to Future Games — discover your next gaming adventure.">
+    <title>Future Games | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="home.css">
+
+    <script>
+    (function () {
+        const scrollKey = "futureGamesRefreshScroll-home";
+
+        if ("scrollRestoration" in history) {
+            history.scrollRestoration = "manual";
+        }
+
+        window.addEventListener("pagehide", function () {
+            try {
+                sessionStorage.setItem(
+                    scrollKey,
+                    String(window.scrollY || window.pageYOffset || 0)
+                );
+            } catch (error) {}
+        });
+
+        window.addEventListener("load", function () {
+            const navigation = performance.getEntriesByType("navigation")[0];
+
+            let savedPosition = null;
+
+            try {
+                savedPosition = sessionStorage.getItem(scrollKey);
+            } catch (error) {}
+
+            if (
+                navigation &&
+                navigation.type === "reload" &&
+                savedPosition !== null
+            ) {
+                try {
+                    sessionStorage.removeItem(scrollKey);
+                } catch (error) {}
+
+                const previousY = Number(savedPosition);
+
+                if (Number.isFinite(previousY) && previousY > 0) {
+                    const maxScroll = Math.max(
+                        0,
+                        document.documentElement.scrollHeight - window.innerHeight
+                    );
+
+                    window.scrollTo(0, Math.min(previousY, maxScroll));
+
+                    requestAnimationFrame(function () {
+                        requestAnimationFrame(function () {
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth"
+                            });
+                        });
+                    });
+                } else {
+                    window.scrollTo(0, 0);
+                }
+            } else {
+                try {
+                    sessionStorage.removeItem(scrollKey);
+                } catch (error) {}
+            }
+        });
+    })();
+    </script>
+
+    <style>
+        /* CONTACT SOCIAL LINKS */
+        .contact-section .contact-panel {
+            display: block;
+        }
+
+        .contact-social-content {
+            width: 100%;
+        }
+
+        .contact-social-heading {
+            margin-bottom: 30px;
+        }
+
+        .contact-social-heading h2 {
+            margin-bottom: 14px;
+        }
+
+        .contact-social-heading > p:last-child {
+            max-width: 620px;
+            line-height: 1.8;
+        }
+
+        .contact-social-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .contact-social-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 14px;
+            min-width: 0;
+            padding: 22px 18px;
+            color: inherit;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            border-radius: 16px;
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                background 0.25s ease;
+        }
+
+        .contact-social-card:hover,
+        .contact-social-card:focus-visible {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.065);
+            border-color: rgba(70, 231, 255, 0.55);
+            outline: none;
+        }
+
+        .contact-social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            flex-shrink: 0;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            font-size: 27px;
+            font-weight: 700;
+            border-radius: 15px;
+        }
+
+        .contact-social-icon.facebook {
+            background: #1877F2;
+        }
+
+        .contact-social-icon.whatsapp {
+            background: #25D366;
+        }
+
+        .contact-social-icon.tiktok {
+            background: #171717;
+            text-shadow: 2px 1px #25F4EE, -2px -1px #FE2C55;
+        }
+
+        .contact-social-icon.instagram {
+            background: linear-gradient(135deg, #833AB4, #E1306C, #FCAF45);
+        }
+
+        .contact-social-info {
+            min-width: 0;
+        }
+
+        .contact-social-info h3 {
+            margin: 0 0 7px;
+            font-size: 17px;
+        }
+
+        .contact-social-info p {
+            margin: 0;
+            color: #a9b0c7;
+            font-size: 12px;
+            line-height: 1.7;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-social-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            margin-top: auto;
+            color: #46e7ff;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .contact-social-note {
+            margin-top: 24px;
+            color: #a9b0c7;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 900px) {
+            .contact-social-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-social-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .contact-social-card {
+                flex-direction: row;
+                align-items: center;
+                padding: 17px;
+            }
+
+            .contact-social-info {
+                flex: 1;
+            }
+
+            .contact-social-action {
+                margin-top: 0;
+                white-space: nowrap;
+            }
+
+            .contact-social-icon {
+                width: 46px;
+                height: 46px;
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="navbar">
+        <a href="home.html" class="logo" aria-label="Future Games Home">
+            FUTURE <span>GAMES</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#devices">Platforms</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="index.html" class="nav-button">Explore Games <span>↗</span></a>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="eyebrow">
+                    <span class="status-dot"></span>
+                    YOUR NEXT LEVEL STARTS HERE
+                </div>
+
+                <h1>
+                    LEVEL UP<br>
+                    YOUR <span>GAME.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover amazing games, explore legendary adventures,
+                    and find your next favorite game with Future Games.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="index.html" class="primary-button">
+                        Explore Our Games <span>→</span>
+                    </a>
+
+                    <a href="#devices" class="secondary-button">
+                        Choose Your Platform
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <strong>GAMES</strong>
+                        <span>Discover your next adventure</span>
+                    </div>
+
+                    <div>
+                        <strong>PLAYSTATION</strong>
+                        <span>Explore your favorite titles</span>
+                    </div>
+
+                    <div>
+                        <strong>XBOX</strong>
+                        <span>Ready for the next level</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-label="Gaming showcase">
+                <div class="visual-ring ring-one"></div>
+                <div class="visual-ring ring-two"></div>
+
+                <div class="visual-card card-back">
+                    <span class="card-symbol">✦</span>
+                </div>
+
+                <div class="visual-card card-front">
+                    <div class="visual-top">
+                        <span>FUTURE GAMES</span>
+                        <span class="online-indicator"></span>
+                    </div>
+
+                    <div class="controller-icon" aria-hidden="true">
+                        <svg viewBox="0 0 240 150" role="img">
+                            <defs>
+                                <linearGradient id="controllerGradient" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#b8a1ff"/>
+                                    <stop offset="100%" stop-color="#46e7ff"/>
+                                </linearGradient>
+                            </defs>
+
+                            <path d="M55 34 C35 34 26 51 20 75 L9 113 C4 133 23 144 38 130 L65 106 L175 106 L202 130 C217 144 236 133 231 113 L220 75 C214 51 205 34 185 34 Z"
+                                  fill="url(#controllerGradient)"
+                                  opacity="0.95"/>
+
+                            <path d="M59 59 V87 M45 73 H73"
+                                  stroke="#11142a"
+                                  stroke-width="9"
+                                  stroke-linecap="round"/>
+
+                            <circle cx="174" cy="62" r="7" fill="#11142a"/>
+                            <circle cx="191" cy="78" r="7" fill="#11142a"/>
+                            <circle cx="157" cy="78" r="7" fill="#11142a"/>
+                            <circle cx="174" cy="94" r="7" fill="#11142a"/>
+
+                            <rect x="91" y="60" width="19" height="7" rx="3.5" fill="#11142a" opacity="0.75"/>
+                            <rect x="130" y="60" width="19" height="7" rx="3.5" fill="#11142a" opacity="0.75"/>
+
+                            <path d="M89 117 L79 136 M151 117 L161 136"
+                                  stroke="#11142a"
+                                  stroke-width="6"
+                                  stroke-linecap="round"
+                                  opacity="0.5"/>
+                        </svg>
+                    </div>
+
+                    <div class="visual-bottom">
+                        <span>READY PLAYER ONE?</span>
+                        <span class="visual-arrow">↗</span>
+                    </div>
+                </div>
+
+                <div class="floating-tag tag-top">
+                    <span class="tag-icon">✦</span>
+                    <span>DISCOVER<br><strong>NEW WORLDS</strong></span>
+                </div>
+
+                <div class="floating-tag tag-bottom">
+                    <span class="tag-icon">⌁</span>
+                    <span>YOUR NEXT<br><strong>ADVENTURE</strong></span>
+                </div>
+            </div>
+
+            <a href="#devices" class="scroll-indicator">
+                <span></span>
+                SCROLL TO EXPLORE
+            </a>
+        </section>
+
+        <section class="platform-section section-container" id="devices">
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">FIND YOUR NEXT GAME</p>
+                    <h2>Choose Your <span>Platform</span></h2>
+                    <p class="section-description">
+                        Select your gaming system and explore the games made for you.
+                    </p>
+                </div>
+            </div>
+
+            <div class="platform-grid">
+                <a class="platform-card platform-ps4" href="index.html?platform=PS4">
+                    <span class="platform-number">01</span>
+                    <span class="platform-icon">PS4</span>
+                    <h3>PlayStation 4</h3>
+                    <p>Explore games for PS4.</p>
+                    <span class="platform-link">Explore platform <span>↗</span></span>
+                </a>
+
+                <a class="platform-card platform-ps5" href="index.html?platform=PS5">
+                    <span class="platform-number">02</span>
+                    <span class="platform-icon">PS5</span>
+                    <h3>PlayStation 5</h3>
+                    <p>Discover your next PS5 adventure.</p>
+                    <span class="platform-link">Explore platform <span>↗</span></span>
+                </a>
+
+                <a class="platform-card platform-x360" href="index.html?platform=Xbox 360">
+                    <span class="platform-number">03</span>
+                    <span class="platform-icon">X360</span>
+                    <h3>Xbox 360</h3>
+                    <p>Revisit legendary Xbox games.</p>
+                    <span class="platform-link">Explore platform <span>↗</span></span>
+                </a>
+
+                <a class="platform-card platform-xbox" href="index.html?platform=Xbox Series S">
+                    <span class="platform-number">04</span>
+                    <span class="platform-icon">X|S</span>
+                    <h3>Xbox Series S</h3>
+                    <p>Find games for your Xbox console.</p>
+                    <span class="platform-link">Explore platform <span>↗</span></span>
+                </a>
+            </div>
+
+            <div class="all-games-banner">
+                <div>
+                    <p class="section-label">THE WHOLE COLLECTION</p>
+                    <h3>Can't decide? Explore them all.</h3>
+                    <p>Browse the complete Future Games collection in one place.</p>
+                </div>
+
+                <a href="index.html" class="primary-button">
+                    View All Games <span>→</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="section-container about-content">
+                <div class="about-decoration" aria-hidden="true">
+                    <span class="about-orbit orbit-a"></span>
+                    <span class="about-orbit orbit-b"></span>
+                    <span class="about-star">✦</span>
+                    <span class="about-core">FG</span>
+                </div>
+
+                <div class="about-text">
+                    <p class="section-label">WELCOME TO FUTURE GAMES</p>
+                    <h2>Gaming is more than a game. <span>It's an experience.</span></h2>
+
+                    <p>
+                        Future Games is your destination for exploring games
+                        across different platforms. Browse our collection,
+                        discover exciting titles, and stay tuned as we continue
+                        building more features for our gaming community.
+                    </p>
+
+                    <a href="index.html" class="text-link">
+                        Start Exploring <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT US -->
+        <section class="contact-section section-container" id="contact">
+            <div class="contact-panel">
+                <div class="contact-social-content">
+                    <div class="contact-social-heading">
+                        <p class="section-label">STAY CONNECTED</p>
+                        <h2>Connect with <span>Future Games.</span></h2>
+                        <p>
+                            Follow us on social media for gaming updates,
+                            new arrivals, and the latest news from Future Games.
+                        </p>
+                    </div>
+
+                    <div class="contact-social-grid">
+                        <a
+                            class="contact-social-card"
+                            href="https://www.facebook.com/share/1FJ4ShUewW/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit Future Games on Facebook"
+                        >
+                            <span class="contact-social-icon facebook" aria-hidden="true">f</span>
+
+                            <span class="contact-social-info">
+                                <h3>Facebook</h3>
+                                <p>Visit our Facebook page.</p>
+                            </span>
+
+                            <span class="contact-social-action">Visit page ↗</span>
+                        </a>
+
+                        <a
+                            class="contact-social-card"
+                            href="https://wa.me/201099375725"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Contact Future Games on WhatsApp"
+                        >
+                            <span class="contact-social-icon whatsapp" aria-hidden="true">W</span>
+
+                            <span class="contact-social-info">
+                                <h3>WhatsApp</h3>
+                                <p>01099375725</p>
+                            </span>
+
+                            <span class="contact-social-action">Message us ↗</span>
+                        </a>
+
+                        <a
+                            class="contact-social-card"
+                            href="https://www.tiktok.com/@future.games4?_r=1&_t=ZS-9AeuXeC56TS"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit Future Games on TikTok"
+                        >
+                            <span class="contact-social-icon tiktok" aria-hidden="true">♪</span>
+
+                            <span class="contact-social-info">
+                                <h3>TikTok</h3>
+                                <p>@future.games4</p>
+                            </span>
+
+                            <span class="contact-social-action">View profile ↗</span>
+                        </a>
+
+                        <a
+                            class="contact-social-card"
+                            href="https://www.instagram.com/future.games.2?rpxt=dzlqdHQyM2szMHhx"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit Future Games on Instagram"
+                        >
+                            <span class="contact-social-icon instagram" aria-hidden="true">◎</span>
+
+                            <span class="contact-social-info">
+                                <h3>Instagram</h3>
+                                <p>Follow our Instagram account.</p>
+                            </span>
+
+                            <span class="contact-social-action">View profile ↗</span>
+                        </a>
+                    </div>
+
+                    <p class="contact-social-note">
+                        Thank you for being part of the Future Games community.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="home.html" class="logo">FUTURE <span>GAMES</span></a>
+
+        <p>Discover your next adventure.</p>
+
+        <a href="index.html" class="footer-link">Browse Games</a>
+
+        <span class="copyright">
+            © <span id="currentYear">2026</span> Future Games. All rights reserved.
+        </span>
+    </footer>
+
+    <script>
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+    </script>
+</body>
+</html>

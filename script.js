@@ -826,6 +826,7 @@ function createFilterBar(){
     });
 }
 
+/* PLATFORM SIDEBAR */
 function createPlatformSidebar(){
     if(document.getElementById("platformSidebar")) return;
 
@@ -856,6 +857,14 @@ function createPlatformSidebar(){
 
             <h2>Choose Console</h2>
 
+            <button
+                type="button"
+                id="sidebarHomeButton"
+                class="sidebar-home-button"
+            >
+                🏠 Home
+            </button>
+
             <button type="button" data-platform="ALL" class="active">
                 🎮 All Games
             </button>
@@ -867,6 +876,14 @@ function createPlatformSidebar(){
             <button type="button" data-platform="PS5">
                 🎮 PlayStation 5
             </button>
+
+            <button type="button" data-platform="Xbox 360">
+                🎮 Xbox 360
+            </button>
+
+            <button type="button" data-platform="Xbox Series S">
+                🎮 Xbox Series S
+            </button>
         </aside>
     `;
 
@@ -874,7 +891,13 @@ function createPlatformSidebar(){
         document.body.appendChild(wrapper.firstChild);
     }
 
-    const menuButton = document.getElementById("platformMenuButton");
+    const sidebarHomeButton = document.getElementById("sidebarHomeButton");
+
+    sidebarHomeButton.addEventListener("click",()=>{
+        window.location.href = "home.html";
+    });
+}  
+  const menuButton = document.getElementById("platformMenuButton");
     const overlay = document.getElementById("platformOverlay");
     const sidebar = document.getElementById("platformSidebar");
     const closeButton = document.getElementById("platformCloseButton");
@@ -1308,8 +1331,28 @@ window.addEventListener("popstate",event=>{
 function createThemeToggle(){
     if(document.getElementById("themeToggle")) return;
 
-    const button = document.createElement("button");
+    const controls = document.createElement("div");
+    controls.className = "header-controls";
+    controls.style.cssText = `
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    `;
 
+    const homeButton = document.createElement("button");
+    homeButton.id = "homePageButton";
+    homeButton.className = "theme-toggle";
+    homeButton.type = "button";
+    homeButton.innerHTML = '<span class="theme-icon">🏠</span><span>Home</span>';
+    homeButton.addEventListener("click",()=>{
+        window.location.href = "home.html";
+    });
+
+    const button = document.createElement("button");
     button.id = "themeToggle";
     button.className = "theme-toggle";
     button.type = "button";
@@ -1338,7 +1381,10 @@ function createThemeToggle(){
         updateThemeButton();
     });
 
-    document.body.appendChild(button);
+    controls.appendChild(homeButton);
+    controls.appendChild(button);
+    document.body.appendChild(controls);
+
     updateThemeButton();
 }
 
@@ -1349,4 +1395,36 @@ createFilterBar();
 createFullscreenButton();
 createBackToTopButton();
 createGallery();
-displayGames(games);
+
+function initializePlatformFromURL(){
+    const params = new URLSearchParams(window.location.search);
+    const requestedPlatform = params.get("platform");
+
+    const supportedPlatforms = [
+        "PS4",
+        "PS5",
+        "Xbox 360",
+        "Xbox Series S"
+    ];
+
+    if(
+        requestedPlatform &&
+        supportedPlatforms.includes(requestedPlatform)
+    ){
+        activePlatform = requestedPlatform;
+    }
+
+    const platformButtons = document.querySelectorAll(
+        "#platformSidebar [data-platform]"
+    );
+
+    platformButtons.forEach(button => {
+        button.classList.toggle(
+            "active",
+            button.dataset.platform === activePlatform
+        );
+    });
+}
+
+initializePlatformFromURL();
+applyFilters();

@@ -1,49 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Future Games</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Games</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+    (function () {
+        const scrollKey = "futureGamesRefreshScroll-games";
+
+        if ("scrollRestoration" in history) {
+            history.scrollRestoration = "manual";
+        }
+
+        window.addEventListener("pagehide", function () {
+            try {
+                sessionStorage.setItem(
+                    scrollKey,
+                    String(window.scrollY || window.pageYOffset || 0)
+                );
+            } catch (error) {}
+        });
+
+        window.addEventListener("load", function () {
+            const navigation = performance.getEntriesByType("navigation")[0];
+
+            let savedPosition = null;
+
+            try {
+                savedPosition = sessionStorage.getItem(scrollKey);
+            } catch (error) {}
+
+            if (
+                navigation &&
+                navigation.type === "reload" &&
+                savedPosition !== null
+            ) {
+                try {
+                    sessionStorage.removeItem(scrollKey);
+                } catch (error) {}
+
+                const previousY = Number(savedPosition);
+
+                if (Number.isFinite(previousY) && previousY > 0) {
+                    const maxScroll = Math.max(
+                        0,
+                        document.documentElement.scrollHeight - window.innerHeight
+                    );
+
+                    window.scrollTo(0, Math.min(previousY, maxScroll));
+
+                    requestAnimationFrame(function () {
+                        requestAnimationFrame(function () {
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth"
+                            });
+                        });
+                    });
+                } else {
+                    window.scrollTo(0, 0);
+                }
+            } else {
+                try {
+                    sessionStorage.removeItem(scrollKey);
+                } catch (error) {}
+            }
+        });
+    })();
+    </script>
 </head>
+
 <body>
-<div class="background-glow glow-one"></div>
-<div class="background-glow glow-two"></div>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
 
-<header class="hero">
-  <div class="hero-content">
-    <p class="small-title">NEXT LEVEL GAMING</p>
-    <h1>FUTURE <span>GAMES</span></h1>
-    <p class="hero-description">Explore our collection of games and discover your next adventure.</p>
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Search for a game...">
+    <header class="hero">
+        <div class="hero-content">
+            <p class="small-title">NEXT LEVEL GAMING</p>
+            <h1>FUTURE <span>GAMES</span></h1>
+            <p class="hero-description">Explore our collection of games and discover your next adventure.</p>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search for a game...">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="section-header">
+            <div>
+                <p class="small-title">OUR COLLECTION</p>
+                <h2>Featured Games</h2>
+            </div>
+
+            <div id="gameCount" class="game-count">0 Games</div>
+        </div>
+
+        <section id="gamesContainer" class="games-grid"></section>
+
+        <div id="noResults" class="no-results">No games found.</div>
+    </main>
+
+    <div id="detailsModal" class="modal">
+        <div class="modal-background"></div>
+
+        <div class="modal-content">
+            <button id="closeModal" class="close-button">×</button>
+            <div id="detailsContainer"></div>
+        </div>
     </div>
-  </div>
-</header>
 
-<main class="container">
-  <div class="section-header">
-    <div>
-      <p class="small-title">OUR COLLECTION</p>
-      <h2>Featured Games</h2>
-    </div>
-    <div id="gameCount" class="game-count">0 Games</div>
-  </div>
-  <section id="gamesContainer" class="games-grid"></section>
-  <div id="noResults" class="no-results">No games found.</div>
-</main>
-
-<div id="detailsModal" class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-content">
-    <button id="closeModal" class="close-button">×</button>
-    <div id="detailsContainer"></div>
-  </div>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
