@@ -1155,6 +1155,7 @@ body.light-mode .platform-sidebar .platform-close {
         font-size: 12px;
     }
 
+    @media (max-width: 550px) {
     .theme-toggle,
     #themeToggle {
         top: 12px !important;
@@ -1164,7 +1165,27 @@ body.light-mode .platform-sidebar .platform-close {
         min-height: 40px;
         padding: 8px 11px;
         font-size: 12px;
+        z-index: 5001 !important;
     }
+
+    /* نسيب مساحة فوق الـ Hero للـ Light/Dark Mode */
+    .hero {
+        padding-top: 95px;
+    }
+
+    /* زر X داخل View Game يبقى بعيد عن زر الـ Light/Dark Mode */
+    .modal-content {
+        padding-top: 70px;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        float: none;
+        z-index: 5;
+    }
+}
 
     .platform-menu-button {
         top: 12px;
