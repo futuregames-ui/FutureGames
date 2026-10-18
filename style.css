@@ -1155,7 +1155,7 @@ body.light-mode .platform-sidebar .platform-close {
         font-size: 12px;
     }
 
-    @media (max-width: 550px) {
+@media (max-width: 550px) {
     .theme-toggle,
     #themeToggle {
         top: 12px !important;
@@ -1185,14 +1185,15 @@ body.light-mode .platform-sidebar .platform-close {
         float: none;
         z-index: 5;
     }
-}
 
+    /* زر التلات شرط فوق كارد View Game ناحية الشمال */
     .platform-menu-button {
         top: 12px;
         left: 12px;
         width: 40px;
         height: 40px;
         font-size: 22px;
+        z-index: 5001;
     }
 
     .platform-sidebar {
