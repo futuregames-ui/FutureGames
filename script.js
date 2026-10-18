@@ -1174,12 +1174,13 @@ function openDetails(id, fromHistory = false){
 function closeDetails(fromHistory = false){
     if(!detailsModal.classList.contains("active")) return;
 
-    const video = detailsContainer.querySelector(".gameplay-video");
-
-    if(video){
+    // إيقاف أي Gameplay Video مفتوح وإرجاعه للبداية
+    detailsContainer.querySelectorAll(".gameplay-video").forEach(video=>{
         video.pause();
         video.currentTime = 0;
-    }
+        video.removeAttribute("src");
+        video.load();
+    });
 
     detailsModal.classList.remove("active");
     document.body.style.overflow = "";
