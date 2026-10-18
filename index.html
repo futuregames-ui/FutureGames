@@ -13,6 +13,31 @@
 
     <script>
     (function () {
+        const params = new URLSearchParams(window.location.search);
+
+        /*
+         * Future Games navigation:
+         *
+         * No query:
+         * index.html -> home.html
+         *
+         * games=1:
+         * index.html?games=1 -> games page
+         *
+         * platform:
+         * index.html?platform=PS4 -> games page
+         * index.html?platform=PS5 -> games page
+         * etc.
+         */
+
+        const hasGamesParameter = params.get("games") === "1";
+        const hasPlatformParameter = params.has("platform");
+
+        if (!hasGamesParameter && !hasPlatformParameter) {
+            window.location.replace("home.html");
+            return;
+        }
+
         const scrollKey = "futureGamesRefreshScroll-games";
 
         if ("scrollRestoration" in history) {
@@ -85,10 +110,16 @@
         <div class="hero-content">
             <p class="small-title">NEXT LEVEL GAMING</p>
             <h1>FUTURE <span>GAMES</span></h1>
-            <p class="hero-description">Explore our collection of games and discover your next adventure.</p>
+            <p class="hero-description">
+                Explore our collection of games and discover your next adventure.
+            </p>
 
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Search for a game...">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for a game..."
+                >
             </div>
         </div>
     </header>
@@ -105,7 +136,9 @@
 
         <section id="gamesContainer" class="games-grid"></section>
 
-        <div id="noResults" class="no-results">No games found.</div>
+        <div id="noResults" class="no-results">
+            No games found.
+        </div>
     </main>
 
     <div id="detailsModal" class="modal">
