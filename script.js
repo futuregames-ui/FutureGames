@@ -565,16 +565,17 @@ g(60,"Sonic Frontiers",["غير متاح",550,"غير متاح","غير متاح
         videoTitle:"FC 27 Trailer"
     }),
 
-    g(39,"GTA VI Standard",[null,2000,null,2500],"1 Player","غير متاح حاليًا","Action / Open World","Action","NEW","images/gta-vi.jpg","تعود Grand Theft Auto إلى ولاية Leonida وVice City في قصة جديدة تتابع Jason وLucia. النسخة الحالية معلنة كتجربة فردية، ولم يتم الإعلان رسميًا عن نمط GTA VI Online حتى الآن.",{
-        screenshots:[
-            "images/gta-vi-1.jpg","images/gta-vi-2.jpg","images/gta-vi-3.jpg",
-            "images/gta-vi-4.jpg","images/gta-vi-5.jpg","images/gta-vi-6.jpg",
-            "images/gta-vi-7.jpg","images/gta-vi-8.jpg","images/gta-vi-9.jpg",
-            "images/gta-vi-10.jpg"
-        ],
-        video:"videos/gta-vi.mp4",
-        videoTitle:"Grand Theft Auto VI Trailer"
-    })
+   g(39,"GTA VI Standard",[null,2000,null,2500],"1 Player","غير متاح حاليًا","Action / Open World","Action","NEW","images/gta-vi.jpg","تعود Grand Theft Auto إلى ولاية Leonida وVice City في قصة جديدة تتابع Jason وLucia. النسخة الحالية معلنة كتجربة فردية، ولم يتم الإعلان رسميًا عن نمط GTA VI Online حتى الآن.\n\nمحتويات Standard ومكافآت الطلب المسبق\n\nVintage Vice City Pack\nمكافأة الطلب المسبق المؤهل، وتشمل سيارة Vapid Stanier موديل 1955 مع مرآب، وملابس وتسريحات شعر، ونمط سلاح حصري.\n\nشهر GTA+ مجاني\nضمن الطلبات الرقمية المؤهلة قبل 20 نوفمبر 2026؛ راعِ شروط الاشتراك والتجديد التلقائي.",{
+    screenshots:[
+        "images/gta-vi-1.jpg","images/gta-vi-2.jpg","images/gta-vi-3.jpg",
+        "images/gta-vi-4.jpg","images/gta-vi-5.jpg","images/gta-vi-6.jpg",
+        "images/gta-vi-7.jpg","images/gta-vi-8.jpg","images/gta-vi-9.jpg",
+        "images/gta-vi-10.jpg"
+    ],
+    video:"videos/gta-vi.mp4",
+    videoTitle:"Grand Theft Auto VI Trailer",
+    sourceUrl:"https://support.rockstargames.com/articles/4QfG4FmZCf5W1gS8jy4UVT/grand-theft-auto-vi-platform-editions-and-versions"
+})
 ];
 
 const GAME_DISPLAY_ORDER = [
